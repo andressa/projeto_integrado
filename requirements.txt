@@ -6,3 +6,4 @@ fabric==1.4
 django-extensions
 django-pipeline
 django-debug-toolbar
+pyserial

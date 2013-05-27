@@ -1,5 +1,5 @@
 """
-Default configurations for a TWIST Django Application
+Default configurations for CC Mining Django Application
 """
 
 import _helper
@@ -9,7 +9,8 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('TWIST', 'socios@twistsystems.com'),
+    ('Andressa Sivolella', 'asivolella@poli.ufrj.br'),
+    ('Luiz Fernando de Frias', 'l.frias@poli.ufrj.br'),
 )
 
 # Local time zone for this installation. Choices can be found here:
@@ -111,7 +112,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
 	'django_extensions',
-    'twist',
+    'cc_mining',
     'south'
 )
 
