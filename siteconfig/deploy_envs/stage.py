@@ -21,8 +21,8 @@ DATABASES = {
     }
 }
 
-MEDIA_ROOT  = '/home/<PROJECT_USERNAME>/public_html/media/'
-STATIC_ROOT = '/home/<PROJECT_USERNAME>/public_html/static/'
+MEDIA_ROOT  = '/home/cc_mining/public_html/media/'
+STATIC_ROOT = '/home/cc_mining/public_html/static/'
 
-MEDIA_URL   = 'http://<PROJECT_USERNAME>.twistsystems.com/media/'
-STATIC_URL  = 'http://<PROJECT_USERNAME>.twistsystems.com/static/'
+MEDIA_URL   = 'http://cc_mining.twistsystems.com/media/'
+STATIC_URL  = 'http://cc_mining.twistsystems.com/static/'
