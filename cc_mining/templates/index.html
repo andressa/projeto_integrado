@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="http://cc_mining.twistsystems.com:4000/socket.io/socket.io.js"></script>
+        <script>
+            $(document).ready(function(){
+                var $cc_area = $('#cc_area');
+                function append_text(text){
+                    $cc_area.append(text + '\n');
+                    $cc_area.animate({scrollTop: $cc_area[0].scrollHeight - $cc_area.height()}, 250);
+                }
+                var socket = io.connect('http://cc_mining.twistsystems.com', {port: 4000});
+                socket.on('message', function(cc){
+                    append_text(cc);
+                });
+            });
+        </script>
+        <style type='text/css'>
+            .logo{
+                width:  20%;
+                height: 20%;
+            }
+            legend{
+                padding: 1em;
+                font: 80%/1 ubuntu;
+                font-weight: bolder;
+                color: #1E254A;
+            }
+            fieldset{
+                border-width: 1px 0 0 0;
+                border-style: solid none none none;
+                border-color: #1E254A;
+            }
+            textarea{
+                background-color: #DBDBDB;
+            }
+        </style>
+    </head>
+    <body>
+        <img src='{{ STATIC_URL }}cc_mining/images/logo.png' class='logo'/>
+        <fieldset>
+            <legend> Closed Caption em tempo real </legend>
+            <div id='cc_real_time'>
+                <textarea id='cc_area' rows=15 cols='100%' readonly></textarea>
+            </div>
+        </fieldset>
+    </body>
+</html>
