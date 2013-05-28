@@ -73,3 +73,56 @@ class ClosedCaptionHandler(object):
     def close_arduino_conn(self):
         self.arduino.close()
 
+    def parse(self, line):
+        '''
+        A mudança de um speaker é dado pelo símbolo >>, quando
+        há um diálogo entre duas pessoas, ou por >>>, quando
+        várias estão falando.
+        obs: por amostragem, vi que esse padrão não é bem respeitado.
+        para contornar esse problema estou fazendo da seguinte forma:
+        começa com >> é simples, mais que isso (>>>, >>>>), é múltiplo.
+
+        Em seguida vem o nome do speaker. Ele pode ser identificado
+        como o nome antes de :, pode ser que não seja identificado e
+        pode estar entre [].
+
+        O texto vem a seguir
+        Caso as linhas não comecem com >> ou >>> serão tratadas como
+        continuação do texto.
+
+        Por sim, linhas entre [] são as que passam uma ação, como [APLAUSOS]
+        '''
+
+        speaker_re = re.compile(r'^>> |^>>> ')
+        name_re = re.compile(r'^\[([a-zA-Z ]+)\] |^([a-zA-Z ]+): ')
+
+        data = {
+                'speaker': {
+                    'name': '',
+                    'type': ''
+                    },
+                'text': '',
+                'timestamp': ''
+                }
+
+        # Define speaker
+        # Search for pattern
+        speaker = speaker_re.search(line)
+        if speaker:
+            # Type
+            if speaker.group() == '>> ': data['speaker']['type'] = 'simple'
+            else: data['speaker']['type'] = 'multiple'
+            # Name
+            # It will only be available in case there is a speaker
+            # Remove the >> ...
+            new_str = speaker_re.split(line)[1]
+            # ... and search in the new string
+            name = name_re.search(new_str)
+            # If there is a name it can be in the first or second group
+            if name: data['speaker']['name'] = name.group(1) or name.group(2)
+
+        # Get text
+        data['text'] = name_re.split(new_str)[-1]
+
+        return data
+
