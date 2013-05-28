@@ -6,8 +6,8 @@
             $(document).ready(function(){
                 var $cc_area = $('#cc_area');
                 function append_text(text){
-                    $cc_area.append(text + '\n');
-                    $cc_area.animate({scrollTop: $cc_area[0].scrollHeight - $cc_area.height()}, 250);
+                    $cc_area.append(text + '<br>');
+                    $cc_area.scrollTop($cc_area[0].scrollHeight);
                 }
                 var socket = io.connect('http://cc_mining.twistsystems.com', {port: 4000});
                 socket.on('message', function(cc){
@@ -31,8 +31,12 @@
                 border-style: solid none none none;
                 border-color: #1E254A;
             }
-            textarea{
+            #cc_area{
+                max-height: 300px;
+                overflow: auto;
                 background-color: #DBDBDB;
+                font-family: 'courier';
+                font-size: 10pt;
             }
         </style>
     </head>
@@ -40,8 +44,7 @@
         <img src='{{ STATIC_URL }}cc_mining/images/logo.png' class='logo'/>
         <fieldset>
             <legend> Closed Caption em tempo real </legend>
-            <div id='cc_real_time'>
-                <textarea id='cc_area' rows=15 cols='100%' readonly></textarea>
+            <div id='cc_area'>
             </div>
         </fieldset>
     </body>
