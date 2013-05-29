@@ -11,6 +11,7 @@ from datetime import datetime
 import serial
 import redis
 import re
+import json
 
 USBDEVICE = '/dev/tty.usbmodemfa131'
 RESPONSE = {
@@ -59,9 +60,14 @@ class ClosedCaptionHandler(object):
                     if (self.arduino.inWaiting() > 0):
                         line = self.arduino.readline()
                         line_str = line.replace('\x00', '')
-                        self.redis.publish('cc', '%s: %s' % (datetime.now(), line_str))
+                        try:
+                            cc_data = self.parse(line_str)
+                        except:
+                            cc_data = self._get_json_format()[ 'text' ] = line_str
+                        cc_data['timestamp'] = str(datetime.now())
+                        self.redis.publish('cc',  json.dumps(cc_data))
                         if self.verbose:
-                            print "%s: %s" % (datetime.now(), line_str)
+                            print cc_data
                 except serial.serialutil.SerialException:
                     pass
         except KeyboardInterrupt:
@@ -72,6 +78,17 @@ class ClosedCaptionHandler(object):
 
     def close_arduino_conn(self):
         self.arduino.close()
+
+    def _get_json_format(self):
+        return {
+        'speaker': {
+            'name': '',
+            'type': ''
+            },
+        'text': '',
+        'timestamp': ''
+        }
+
 
     def parse(self, line):
         '''
@@ -96,18 +113,12 @@ class ClosedCaptionHandler(object):
         speaker_re = re.compile(r'^>> |^>>> ')
         name_re = re.compile(r'^\[([a-zA-Z ]+)\] |^([a-zA-Z ]+): ')
 
-        data = {
-                'speaker': {
-                    'name': '',
-                    'type': ''
-                    },
-                'text': '',
-                'timestamp': ''
-                }
+        data = self._get_json_format()
 
         # Define speaker
         # Search for pattern
         speaker = speaker_re.search(line)
+        new_str = ''
         if speaker:
             # Type
             if speaker.group() == '>> ': data['speaker']['type'] = 'simple'
@@ -122,7 +133,10 @@ class ClosedCaptionHandler(object):
             if name: data['speaker']['name'] = name.group(1) or name.group(2)
 
         # Get text
-        data['text'] = name_re.split(new_str)[-1]
+        if new_str:
+            data['text'] = name_re.split(new_str)[-1]
+        else:
+            data['text'] = line
 
         return data
 

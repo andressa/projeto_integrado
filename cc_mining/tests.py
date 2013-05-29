@@ -31,3 +31,8 @@ class CCParser(TestCase):
         content = self.cc.parse('>> TA MUITO CERTO.')
         self.assertEquals(content['speaker']['name'], '')
         self.assertEquals(content.get('text'), 'TA MUITO CERTO.')
+
+    def test_broken_cc(self):
+
+        content = self.cc.parse('*>> FERROU')
+        self.assertEquals(content.get('text'), '*>> FERROU')

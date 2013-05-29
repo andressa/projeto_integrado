@@ -1,9 +1,60 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset='utf-8'> 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script src="http://cc_mining.twistsystems.com:4000/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="{{STATIC_URL }}cc_mining/js/d3-cloud-master/lib/d3/d3.js"></script>
+        <script type="text/javascript" src="{{STATIC_URL }}cc_mining/js/d3-cloud-master/d3.layout.cloud.js"></script>
+        <link href="{{ STATIC_URL }}cc_mining/css/wordcloud.css" rel="stylesheet" type="text/css" />
         <script>
-            $(document).ready(function(){
+                var MAP_WIDTH = 960;
+                var MAP_HEIGHT = 600;
+
+                function parse_text(line) {
+                    var new_line = line.replace(/[^a-zA-Z ]/g, '').replace(/^\s+|\s+$/g, '');
+                    return new_line.split(' ');
+                }
+
+                function init(words) {
+
+                    localStorage.setItem("words", words);
+                    d3.layout.cloud().size([MAP_WIDTH, MAP_HEIGHT])
+                        .words(words.map(function(d) {
+                            return {text: d, size: 23 };
+                        }))
+                        .rotate(function() { return ~~(Math.random() * 2) * 90; })
+                        .font("Impact")
+                        .fontSize(function(d) { return d.size; })
+                        .on("end", draw)
+                        .start();
+
+                }
+
+
+                function draw(words) {
+                    var fill = d3.scale.category20();
+                    d3.select("#cc_analysis").append("svg")
+                    .attr("width", MAP_WIDTH)
+                    .attr("height", MAP_HEIGHT)
+                    .append("g")
+                    .attr("transform", "translate(480,300)scale(1.038062334060669,1.038062334060669)")
+                    .selectAll("text")
+                    .data(words)
+                    .enter().append("text")
+                    .style("font-size", function(d) { return d.size + "px"; })
+                    .style("font-family", "Impact")
+                    .style("fill", function(d, i) { return fill(i); })
+                    .attr("text-anchor", "middle")
+                    .attr("transform", function(d) {
+                        return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                    })
+                    .text(function(d) { return d.text; });
+                }
+            $(document).ready(function() {
+                init([ "Hello", "this", "world", "normally", "you", "want", "more", "than", "words", "you", "can", "give",
+                        "than", "this", "to", "the", "world", "world"]);
+
                 var $cc_area = $('#cc_area');
                 function append_text(text){
                     $cc_area.append(text + '<br>');
@@ -11,9 +62,19 @@
                 }
                 var socket = io.connect('http://cc_mining.twistsystems.com', {port: 4000});
                 socket.on('message', function(cc){
-                    append_text(cc);
+                    console.log(cc);
+                    cc_data = JSON.parse(cc);
+                    append_text(cc_data.text);
+                    var old_words = localStorage.getItem("words").split(",");
+                    d3.select("#cc_analysis").select("svg").remove();
+                    var new_words = parse_text(cc_data.text);
+                    var newarray = old_words.concat(new_words);
+                    localStorage.setItem("words", newarray);
+                    init(newarray);
                 });
             });
+
+
         </script>
         <style type='text/css'>
             .logo{
@@ -45,6 +106,11 @@
         <fieldset>
             <legend> Closed Caption em tempo real </legend>
             <div id='cc_area'>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend> Análises </legend>
+            <div id='cc_analysis'>
             </div>
         </fieldset>
     </body>
