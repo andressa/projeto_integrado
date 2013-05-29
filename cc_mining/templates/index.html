@@ -62,7 +62,6 @@
                 }
                 var socket = io.connect('http://cc_mining.twistsystems.com', {port: 4000});
                 socket.on('message', function(cc){
-                    console.log(cc);
                     cc_data = JSON.parse(cc);
                     append_text(cc_data.text);
                     var old_words = localStorage.getItem("words").split(",");
