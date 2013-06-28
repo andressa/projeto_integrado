@@ -26,6 +26,8 @@ class TVShow(models.Model):
 
 class Saves(models.Model):
     fname = models.CharField(max_length=30)
+    lbegin = models.IntegerField()
+    lend = models.IntegerField()
 
 class Analysis(models.Model):
     tvshow = models.ForeignKey('TVShow')
