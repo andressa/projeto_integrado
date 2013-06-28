@@ -3,3 +3,5 @@
 *~
 *.pyc
 siteconfig/db/*
+cc_mining/ClosedCapitionHandler/*
+cc_mining/ccAcquisition.py
