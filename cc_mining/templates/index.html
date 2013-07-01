@@ -2,9 +2,12 @@
 {% block "javascript" %}
 {{ block.super }}
     <script src="http://cc_mining.twistsystems.com:4000/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="http://visapi-gadgets.googlecode.com/svn/trunk/wordcloud/wc.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL }}cc_mining/js/d3-cloud-master/lib/d3/d3.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL }}cc_mining/js/d3-cloud-master/d3.layout.cloud.js"></script>
     <script>
         $(document).ready(function(){
+            //init([ "Hello", "this", "world", "normally", "you", "want", "more", "than", "words", "you", "can", "give", "than", "this", "to", "the", "world", "world"]);
+
             var $cc_area = $('#cc_area');
             function append_text(text){
                 $cc_area.append(text + '<br>');
@@ -23,7 +26,7 @@
 {% block "style" %}
 {{ block.super }}
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-    <link rel="stylesheet" type="text/css" href="http://visapi-gadgets.googlecode.com/svn/trunk/wordcloud/wc.css"/>
+    <link href="{{ STATIC_URL }}cc_mining/css/wordcloud.css" rel="stylesheet" type="text/css" />
     <style type='text/css'>
         legend{
             padding: 1em;
@@ -62,7 +65,6 @@
             <fieldset>
                 <legend> Análises </legend>
                 <div id="realtime-wordcloud" width="50%" float="left">
-
                 </div>
                 <div id="realtime-wordcounter" width="50%" float="left">
                 </div>
