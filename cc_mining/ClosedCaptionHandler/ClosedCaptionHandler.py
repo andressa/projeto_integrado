@@ -12,13 +12,15 @@ import serial
 import redis
 import re
 
-USBDEVICE = '/dev/tty.usbmodemfa131'
+USBDEVICE = '/dev/tty.usbmodemfd121'
 RESPONSE = {
             0: 'ARDUINO CONNECTED! LETS GET CLOSED CAPTIONS',
             1: 'ARDUINO IS NOT CONNECTED!',
            }
 VERBOSE = True
 HOST = 'sinatra.twistsystems.com'
+
+CC_FOLDER = "/Users/asivolella/Dropbox/Workspace/UFRJ/ProjetoIntegrado/closed_captions"
 
 class ClosedCaptionHandler(object):
     """
@@ -60,6 +62,9 @@ class ClosedCaptionHandler(object):
                         line = self.arduino.readline()
                         line_str = line.replace('\x00', '')
                         self.redis.publish('cc', '%s: %s' % (datetime.now(), line_str))
+                        file = open("%s/%s.txt"%(CC_FOLDER, datetime.now().strftime("%Y-%m-%d")), "a")
+                        file.write("%s: %s\n"%(datetime.now(), line_str))
+                        file.close()
                         if self.verbose:
                             print "%s: %s" % (datetime.now(), line_str)
                 except serial.serialutil.SerialException:
