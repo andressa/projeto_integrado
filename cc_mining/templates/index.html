@@ -5,8 +5,49 @@
     <script type="text/javascript" src="{{STATIC_URL }}cc_mining/js/d3-cloud-master/lib/d3/d3.js"></script>
     <script type="text/javascript" src="{{STATIC_URL }}cc_mining/js/d3-cloud-master/d3.layout.cloud.js"></script>
     <script>
+        var MAP_WIDTH = 960;
+        var MAP_HEIGHT = 600;
+
+        function parse_text(line) {
+            var new_line = line.replace(/[^a-zA-Z ]/g, '').replace(/^\s+|\s+$/g, '');
+            return new_line.split(' ');
+        }
+
+        function init(words) {
+            localStorage.setItem("words", words);
+            d3.layout.cloud().size([MAP_WIDTH, MAP_HEIGHT])
+                .words(words.map(function(d) {
+                    return {text: d, size: 23 };
+                }))
+                .rotate(function() { return ~~(Math.random() * 2) * 90; })
+                .font("Impact")
+                .fontSize(function(d) { return d.size; })
+                .on("end", draw)
+                .start();
+
+        }
+        function draw(words) {
+            var fill = d3.scale.category20();
+            d3.select("#realtime-wordcloud").append("svg")
+            .attr("width", MAP_WIDTH)
+            .attr("height", MAP_HEIGHT)
+            .append("g")
+            .attr("transform", "translate(480,300)scale(1.038062334060669,1.038062334060669)")
+            .selectAll("text")
+            .data(words)
+            .enter().append("text")
+            .style("font-size", function(d) { return d.size + "px"; })
+            .style("font-family", "Impact")
+            .style("fill", function(d, i) { return fill(i); })
+            .attr("text-anchor", "middle")
+            .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
+            .text(function(d) { return d.text; });
+        }
         $(document).ready(function(){
-            //init([ "Hello", "this", "world", "normally", "you", "want", "more", "than", "words", "you", "can", "give", "than", "this", "to", "the", "world", "world"]);
+            init(['']);
+            localStorage.setItem("last_minute", 0);
 
             var $cc_area = $('#cc_area');
             function append_text(text){
@@ -16,6 +57,18 @@
             var socket = io.connect('http://cc_mining.twistsystems.com', {port: 4000});
             socket.on('message', function(cc){
                 append_text(cc);
+                var text = cc.split(":")[3];
+                cur_minute = parseInt(cc.split(":")[1]);
+                if (cur_minute > localStorage.getItem("last_minute") + 2){
+                    localStorage.setItem("words", ['']);
+                }
+                localStorage.setItem("last_minute", cur_minute);
+                var old_words = localStorage.getItem("words").split(",");
+                d3.select("#realtime-wordcloud").select("svg").remove();
+                var new_words = parse_text(text);
+                var newarray = old_words.concat(new_words);
+                localStorage.setItem("words", newarray);
+                init(newarray);
             });
         });
         $(function() {
@@ -63,10 +116,13 @@
                 </div>
             </fieldset>
             <fieldset>
-                <legend> Análises </legend>
-                <div id="realtime-wordcloud" width="50%" float="left">
+                <legend> Nuvem de Palavras </legend>
+                <div id="realtime-wordcloud" class="wordcloud">
                 </div>
-                <div id="realtime-wordcounter" width="50%" float="left">
+            </fieldset>
+            <fieldset>
+                <legend> Contador de Termos </legend>
+                <div id="realtime-wordcounter">
                 </div>
             </fieldset>
         </div>

@@ -1,11 +1,11 @@
 body {
     position: relative;
     font-family: "Helvetica Neue", sans-serif;
-    width: 960px;
+    width: 100%;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 1em;
 }
-#cc_analysis text:hover {
+.wordcloud text:hover {
     opacity: .7 !important;
 }
