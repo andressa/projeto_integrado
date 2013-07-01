@@ -2,6 +2,7 @@
 {% block "javascript" %}
 {{ block.super }}
     <script src="http://cc_mining.twistsystems.com:4000/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="http://visapi-gadgets.googlecode.com/svn/trunk/wordcloud/wc.js"></script>
     <script>
         $(document).ready(function(){
             var $cc_area = $('#cc_area');
@@ -22,6 +23,7 @@
 {% block "style" %}
 {{ block.super }}
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="http://visapi-gadgets.googlecode.com/svn/trunk/wordcloud/wc.css"/>
     <style type='text/css'>
         legend{
             padding: 1em;
@@ -55,6 +57,14 @@
             <fieldset>
                 <legend> Closed Caption em tempo real </legend>
                 <div id='cc_area'>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend> Análises </legend>
+                <div id="realtime-wordcloud" width="50%" float="left">
+
+                </div>
+                <div id="realtime-wordcounter" width="50%" float="left">
                 </div>
             </fieldset>
         </div>
