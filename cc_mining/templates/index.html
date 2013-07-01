@@ -1,51 +1,68 @@
-<html>
-    <head>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script src="http://cc_mining.twistsystems.com:4000/socket.io/socket.io.js"></script>
-        <script>
-            $(document).ready(function(){
-                var $cc_area = $('#cc_area');
-                function append_text(text){
-                    $cc_area.append(text + '<br>');
-                    $cc_area.scrollTop($cc_area[0].scrollHeight);
-                }
-                var socket = io.connect('http://cc_mining.twistsystems.com', {port: 4000});
-                socket.on('message', function(cc){
-                    append_text(cc);
-                });
+{% extends "base.html" %}
+{% block "javascript" %}
+{{ block.super }}
+    <script src="http://cc_mining.twistsystems.com:4000/socket.io/socket.io.js"></script>
+    <script>
+        $(document).ready(function(){
+            var $cc_area = $('#cc_area');
+            function append_text(text){
+                $cc_area.append(text + '<br>');
+                $cc_area.scrollTop($cc_area[0].scrollHeight);
+            }
+            var socket = io.connect('http://cc_mining.twistsystems.com', {port: 4000});
+            socket.on('message', function(cc){
+                append_text(cc);
             });
-        </script>
-        <style type='text/css'>
-            .logo{
-                width:  20%;
-                height: 20%;
-            }
-            legend{
-                padding: 1em;
-                font: 80%/1 ubuntu;
-                font-weight: bolder;
-                color: #1E254A;
-            }
-            fieldset{
-                border-width: 1px 0 0 0;
-                border-style: solid none none none;
-                border-color: #1E254A;
-            }
-            #cc_area{
-                max-height: 300px;
-                overflow: auto;
-                background-color: #DBDBDB;
-                font-family: 'courier';
-                font-size: 10pt;
-            }
-        </style>
-    </head>
-    <body>
-        <img src='{{ STATIC_URL }}cc_mining/images/logo.png' class='logo'/>
-        <fieldset>
-            <legend> Closed Caption em tempo real </legend>
-            <div id='cc_area'>
-            </div>
-        </fieldset>
-    </body>
-</html>
+        });
+        $(function() {
+            $( "#tabs" ).tabs();
+        });
+    </script>
+{% endblock "javascript" %}
+{% block "style" %}
+{{ block.super }}
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <style type='text/css'>
+        legend{
+            padding: 1em;
+            font: 80%/1 ubuntu;
+            font-weight: bolder;
+            color: #1E254A;
+        }
+        fieldset{
+            border-width: 1px 0 0 0;
+            border-style: solid none none none;
+            border-color: #1E254A;
+        }
+        #cc_area{
+            max-height: 300px;
+            overflow: auto;
+            background-color: #DBDBDB;
+            font-family: 'courier';
+            font-size: 10pt;
+        }
+    </style>
+{% endblock "style" %}
+{% block "content" %}
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab-realtime"> Tempo Real </a></li>
+            <li><a href="#tab-jornalismo"> Jornalismo </a></li>
+            <li><a href="#tab-novelas"> Novelas </a></li>
+            <li><a href="#tab-futebol"> Copa das Confederações </a></li>
+        </ul>
+        <div id="tab-realtime">
+            <fieldset>
+                <legend> Closed Caption em tempo real </legend>
+                <div id='cc_area'>
+                </div>
+            </fieldset>
+        </div>
+        <div id="tab-jornalismo">
+        </div>
+        <div id="tab-novelas">
+        </div>
+        <div id="tab-futebol">
+        </div>
+    </div>
+{% endblock "content" %}
