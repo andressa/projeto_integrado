@@ -1,7 +1,7 @@
-from django.conf.urls.defaults import patterns
-import views
+from django.conf.urls.defaults import patterns, url
+from cc_mining.views import *
 
 urlpatterns = patterns('',
-    # Dummy index view
-    (r'^$', views.index),
+   (r'^$', index),
+   url(r'^jornalismo/$', Jornalismo, name='jornalismo'),
 )
