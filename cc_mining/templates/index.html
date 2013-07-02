@@ -8,6 +8,15 @@
         var MAP_WIDTH = 960;
         var MAP_HEIGHT = 600;
 
+        function get_analysis(novela, ndate, atype) {
+            if (
+                novela == ""
+                || ndate == ""
+                || atype == ""
+            ) return;
+             window.open( "novelas/" + novela + "/" + ndate + "/" + atype + "/", "Analysis", "height=1500px,width=1500px,modal=yes");
+        }
+
         function parse_text(line) {
             var new_line = line.replace(/[^a-zA-Z ]/g, '').replace(/^\s+|\s+$/g, '');
             return new_line.split(' ');
@@ -46,6 +55,19 @@
             .text(function(d) { return d.text; });
         }
         $(document).ready(function(){
+
+            // Novela
+
+            $('.novela_attr').change(function(){
+                get_analysis(
+                            $('#novela').val(),
+                            $('#datas').val(),
+                            $('#types').val()
+                            );
+            });
+
+            // ------
+
             init(['']);
             localStorage.setItem("last_minute", 0);
 
@@ -129,6 +151,29 @@
         <div id="tab-jornalismo">
         </div>
         <div id="tab-novelas">
+            <fieldset>
+                <legend> Novelas </legend>
+                <div id='novelasdiv'>
+                    <select id='novela' class='novela_attr'>
+                        <option value=''>----</option>
+                        {% for novela in novelas_list %}
+                            <option value='{{ novela.dir }}'>{{ novela.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div id='datasdiv'>
+                    <select id='datas' class='novela_attr'>
+                        {% for date in dates_list %}
+                            <option value='{{ date }}'>{{ date }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div id='typesdiv'>
+                    <select id='types' class='novela_attr'>
+                        <option value='tree'>Tree</option>
+                    </select>
+                </div>
+            </fieldset>
         </div>
         <div id="tab-futebol">
         </div>
