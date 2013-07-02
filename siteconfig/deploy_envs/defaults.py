@@ -113,6 +113,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
 	'django_extensions',
     'cc_mining',
+    'novela',
     'south'
 )
 

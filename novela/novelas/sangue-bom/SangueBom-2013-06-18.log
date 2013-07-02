@@ -1,0 +1,205 @@
+WARNING: 
+                CC: OLHEI PRA ELE E DISSE:QUAL E SEU NOME?
+                Parsed: {'action': '', 'text': u'OLHEI PRA ELE E DISSE:QUAL E SEU NOME?', 'speaker': '', 'timestamp': ''}
+WARNING: 
+                CC: ABINHO] ELA TA TE CHAMANDO?
+                Parsed: {'action': '', 'text': u'ABINHO] ELA TA TE CHAMANDO?', 'speaker': '', 'timestamp': ''}
+DEBUG: Recuperando ultima arvore
+DEBUG: SELECT "cc_mining_analysis"."id", "cc_mining_analysis"."tvshow_id" FROM "cc_mining_analysis" INNER JOIN "cc_mining_tvshow" ON ("cc_mining_analysis"."tvshow_id" = "cc_mining_tvshow"."id") WHERE ("cc_mining_tvshow"."pid_id" = 4  AND "cc_mining_analysis"."id" < 2 )
+DEBUG: Nao existem outras analises
+DEBUG: JSON inicial:
+{'nodes': {}, 'edges': {}}
+DEBUG: Arvore nao contem ERICO
+DEBUG: Pesquisando relacionamento entre ERICO e SOCORRO...
+DEBUG: O ERICO tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem DAMARIS
+DEBUG: Pesquisando relacionamento entre DAMARIS e KARMITA...
+DEBUG: O DAMARIS tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem BARRABAS
+DEBUG: Pesquisando relacionamento entre BARRABAS e DAMARIS...
+DEBUG: O BARRABAS tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem ODILA
+DEBUG: Pesquisando relacionamento entre ODILA e RENATA...
+DEBUG: O ODILA tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem BARBARA
+DEBUG: Pesquisando relacionamento entre BARBARA e TABATA...
+DEBUG: O BARBARA tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem AMORA
+DEBUG: Pesquisando relacionamento entre AMORA e BEN...
+DEBUG: O AMORA tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem DOUGLAS
+DEBUG: Pesquisando relacionamento entre DOUGLAS e GIANE...
+DEBUG: O DOUGLAS tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem SHEILA
+DEBUG: Pesquisando relacionamento entre SHEILA e VINNY...
+DEBUG: O SHEILA tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem CHARLENE
+DEBUG: Pesquisando relacionamento entre CHARLENE e LUCINDO...
+DEBUG: O CHARLENE tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre BARBARA e KARMITA...
+DEBUG: O BARBARA tem os seguintes relacionamentos: {'TABATA': {'n': 10}}
+DEBUG: Arvore nao contem CARLITO
+DEBUG: Pesquisando relacionamento entre CARLITO e KARMITA...
+DEBUG: O CARLITO tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre AMORA e BENTO...
+DEBUG: O AMORA tem os seguintes relacionamentos: {'BEN': {'n': 4}}
+DEBUG: Pesquisando relacionamento entre CHARLENE e FILINHO...
+DEBUG: O CHARLENE tem os seguintes relacionamentos: {'LUCINDO': {'n': 14}}
+DEBUG: Pesquisando relacionamento entre DAMARIS e LUCINDO...
+DEBUG: O DAMARIS tem os seguintes relacionamentos: {'KARMITA': {'n': 6}}
+DEBUG: Pesquisando relacionamento entre CHARLENE e FILIPINHO...
+DEBUG: O CHARLENE tem os seguintes relacionamentos: {'LUCINDO': {'n': 14}, 'FILINHO': {'n': 4}}
+DEBUG: Arvore nao contem FABINHO
+DEBUG: Pesquisando relacionamento entre FABINHO e MEL...
+DEBUG: O FABINHO tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre BARBARA e NATAN...
+DEBUG: O BARBARA tem os seguintes relacionamentos: {'KARMITA': {'n': 18}, 'TABATA': {'n': 10}}
+DEBUG: Arvore nao contem JUNTOS
+DEBUG: Pesquisando relacionamento entre JUNTOS e KARMITA...
+DEBUG: O JUNTOS tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre ERICO e SALMA...
+DEBUG: O ERICO tem os seguintes relacionamentos: {'SOCORRO': {'n': 8}}
+DEBUG: Arvore nao contem NESTOR
+DEBUG: Pesquisando relacionamento entre NESTOR e ODILA...
+DEBUG: O NESTOR tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem MAURICIO
+DEBUG: Pesquisando relacionamento entre MAURICIO e VERONICA...
+DEBUG: O MAURICIO tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre SHEILA e TITO...
+DEBUG: O SHEILA tem os seguintes relacionamentos: {'VINNY': {'n': 10}}
+DEBUG: Arvore nao contem BENTO
+DEBUG: Pesquisando relacionamento entre BENTO e GIANE...
+DEBUG: O BENTO tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre BARRABAS e LUCINDO...
+DEBUG: O BARRABAS tem os seguintes relacionamentos: {'DAMARIS': {'n': 12}}
+DEBUG: Arvore nao contem LARA
+DEBUG: Pesquisando relacionamento entre LARA e TITO...
+DEBUG: O LARA tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem LUZ
+DEBUG: Pesquisando relacionamento entre LUZ e XANDE...
+DEBUG: O LUZ tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre BARRABAS e VITINHO...
+DEBUG: O BARRABAS tem os seguintes relacionamentos: {'DAMARIS': {'n': 12}, 'LUCINDO': {'n': 4}}
+DEBUG: Pesquisando relacionamento entre LUZ e MALU...
+DEBUG: O LUZ tem os seguintes relacionamentos: {'XANDE': {'n': 12}}
+DEBUG: Pesquisando relacionamento entre CARLITO e FILIPINHO...
+DEBUG: O CARLITO tem os seguintes relacionamentos: {'KARMITA': {'n': 18}}
+DEBUG: Pesquisando relacionamento entre BENTO e BRUNO...
+DEBUG: O BENTO tem os seguintes relacionamentos: {'GIANE': {'n': 4}}
+DEBUG: Arvore nao contem KEVIN
+DEBUG: Pesquisando relacionamento entre KEVIN e XANDE...
+DEBUG: O KEVIN tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre BARBARA e CARLITO...
+DEBUG: O BARBARA tem os seguintes relacionamentos: {'NATAN': {'n': 14}, 'KARMITA': {'n': 18}, 'TABATA': {'n': 10}}
+DEBUG: Arvore nao contem FILIPINHO
+DEBUG: Pesquisando relacionamento entre FILIPINHO e KARMITA...
+DEBUG: O FILIPINHO tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre ERICO e RENATA...
+DEBUG: O ERICO tem os seguintes relacionamentos: {'SOCORRO': {'n': 8}, 'SALMA': {'n': 8}}
+DEBUG: Arvore nao contem GIANE
+DEBUG: Pesquisando relacionamento entre GIANE e SILVERIO...
+DEBUG: O GIANE tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre AMORA e MALU...
+DEBUG: O AMORA tem os seguintes relacionamentos: {'BENTO': {'n': 28}, 'BEN': {'n': 4}}
+DEBUG: Arvore nao contem CAMILINHA
+DEBUG: Pesquisando relacionamento entre CAMILINHA e RONALDO...
+DEBUG: O CAMILINHA tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem SALMA
+DEBUG: Pesquisando relacionamento entre SALMA e SOCORRO...
+DEBUG: O SALMA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre CHARLENE e DAMARIS...
+DEBUG: O CHARLENE tem os seguintes relacionamentos: {'LUCINDO': {'n': 14}, 'FILINHO': {'n': 4}, 'FILIPINHO': {'n': 6}}
+INFO: Relations:
+Counter({(u'AMORA', u'BENTO'): 28, (u'BARBARA', u'KARMITA'): 18, (u'CARLITO', u'KARMITA'): 18, (u'ERICO', u'RENATA'): 16, (u'ODILA', u'RENATA'): 14, (u'CHARLENE', u'LUCINDO'): 14, (u'BARBARA', u'NATAN'): 14, (u'MAURICIO', u'VERONICA'): 14, (u'LARA', u'TITO'): 14, (u'BARRABAS', u'DAMARIS'): 12, (u'SHEILA', u'TITO'): 12, (u'LUZ', u'XANDE'): 12, (u'BARBARA', u'TABATA'): 10, (u'SHEILA', u'VINNY'): 10, (u'LUZ', u'MALU'): 10, (u'BARBARA', u'CARLITO'): 10, (u'FILIPINHO', u'KARMITA'): 10, (u'ERICO', u'SOCORRO'): 8, (u'DOUGLAS', u'GIANE'): 8, (u'FABINHO', u'MEL'): 8, (u'ERICO', u'SALMA'): 8, (u'BARRABAS', u'VITINHO'): 8, (u'CAMILINHA', u'RONALDO'): 8, (u'DAMARIS', u'KARMITA'): 6, (u'DAMARIS', u'LUCINDO'): 6, (u'CHARLENE', u'FILIPINHO'): 6, (u'NESTOR', u'ODILA'): 6, (u'GIANE', u'SILVERIO'): 6, (u'SALMA', u'SOCORRO'): 6, (u'CHARLENE', u'DAMARIS'): 6, (u'AMORA', u'BEN'): 4, (u'CHARLENE', u'FILINHO'): 4, (u'JUNTOS', u'KARMITA'): 4, (u'BENTO', u'GIANE'): 4, (u'BARRABAS', u'LUCINDO'): 4, (u'CARLITO', u'FILIPINHO'): 4, (u'BENTO', u'Bruno'): 4, (u'KEVIN', u'XANDE'): 4, (u'AMORA', u'MALU'): 3, (u'BENTO', u'VERONICA'): 2, (u'BARRABAS', u'TABATA'): 2, (u'DAMARIS', u'LILI'): 2, (u'BARBARA', u'PEIXINHO'): 2, (u'BARBARA', u'DAMARIS'): 2, (u'GLORIA', u'ROSEME'): 2, (u'GLORIA', u'PERACIO'): 2, (u'BARRABAS', u'CHARLENE'): 2, (u'DOUGLAS', u'SILVERIO'): 2, (u'JONAS', u'SOCORRO'): 2, (u'FILIPHO', u'TABATA'): 2, (u'DAMARIS', u'TABATA'): 2, (u'ERICO', u'JONAS'): 2, (u'AMORA', u'AMORA'): 2, (u'AMORA', u'DOUGLAS'): 2, (u'AMORA', u'LUZ'): 2, (u'FILIPINHO', u'LILI'): 2, (u'FILIPINHO', u'MEL'): 2, (u'ERICO', u'GIANE'): 2, (u'NICE', u'SHEILA'): 2, (u'LARA', u'VINNY'): 2, (u'ROSEME', u'XANDE'): 2, (u'CRLENE', u'FILIPINHO'): 2, (u'NATAN', u'RENATA'): 2, (u'CRLENE', u'LUCINDO'): 2, (u'CAMILINHA', u'NATAN'): 2, (u'LILI', u'LUCINDO'): 2, (u'ELISEU', u'PERACIO'): 2, (u'BARRABAS', u'NATAN'): 2, (u'BENTO', u'MALU'): 2, (u'ERICO', u'TITO'): 2, (u'BARRABAS', u'TINA'): 2, (u'NESTOR', u'SALMA'): 2, (u'BARBARA', u'SUELI'): 2, (u'KARMITA', u'LUCINDO'): 2, (u'FABINHO', u'PEIXINHO'): 2, (u'BARBARA', u'ELISEU'): 2, (u'NICE', u'VINNY'): 2, (u'DAMARIS', u'MEL'): 2, (u'ERICO', u'MAURICIO'): 2, (u'TINA', u'XANDE'): 2, (u'AMORA', u'SUELI'): 2, (u'CHARLENE', u'MEL'): 2, (u'FILIPINHO', u'TABATA'): 2, (u'CARLITO', u'TABATA'): 2, (u'CHARLENE', u'LILI'): 2, (u'CAMILINHA', u'MEL'): 2, (u'DAMARIS', u'FABINHO'): 2, (u'CARLITO', u'DAMARIS'): 2, (u'DAMARIS', u'VINNY'): 2, (u'FILIPHO', u'LUCINDO'): 2})
+INFO: Arvore:
+{'edges': {'AMORA': {'BEN': {'n': 4},
+                     'BENTO': {'n': 28},
+                     'MALU': {'n': 3}},
+           'BARBARA': {'CARLITO': {'n': 10},
+                       'KARMITA': {'n': 18},
+                       'NATAN': {'n': 14},
+                       'TABATA': {'n': 10}},
+           'BARRABAS': {'DAMARIS': {'n': 12},
+                        'LUCINDO': {'n': 4},
+                        'VITINHO': {'n': 8}},
+           'BENTO': {'BRUNO': {'n': 4},
+                     'GIANE': {'n': 4}},
+           'CAMILINHA': {'RONALDO': {'n': 8}},
+           'CARLITO': {'FILIPINHO': {'n': 4},
+                       'KARMITA': {'n': 18}},
+           'CHARLENE': {'DAMARIS': {'n': 6},
+                        'FILINHO': {'n': 4},
+                        'FILIPINHO': {'n': 6},
+                        'LUCINDO': {'n': 14}},
+           'DAMARIS': {'KARMITA': {'n': 6},
+                       'LUCINDO': {'n': 6}},
+           'DOUGLAS': {'GIANE': {'n': 8}},
+           'ERICO': {'RENATA': {'n': 16},
+                     'SALMA': {'n': 8},
+                     'SOCORRO': {'n': 8}},
+           'FABINHO': {'MEL': {'n': 8}},
+           'FILIPINHO': {'KARMITA': {'n': 10}},
+           'GIANE': {'SILVERIO': {'n': 6}},
+           'JUNTOS': {'KARMITA': {'n': 4}},
+           'KEVIN': {'XANDE': {'n': 4}},
+           'LARA': {'TITO': {'n': 14}},
+           'LUZ': {'MALU': {'n': 10},
+                   'XANDE': {'n': 12}},
+           'MAURICIO': {'VERONICA': {'n': 14}},
+           'NESTOR': {'ODILA': {'n': 6}},
+           'ODILA': {'RENATA': {'n': 14}},
+           'SALMA': {'SOCORRO': {'n': 6}},
+           'SHEILA': {'TITO': {'n': 12},
+                      'VINNY': {'n': 10}}},
+ 'nodes': {'AMORA': {},
+           'BARBARA': {},
+           'BARRABAS': {},
+           'BEN': {},
+           'BENTO': {},
+           'BRUNO': {},
+           'CAMILINHA': {},
+           'CARLITO': {},
+           'CHARLENE': {},
+           'CRLENE': {},
+           'DAMARIS': {},
+           'DOUGLAS': {},
+           'ELISEU': {},
+           'ERICO': {},
+           'FABINHO': {},
+           'FILINHO': {},
+           'FILIPHO': {},
+           'FILIPINHO': {},
+           'GIANE': {},
+           'GLORIA': {},
+           'JONAS': {},
+           'JUNTOS': {},
+           'KARMITA': {},
+           'KEVIN': {},
+           'LARA': {},
+           'LILI': {},
+           'LUCINDO': {},
+           'LUZ': {},
+           'MALU': {},
+           'MAURICIO': {},
+           'MEL': {},
+           'NATAN': {},
+           'NESTOR': {},
+           'NICE': {},
+           'ODILA': {},
+           'PEIXINHO': {},
+           'PERACIO': {},
+           'RENATA': {},
+           'RONALDO': {},
+           'ROSEME': {},
+           'SALMA': {},
+           'SHEILA': {},
+           'SILVERIO': {},
+           'SOCORRO': {},
+           'SUELI': {},
+           'TABATA': {},
+           'TINA': {},
+           'TITO': {},
+           'VERONICA': {},
+           'VINNY': {},
+           'VITINHO': {},
+           'XANDE': {}}}

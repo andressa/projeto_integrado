@@ -1,0 +1,69 @@
+WARNING: 
+                CC: FAZ OSEGUINTE: AVISA A SARGENTONA..
+                Parsed: {'action': '', 'text': u'FAZ OSEGUINTE: AVISA A SARGENTONA..', 'speaker': '', 'timestamp': ''}
+WARNING: 
+                CC: UMA MULHER VEMCOM UMA PROPOSTA ASSIM:EU SO QUERO USAR O SEU CORPO.
+                Parsed: {'action': '', 'text': u'UMA MULHER VEMCOM UMA PROPOSTA ASSIM:EU SO QUERO USAR O SEU CORPO.', 'speaker': '', 'timestamp': ''}
+DEBUG: Recuperando ultima arvore
+DEBUG: SELECT "cc_mining_analysis"."id", "cc_mining_analysis"."tvshow_id" FROM "cc_mining_analysis" INNER JOIN "cc_mining_tvshow" ON ("cc_mining_analysis"."tvshow_id" = "cc_mining_tvshow"."id") WHERE ("cc_mining_tvshow"."pid_id" = 3  AND "cc_mining_analysis"."id" < 1 )
+DEBUG: Nao existem outras analises
+DEBUG: JSON inicial:
+{'nodes': {}, 'edges': {}}
+DEBUG: Arvore nao contem CASSIO
+DEBUG: Pesquisando relacionamento entre CASSIO e ESTER...
+DEBUG: O CASSIO tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem ESTER
+DEBUG: Pesquisando relacionamento entre ESTER e LINDAURA...
+DEBUG: O ESTER tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem AMADEU
+DEBUG: Pesquisando relacionamento entre AMADEU e ISABEL...
+DEBUG: O AMADEU tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem LINDAURA
+DEBUG: Pesquisando relacionamento entre LINDAURA e SAMUEL...
+DEBUG: O LINDAURA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre AMADEU e CIRO...
+DEBUG: O AMADEU tem os seguintes relacionamentos: {'ISABEL': {'n': 20}}
+DEBUG: Arvore nao contem CIRO
+DEBUG: Pesquisando relacionamento entre CIRO e RODRIGO...
+DEBUG: O CIRO tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem ISABEL
+DEBUG: Pesquisando relacionamento entre ISABEL e RODRIGO...
+DEBUG: O ISABEL tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre CIRO e JUNTOS...
+DEBUG: O CIRO tem os seguintes relacionamentos: {'RODRIGO': {'n': 4}}
+DEBUG: Arvore nao contem CASSIANO
+DEBUG: Pesquisando relacionamento entre CASSIANO e ESTER...
+DEBUG: O CASSIANO tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre ESTER e SAMUEL...
+DEBUG: O ESTER tem os seguintes relacionamentos: {'LINDAURA': {'n': 14}}
+DEBUG: Pesquisando relacionamento entre CIRO e ISABEL...
+DEBUG: O CIRO tem os seguintes relacionamentos: {'RODRIGO': {'n': 4}, 'JUNTOS': {'n': 6}}
+DEBUG: Pesquisando relacionamento entre CASSIANO e DUQUE...
+DEBUG: O CASSIANO tem os seguintes relacionamentos: {'ESTER': {'n': 6}}
+INFO: Relations:
+Counter({(u'CASSIANO', u'DUQUE'): 59, (u'AMADEU', u'ISABEL'): 20, (u'ISABEL', u'RODRIGO'): 16, (u'ESTER', u'LINDAURA'): 14, (u'LINDAURA', u'SAMUEL'): 10, (u'ESTER', u'SAMUEL'): 10, (u'CIRO', u'ISABEL'): 8, (u'AMADEU', u'CIRO'): 6, (u'CIRO', u'JUNTOS'): 6, (u'CASSIANO', u'ESTER'): 6, (u'CASSIO', u'ESTER'): 4, (u'CIRO', u'RODRIGO'): 4, (u'ALBERTO', u'EST'): 2, (u'CASSIANO', u'EST'): 2, (u'AMADEU', u'JUNTOS'): 2, (u'ESTER', u'ISABEL'): 2, (u'DUQUE', u'ISABEL'): 2})
+INFO: Arvore:
+{'edges': {'AMADEU': {'CIRO': {'n': 6},
+                      'ISABEL': {'n': 20}},
+           'CASSIANO': {'DUQUE': {'n': 59},
+                        'ESTER': {'n': 6}},
+           'CASSIO': {'ESTER': {'n': 4}},
+           'CIRO': {'ISABEL': {'n': 8},
+                    'JUNTOS': {'n': 6},
+                    'RODRIGO': {'n': 4}},
+           'ESTER': {'LINDAURA': {'n': 14},
+                     'SAMUEL': {'n': 10}},
+           'ISABEL': {'RODRIGO': {'n': 16}},
+           'LINDAURA': {'SAMUEL': {'n': 10}}},
+ 'nodes': {'AMADEU': {},
+           'CASSIANO': {},
+           'CASSIO': {},
+           'CIRO': {},
+           'DUQUE': {},
+           'EST': {},
+           'ESTER': {},
+           'ISABEL': {},
+           'JUNTOS': {},
+           'LINDAURA': {},
+           'RODRIGO': {},
+           'SAMUEL': {}}}
