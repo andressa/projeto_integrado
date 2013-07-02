@@ -166,6 +166,68 @@
             })
             .text(function(d) { return d.text; });
         }
+        function init_bomDiaBrasil(words) {
+            d3.layout.cloud().size([MAP_WIDTH, MAP_HEIGHT])
+                .words(words.map(function(d) {
+                    return {text: d, size: 23 };
+                }))
+                .rotate(function() { return ~~(Math.random() * 2) * 90; })
+                .font("Impact")
+                .fontSize(function(d) { return d.size; })
+                .on("end", draw_bomDiaBrasil)
+                .start();
+
+        }
+        function draw_bomDiaBrasil(words) {
+            var fill = d3.scale.category20();
+            d3.select("#bomDiaBrasil-wordcloud").append("svg")
+            .attr("width", MAP_WIDTH)
+            .attr("height", MAP_HEIGHT)
+            .append("g")
+            .attr("transform", "translate(480,300)scale(1.038062334060669,1.038062334060669)")
+            .selectAll("text")
+            .data(words)
+            .enter().append("text")
+            .style("font-size", function(d) { return d.size + "px"; })
+            .style("font-family", "Impact")
+            .style("fill", function(d, i) { return fill(i); })
+            .attr("text-anchor", "middle")
+            .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
+            .text(function(d) { return d.text; });
+        }
+        function init_jornalHoje(words) {
+            d3.layout.cloud().size([MAP_WIDTH, MAP_HEIGHT])
+                .words(words.map(function(d) {
+                    return {text: d, size: 23 };
+                }))
+                .rotate(function() { return ~~(Math.random() * 2) * 90; })
+                .font("Impact")
+                .fontSize(function(d) { return d.size; })
+                .on("end", draw_jornalHoje)
+                .start();
+
+        }
+        function draw_jornalHoje(words) {
+            var fill = d3.scale.category20();
+            d3.select("#jornalHoje-wordcloud").append("svg")
+            .attr("width", MAP_WIDTH)
+            .attr("height", MAP_HEIGHT)
+            .append("g")
+            .attr("transform", "translate(480,300)scale(1.038062334060669,1.038062334060669)")
+            .selectAll("text")
+            .data(words)
+            .enter().append("text")
+            .style("font-size", function(d) { return d.size + "px"; })
+            .style("font-family", "Impact")
+            .style("fill", function(d, i) { return fill(i); })
+            .attr("text-anchor", "middle")
+            .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
+            .text(function(d) { return d.text; });
+        }
         function remove_diacritics (str) {
             if(!changes) {
                 changes = defaultDiacriticsRemovalMap;
@@ -195,8 +257,16 @@
                 async: false,
                 success: function(cc){
                     d3.select("#jornalismo-wordcloud").select("svg").remove();
-                    closed_captions = filter_stop_words(cc['JN']);
+                    closed_captions = filter_stop_words(parse_text(cc['JN']).join(" "));
                     init_jornalismo(closed_captions.split(' '));
+
+                    d3.select("#bomDiaBrasil-wordcloud").select("svg").remove();
+                    closed_captions = filter_stop_words(parse_text(cc["Bom Dia Brasil"]).join(" "));
+                    init_bomDiaBrasil(closed_captions.split(' '));
+
+                    d3.select("#jornalHoje-wordcloud").select("svg").remove();
+                    closed_captions = filter_stop_words(parse_text(cc["Jornal Hoje"]).join(" "));
+                    init_jornalHoje(closed_captions.split(' '));
                 }
             });
         }
@@ -304,8 +374,15 @@
             <p>Data: <input type="text" id="jornalismo-data" class="datepicker" /></p>
             <fieldset>
                 <legend> Jornal Nacional</legend>
-                <div id="jornalismo-wordcloud" class="wordcloud">
-                </div>
+                <div id="jornalismo-wordcloud" class="wordcloud"></div>
+            </fieldset>
+            <fieldset>
+                <legend> Jornal Hoje </legend>
+                <div id="jornalHoje-wordcloud" class="wordcloud"></div>
+            </fieldset>
+            <fieldset>
+                <legend> Bom Dia Brasil </legend>
+                <div id="bomDiaBrasil-wordcloud" class="wordcloud"></div>
             </fieldset>
         </div>
         <div id="tab-novelas">

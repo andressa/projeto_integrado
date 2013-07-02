@@ -18,7 +18,7 @@ def index(request):
 
 @csrf_protect
 def Jornalismo(request):
-    result = {"JN": ""}
+    result = {"JN": "", "Bom Dia Brasil": "", "Jornal Hoje": ""}
     since = datetime.datetime.strptime(request.POST['date'], '%d/%m/%Y')
     until = since + datetime.timedelta(days=1)
     closed_captions = CC.objects.filter(tvshow__pid__name='JN', tvshow__date__lte=until, tvshow__date__gte=since)
@@ -27,4 +27,18 @@ def Jornalismo(request):
             result["JN"] += cc.text.split(": ")[1]
         except IndexError:
             result["JN"] += cc.text
+
+    closed_captions = CC.objects.filter(tvshow__pid__name='Bom Dia Brasil')
+    for cc in closed_captions:
+        try:
+            result["Bom Dia Brasil"] += cc.text.split(": ")[1]
+        except IndexError:
+            result["Bom Dia Brasil"] += cc.text
+
+    closed_captions = CC.objects.filter(tvshow__pid__name='Jornal Hoje')
+    for cc in closed_captions:
+        try:
+            result["Jornal Hoje"] += cc.text.split(": ")[1]
+        except IndexError:
+            result["Jornal Hoje"] += cc.text
     return HttpResponse(json.dumps(result))
