@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        {% block "javascript"%}
+            <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+            <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        {% endblock "javascript"%}
+        {% block "style"%}
+            <link href='//fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+        {% endblock "style"%}
+    </head>
+    <body>
+        <div id='container' class='container'>
+        <header> <!-- HTML5 header tag -->
+            <a href='#' id='logo'><img src="{{STATIC_URL}}cc_mining/images/logo.png"/></a>
+        </header>
+        <section id="content">
+            {% block "content"%}
+            {% endblock "content"%}
+        </section>
+        </div>
+    </body>
+</html>
+
+
+

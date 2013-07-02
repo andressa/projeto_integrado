@@ -5,3 +5,5 @@
 siteconfig/db/*
 cc_mining/ClosedCapitionHandler/*
 cc_mining/ccAcquisition.py
+keep_ccAcquisition_running.sh
+closed_captions/*
