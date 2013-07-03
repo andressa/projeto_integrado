@@ -272,9 +272,7 @@ class NovelaAnalysis(object):
         f.close()
 
 def get_dates():
-    for f in glob.glob("%s/*-clean.txt" % config.BASE_ADDRESS):
-        path, filename = os.path.split(f)
-        yield filename.split('-clean.txt')[0]
+    return ['2013-06-18', '2013-06-19', '2013-06-20', '2013-06-21', '2013-06-22', '2013-06-24']
 
 def analysis_exists(novela_name, novela_date, novela_dir):
     logfile = get_novela_filename(novela_dir, novela_name, novela_date, 'log')

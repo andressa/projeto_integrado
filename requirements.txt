@@ -7,3 +7,4 @@ django-extensions
 django-pipeline
 django-debug-toolbar
 pyserial
+networkx
