@@ -1,0 +1,284 @@
+WARNING: 
+                CC: [BRUNOEU SEI.
+                Parsed: {'action': '', 'text': u'[BRUNOEU SEI.', 'speaker': '', 'timestamp': ''}
+WARNING: 
+                CC: RUNO] VAI,
+                Parsed: {'action': '', 'text': u'RUNO] VAI,', 'speaker': '', 'timestamp': ''}
+WARNING: 
+                CC: [LUTER OI,
+                Parsed: {'action': '', 'text': u'[LUTER OI,', 'speaker': '', 'timestamp': ''}
+WARNING: 
+                CC: ESAR] LUTERO!
+                Parsed: {'action': '', 'text': u'ESAR] LUTERO!', 'speaker': '', 'timestamp': ''}
+DEBUG: Recuperando ultima arvore
+DEBUG: SELECT "cc_mining_analysis"."id", "cc_mining_analysis"."tvshow_id" FROM "cc_mining_analysis" INNER JOIN "cc_mining_tvshow" ON ("cc_mining_analysis"."tvshow_id" = "cc_mining_tvshow"."id") WHERE ("cc_mining_tvshow"."pid_id" = 6  AND "cc_mining_analysis"."id" < 3 )
+DEBUG: Nao existem outras analises
+DEBUG: JSON inicial:
+{'nodes': {}, 'edges': {}}
+DEBUG: Arvore nao contem HOMEM
+DEBUG: Pesquisando relacionamento entre HOMEM e MARCIA...
+DEBUG: O HOMEM tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem BRUNO
+DEBUG: Pesquisando relacionamento entre BRUNO e PALOMA...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem NICOLE
+DEBUG: Pesquisando relacionamento entre NICOLE e THALES...
+DEBUG: O NICOLE tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem ATILIO
+DEBUG: Pesquisando relacionamento entre ATILIO e VALDIRENE...
+DEBUG: O ATILIO tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre BRUNO e GINA...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {'PALOMA': {'n': 42}}
+DEBUG: Arvore nao contem BERNARDA
+DEBUG: Pesquisando relacionamento entre BERNARDA e WAGNER...
+DEBUG: O BERNARDA tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem LUTERO
+DEBUG: Pesquisando relacionamento entre LUTERO e ORDALIA...
+DEBUG: O LUTERO tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem AMARILYS
+DEBUG: Pesquisando relacionamento entre AMARILYS e LUTERO...
+DEBUG: O AMARILYS tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem GINA
+DEBUG: Pesquisando relacionamento entre GINA e ORDALIA...
+DEBUG: O GINA tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem PATRICIA
+DEBUG: Pesquisando relacionamento entre PATRICIA e PORTEIRO...
+DEBUG: O PATRICIA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre LUTERO e PALOMA...
+DEBUG: O LUTERO tem os seguintes relacionamentos: {'ORDALIA': {'n': 4}}
+DEBUG: Pesquisando relacionamento entre BERNARDA e PILAR...
+DEBUG: O BERNARDA tem os seguintes relacionamentos: {'WAGNER': {'n': 4}}
+DEBUG: Arvore nao contem LEILA
+DEBUG: Pesquisando relacionamento entre LEILA e NEIDE...
+DEBUG: O LEILA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre ATILIO e MARCIA...
+DEBUG: O ATILIO tem os seguintes relacionamentos: {'VALDIRENE': {'n': 4}}
+DEBUG: Arvore nao contem DENIZARD
+DEBUG: Pesquisando relacionamento entre DENIZARD e RINALDO...
+DEBUG: O DENIZARD tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre AMARILYS e FELIX...
+DEBUG: O AMARILYS tem os seguintes relacionamentos: {'LUTERO': {'n': 4}}
+DEBUG: Arvore nao contem FELIX
+DEBUG: Pesquisando relacionamento entre FELIX e JACQUES...
+DEBUG: O FELIX tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem PILAR
+DEBUG: Pesquisando relacionamento entre PILAR e VINICIUS...
+DEBUG: O PILAR tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem JACQUES
+DEBUG: Pesquisando relacionamento entre JACQUES e LUTERO...
+DEBUG: O JACQUES tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre NICOLE e VINICIUS...
+DEBUG: O NICOLE tem os seguintes relacionamentos: {'THALES': {'n': 4}}
+DEBUG: Pesquisando relacionamento entre BRUNO e PAULINHA...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {'GINA': {'n': 6}, 'PALOMA': {'n': 42}}
+DEBUG: Pesquisando relacionamento entre AMARILYS e FEX...
+DEBUG: O AMARILYS tem os seguintes relacionamentos: {'FELIX': {'n': 36}, 'LUTERO': {'n': 4}}
+DEBUG: Arvore nao contem CER
+DEBUG: Pesquisando relacionamento entre CER e PILAR...
+DEBUG: O CER tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem NINHO
+DEBUG: Pesquisando relacionamento entre NINHO e PALOMA...
+DEBUG: O NINHO tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem ORDALIA
+DEBUG: Pesquisando relacionamento entre ORDALIA e PALOMA...
+DEBUG: O ORDALIA tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem ALINE
+DEBUG: Pesquisando relacionamento entre ALINE e CESAR...
+DEBUG: O ALINE tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre BERNARDA e LEILA...
+DEBUG: O BERNARDA tem os seguintes relacionamentos: {'PILAR': {'n': 14}, 'WAGNER': {'n': 4}}
+DEBUG: Arvore nao contem JOANA
+DEBUG: Pesquisando relacionamento entre JOANA e LUTERO...
+DEBUG: O JOANA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre AMARILYS e PALOMA...
+DEBUG: O AMARILYS tem os seguintes relacionamentos: {'FELIX': {'n': 36}, 'FEX': {'n': 4}, 'LUTERO': {'n': 4}}
+DEBUG: Pesquisando relacionamento entre LEILA e THALES...
+DEBUG: O LEILA tem os seguintes relacionamentos: {'NEIDE': {'n': 20}}
+DEBUG: Arvore nao contem CESAR
+DEBUG: Pesquisando relacionamento entre CESAR e PILAR...
+DEBUG: O CESAR tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem RINALDO
+DEBUG: Pesquisando relacionamento entre RINALDO e VALDIRENE...
+DEBUG: O RINALDO tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre AMARILYS e BRUNO...
+DEBUG: O AMARILYS tem os seguintes relacionamentos: {'FELIX': {'n': 36}, 'PALOMA': {'n': 85}, 'FEX': {'n': 4}, 'LUTERO': {'n': 4}}
+DEBUG: Pesquisando relacionamento entre AMARILYS e ORDALIA...
+DEBUG: O AMARILYS tem os seguintes relacionamentos: {'BRUNO': {'n': 16}, 'FELIX': {'n': 36}, 'PALOMA': {'n': 85}, 'FEX': {'n': 4}, 'LUTERO': {'n': 4}}
+DEBUG: Pesquisando relacionamento entre LEILA e PIL...
+DEBUG: O LEILA tem os seguintes relacionamentos: {'NEIDE': {'n': 20}, 'THALES': {'n': 50}}
+DEBUG: Pesquisando relacionamento entre FELIX e SIMONE...
+DEBUG: O FELIX tem os seguintes relacionamentos: {'JACQUES': {'n': 36}}
+DEBUG: Pesquisando relacionamento entre BRUNO e PAULA...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {'GINA': {'n': 6}, 'PAULINHA': {'n': 8}, 'PALOMA': {'n': 42}}
+DEBUG: Arvore nao contem MICHEL
+DEBUG: Pesquisando relacionamento entre MICHEL e PATRICIA...
+DEBUG: O MICHEL tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre ORDALIA e PAULINHA...
+DEBUG: O ORDALIA tem os seguintes relacionamentos: {'PALOMA': {'n': 16}}
+DEBUG: Pesquisando relacionamento entre PILAR e SIRLANGE...
+DEBUG: O PILAR tem os seguintes relacionamentos: {'VINICIUS': {'n': 8}}
+DEBUG: Arvore nao contem ENTREGADOR
+DEBUG: Pesquisando relacionamento entre ENTREGADOR e PATRICIA...
+DEBUG: O ENTREGADOR tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem CARLITO
+DEBUG: Pesquisando relacionamento entre CARLITO e VALDIRENE...
+DEBUG: O CARLITO tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre PILAR e WAGNER...
+DEBUG: O PILAR tem os seguintes relacionamentos: {'VINICIUS': {'n': 8}, 'SIRLANGE': {'n': 12}}
+DEBUG: Arvore nao contem PALOMA
+DEBUG: Pesquisando relacionamento entre PALOMA e PAULA...
+DEBUG: O PALOMA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre BRUNO e ORDALIA...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {'GINA': {'n': 6}, 'PAULA': {'n': 6}, 'PAULINHA': {'n': 8}, 'PALOMA': {'n': 42}}
+DEBUG: Arvore nao contem ANE
+DEBUG: Pesquisando relacionamento entre ANE e CESAR...
+DEBUG: O ANE tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre NICOLE e PILAR...
+DEBUG: O NICOLE tem os seguintes relacionamentos: {'VINICIUS': {'n': 12}, 'THALES': {'n': 4}}
+DEBUG: Arvore nao contem MARCIA
+DEBUG: Pesquisando relacionamento entre MARCIA e VALDIRENE...
+DEBUG: O MARCIA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre LEILA e PILAR...
+DEBUG: O LEILA tem os seguintes relacionamentos: {'NEIDE': {'n': 20}, 'THALES': {'n': 50}, 'PIL': {'n': 4}}
+DEBUG: Clusterizacao:
+[['GINA', 'FELIX', 'JOANA', 'PAULINHA', 'LUTERO', 'SIMONE', 'PAULA', 'BRUNO', 'PALOMA', 'ORDALIA', 'AMARILYS', 'NINHO', 'FEX', 'JACQUES'], ['ANE', 'PILAR', 'PIL', 'ALINE', 'THALES', 'BERNARDA', 'WAGNER', 'VINICIUS', 'LEILA', 'CER', 'SIRLANGE', 'NEIDE', 'CESAR', 'NICOLE'], ['MARCIA', 'RINALDO', 'VALDIRENE', 'CARLITO', 'DENIZARD', 'ATILIO', 'HOMEM'], ['MICHEL', 'PATRICIA', 'PORTEIRO', 'ENTREGADOR'], ['LUTO'], ['LDA'], ['ROGERIO'], ['LEI'], ['BRU']]
+DEBUG: Node FEX go to group #0
+DEBUG: Node PILAR go to group #1
+DEBUG: Node WAGNER go to group #1
+DEBUG: Node HOMEM go to group #2
+DEBUG: Node ENTREGADOR go to group #3
+DEBUG: Node RINALDO go to group #2
+DEBUG: Node SIMONE go to group #0
+DEBUG: Node LEILA go to group #1
+DEBUG: Node BRUNO go to group #0
+DEBUG: Node NEIDE go to group #1
+DEBUG: Node LUTO go to group #4
+DEBUG: Node LDA go to group #5
+DEBUG: Node PIL go to group #1
+DEBUG: Node ROGERIO go to group #6
+DEBUG: Node MARCIA go to group #2
+DEBUG: Node THALES go to group #1
+DEBUG: Node FELIX go to group #0
+DEBUG: Node PATRICIA go to group #3
+DEBUG: Node VINICIUS go to group #1
+DEBUG: Node NICOLE go to group #1
+DEBUG: Node PALOMA go to group #0
+DEBUG: Node DENIZARD go to group #2
+DEBUG: Node CESAR go to group #1
+DEBUG: Node NINHO go to group #0
+DEBUG: Node CER go to group #1
+DEBUG: Node GINA go to group #0
+DEBUG: Node BERNARDA go to group #1
+DEBUG: Node JOANA go to group #0
+DEBUG: Node PAULINHA go to group #0
+DEBUG: Node ATILIO go to group #2
+DEBUG: Node ORDALIA go to group #0
+DEBUG: Node PAULA go to group #0
+DEBUG: Node JACQUES go to group #0
+DEBUG: Node ANE go to group #1
+DEBUG: Node ALINE go to group #1
+DEBUG: Node LEI go to group #7
+DEBUG: Node BRU go to group #8
+DEBUG: Node SIRLANGE go to group #1
+DEBUG: Node LUTERO go to group #0
+DEBUG: Node VALDIRENE go to group #2
+DEBUG: Node CARLITO go to group #2
+DEBUG: Node PORTEIRO go to group #3
+DEBUG: Node AMARILYS go to group #0
+DEBUG: Node MICHEL go to group #3
+INFO: Relations:
+Counter({(u'AMARILYS', u'PALOMA'): 85, (u'MARCIA', u'VALDIRENE'): 60, (u'LEILA', u'THALES'): 50, (u'BRUNO', u'PALOMA'): 42, (u'AMARILYS', u'FELIX'): 36, (u'FELIX', u'JACQUES'): 36, (u'HOMEM', u'MARCIA'): 34, (u'NINHO', u'PALOMA'): 34, (u'LEILA', u'PILAR'): 34, (u'ALINE', u'CESAR'): 28, (u'LUTERO', u'PALOMA'): 26, (u'CARLITO', u'VALDIRENE'): 24, (u'LEILA', u'NEIDE'): 20, (u'ATILIO', u'MARCIA'): 18, (u'PALOMA', u'PAULA'): 18, (u'ORDALIA', u'PALOMA'): 16, (u'AMARILYS', u'BRUNO'): 16, (u'BERNARDA', u'PILAR'): 14, (u'DENIZARD', u'RINALDO'): 14, (u'NICOLE', u'VINICIUS'): 12, (u'PILAR', u'SIRLANGE'): 12, (u'PATRICIA', u'PORTEIRO'): 10, (u'JACQUES', u'LUTERO'): 10, (u'AMARILYS', u'ORDALIA'): 10, (u'MICHEL', u'PATRICIA'): 10, (u'NICOLE', u'PILAR'): 10, (u'GINA', u'ORDALIA'): 8, (u'PILAR', u'VINICIUS'): 8, (u'BRUNO', u'PAULINHA'): 8, (u'BERNARDA', u'LEILA'): 8, (u'CESAR', u'PILAR'): 8, (u'FELIX', u'SIMONE'): 8, (u'ENTREGADOR', u'PATRICIA'): 8, (u'BRUNO', u'GINA'): 6, (u'RINALDO', u'VALDIRENE'): 6, (u'FELIX', u'FELIX'): 6, (u'BRUNO', u'PAULA'): 6, (u'NICOLE', u'THALES'): 4, (u'ATILIO', u'VALDIRENE'): 4, (u'BERNARDA', u'WAGNER'): 4, (u'LUTERO', u'ORDALIA'): 4, (u'AMARILYS', u'LUTERO'): 4, (u'AMARILYS', u'FEX'): 4, (u'CER', u'PILAR'): 4, (u'JOANA', u'LUTERO'): 4, (u'LEILA', u'PIL'): 4, (u'ORDALIA', u'PAULINHA'): 4, (u'PILAR', u'WAGNER'): 4, (u'BRUNO', u'ORDALIA'): 4, (u'ANE', u'CESAR'): 4, (u'LUTERO', u'LUTERO'): 4, (u'BERNARDA', u'NICOLE'): 2, (u'LEI', u'NEIDE'): 2, (u'DENIZARD', u'MARCIA'): 2, (u'AMARILYS', u'LUTO'): 2, (u'LDA', u'LEI'): 2, (u'LDA', u'LEILA'): 2, (u'FELIX', u'LUTERO'): 2, (u'BRU', u'NINHO'): 2, (u'MARCIA', u'MARCIA'): 2, (u'LEILA', u'PALOMA'): 2, (u'GINA', u'PALOMA'): 2, (u'ROGERIO', u'THALES'): 2, (u'PILAR', u'THALES'): 2, (u'FELIX', u'PORTEIRO'): 2, (u'CESAR', u'MICHEL'): 2, (u'JACQUES', u'JACQUES'): 2, (u'AMARILYS', u'SIRLANGE'): 2, (u'BERNARDA', u'THALES'): 2, (u'NICOLE', u'NINHO'): 2, (u'HOMEM', u'VALDIRENE'): 2, (u'BRUNO', u'PILAR'): 2, (u'PALOMA', u'PALOMA'): 2, (u'LUTO', u'PALOMA'): 2, (u'BRUNO', u'JACQUES'): 2, (u'LEILA', u'LEILA'): 2, (u'BRUNO', u'NEIDE'): 2, (u'AMARILYS', u'GINA'): 2, (u'CESAR', u'LUTERO'): 2, (u'LUTERO', u'PILAR'): 2, (u'GINA', u'LUTERO'): 2, (u'MARCIA', u'PALOMA'): 2, (u'AMARILYS', u'ATILIO'): 2, (u'NICOLE', u'ROGERIO'): 2, (u'BRU', u'ORDALIA'): 2, (u'BERNARDA', u'SIRLANGE'): 2})
+INFO: Arvore:
+{'edges': {'ALINE': {'CESAR': {'n': 28}},
+           'AMARILYS': {'BRUNO': {'n': 16},
+                        'FELIX': {'n': 36},
+                        'FEX': {'n': 4},
+                        'LUTERO': {'n': 4},
+                        'ORDALIA': {'n': 10},
+                        'PALOMA': {'n': 85}},
+           'ANE': {'CESAR': {'n': 4}},
+           'ATILIO': {'MARCIA': {'n': 18},
+                      'VALDIRENE': {'n': 4}},
+           'BERNARDA': {'LEILA': {'n': 8},
+                        'PILAR': {'n': 14},
+                        'WAGNER': {'n': 4}},
+           'BRUNO': {'GINA': {'n': 6},
+                     'ORDALIA': {'n': 4},
+                     'PALOMA': {'n': 42},
+                     'PAULA': {'n': 6},
+                     'PAULINHA': {'n': 8}},
+           'CARLITO': {'VALDIRENE': {'n': 24}},
+           'CER': {'PILAR': {'n': 4}},
+           'CESAR': {'PILAR': {'n': 8}},
+           'DENIZARD': {'RINALDO': {'n': 14}},
+           'ENTREGADOR': {'PATRICIA': {'n': 8}},
+           'FELIX': {'JACQUES': {'n': 36},
+                     'SIMONE': {'n': 8}},
+           'GINA': {'ORDALIA': {'n': 8}},
+           'HOMEM': {'MARCIA': {'n': 34}},
+           'JACQUES': {'LUTERO': {'n': 10}},
+           'JOANA': {'LUTERO': {'n': 4}},
+           'LEILA': {'NEIDE': {'n': 20},
+                     'PIL': {'n': 4},
+                     'PILAR': {'n': 34},
+                     'THALES': {'n': 50}},
+           'LUTERO': {'ORDALIA': {'n': 4},
+                      'PALOMA': {'n': 26}},
+           'MARCIA': {'VALDIRENE': {'n': 60}},
+           'MICHEL': {'PATRICIA': {'n': 10}},
+           'NICOLE': {'PILAR': {'n': 10},
+                      'THALES': {'n': 4},
+                      'VINICIUS': {'n': 12}},
+           'NINHO': {'PALOMA': {'n': 34}},
+           'ORDALIA': {'PALOMA': {'n': 16},
+                       'PAULINHA': {'n': 4}},
+           'PALOMA': {'PAULA': {'n': 18}},
+           'PATRICIA': {'PORTEIRO': {'n': 10}},
+           'PILAR': {'SIRLANGE': {'n': 12},
+                     'VINICIUS': {'n': 8},
+                     'WAGNER': {'n': 4}},
+           'RINALDO': {'VALDIRENE': {'n': 6}}},
+ 'nodes': {'ALINE': {},
+           'AMARILYS': {},
+           'ANE': {},
+           'ATILIO': {},
+           'BERNARDA': {},
+           'BRU': {},
+           'BRUNO': {},
+           'CARLITO': {},
+           'CER': {},
+           'CESAR': {},
+           'DENIZARD': {},
+           'ENTREGADOR': {},
+           'FELIX': {},
+           'FEX': {},
+           'GINA': {},
+           'HOMEM': {},
+           'JACQUES': {},
+           'JOANA': {},
+           'LDA': {},
+           'LEI': {},
+           'LEILA': {},
+           'LUTERO': {},
+           'LUTO': {},
+           'MARCIA': {},
+           'MICHEL': {},
+           'NEIDE': {},
+           'NICOLE': {},
+           'NINHO': {},
+           'ORDALIA': {},
+           'PALOMA': {},
+           'PATRICIA': {},
+           'PAULA': {},
+           'PAULINHA': {},
+           'PIL': {},
+           'PILAR': {},
+           'PORTEIRO': {},
+           'RINALDO': {},
+           'ROGERIO': {},
+           'SIMONE': {},
+           'SIRLANGE': {},
+           'THALES': {},
+           'VALDIRENE': {},
+           'VINICIUS': {},
+           'WAGNER': {}}}

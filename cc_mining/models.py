@@ -18,7 +18,7 @@ class CC(models.Model):
     text = models.CharField(max_length=300)
 
 class Programa(models.Model):
-    name = models.CharField(max_length=80)
+    name = models.CharField(max_length=80, unique=True)
 
 class TVShow(models.Model):
     pid = models.ForeignKey('Programa')
@@ -34,13 +34,14 @@ class Analysis(models.Model):
 
 
 def load_json(instance, **kwargs):
+    if not instance.json: return
     instance.json = json.loads(instance.json)
 
 class Tree(models.Model):
     aid = models.ForeignKey('Analysis')
     json = models.TextField()
 
-    def save(self):
+    def save(self, *args, **kwargs):
         self.json = json.dumps(self.json)
         super(Tree, self).save()
 

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Analysis</title>
+        <link rel="stylesheet" href="{{ STATIC_URL }}cc_mining/css/atlas.css" type="text/css" charset="utf-8">
+        <style type='text/css'>
+        </style>
+    </head>
+    <body>
+        <canvas id="viewport" width="1600" height="760"></canvas>
+        <script>
+              localStorage.setItem('data', {{ json|safe }});
+        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="{{ STATIC_URL }}cc_mining/js/arbor.js"></script>
+        <script src="{{ STATIC_URL }}cc_mining/js/graphics.js"></script>
+        <script src="{{ STATIC_URL }}cc_mining/js/atlas.js"></script>
+    </body>
+</html>

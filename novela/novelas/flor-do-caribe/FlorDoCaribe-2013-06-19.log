@@ -1,0 +1,210 @@
+WARNING: 
+                CC: AMARALINA: DESILUSAO AMOROSA.
+                Parsed: {'action': '', 'text': u'AMARALINA: DESILUSAO AMOROSA.', 'speaker': '', 'timestamp': ''}
+WARNING: 
+                CC: LAURINHA: AI VOU EU!
+                Parsed: {'action': '', 'text': u'LAURINHA: AI VOU EU!', 'speaker': '', 'timestamp': ''}
+WARNING: 
+                CC: [OLIVIA]OM A TENENTE ISABEL?
+                Parsed: {'action': '', 'text': u'[OLIVIA]OM A TENENTE ISABEL?', 'speaker': '', 'timestamp': ''}
+WARNING: 
+                CC: VOCE CHEGOU PRA ELA E FALOU:PO,
+                Parsed: {'action': '', 'text': u'VOCE CHEGOU PRA ELA E FALOU:PO,', 'speaker': '', 'timestamp': ''}
+WARNING: 
+                CC: E ELA: AI,
+                Parsed: {'action': '', 'text': u'E ELA: AI,', 'speaker': '', 'timestamp': ''}
+WARNING: 
+                CC: ASSIANO] NAO ADIANTAEU PEDIR,
+                Parsed: {'action': '', 'text': u'ASSIANO] NAO ADIANTAEU PEDIR,', 'speaker': '', 'timestamp': ''}
+DEBUG: Recuperando ultima arvore
+DEBUG: SELECT "cc_mining_analysis"."id", "cc_mining_analysis"."tvshow_id" FROM "cc_mining_analysis" INNER JOIN "cc_mining_tvshow" ON ("cc_mining_analysis"."tvshow_id" = "cc_mining_tvshow"."id") WHERE ("cc_mining_tvshow"."pid_id" = 3  AND "cc_mining_analysis"."id" < 4 )
+DEBUG: JSON inicial:
+{u'nodes': {u'EST': {}, u'CASSIANO': {}, u'SAMUEL': {}, u'AMADEU': {}, u'ISABEL': {}, u'DUQUE': {}, u'CASSIO': {}, u'JUNTOS': {}, u'ESTER': {}, u'RODRIGO': {}, u'LINDAURA': {}, u'CIRO': {}}, u'edges': {u'CASSIANO': {u'ESTER': {u'n': 6}, u'DUQUE': {u'n': 59}}, u'AMADEU': {u'ISABEL': {u'n': 20}, u'CIRO': {u'n': 6}}, u'ISABEL': {u'RODRIGO': {u'n': 16}}, u'CASSIO': {u'ESTER': {u'n': 4}}, u'ESTER': {u'LINDAURA': {u'n': 14}, u'SAMUEL': {u'n': 10}}, u'LINDAURA': {u'SAMUEL': {u'n': 10}}, u'CIRO': {u'ISABEL': {u'n': 8}, u'RODRIGO': {u'n': 4}, u'JUNTOS': {u'n': 6}}}}
+DEBUG: Arvore nao contem LIPE
+DEBUG: Pesquisando relacionamento entre LIPE e MATEUS...
+DEBUG: O LIPE tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem BIBIANA
+DEBUG: Pesquisando relacionamento entre BIBIANA e MARIZE...
+DEBUG: O BIBIANA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre LINDAURA e ZULEIKA...
+DEBUG: O LINDAURA tem os seguintes relacionamentos: {u'SAMUEL': {u'n': 10}}
+DEBUG: Arvore nao contem JULIANO
+DEBUG: Pesquisando relacionamento entre JULIANO e QUIRINO...
+DEBUG: O JULIANO tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem OLIVIA
+DEBUG: Pesquisando relacionamento entre OLIVIA e TAIS...
+DEBUG: O OLIVIA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre CASSIANO e SAMUCA...
+DEBUG: O CASSIANO tem os seguintes relacionamentos: {u'ESTER': {u'n': 6}, u'DUQUE': {u'n': 59}}
+DEBUG: Arvore nao contem HELIO
+DEBUG: Pesquisando relacionamento entre HELIO e YVETE...
+DEBUG: O HELIO tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem GUIOMAR
+DEBUG: Pesquisando relacionamento entre GUIOMAR e SAMUCA...
+DEBUG: O GUIOMAR tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem CHICO
+DEBUG: Pesquisando relacionamento entre CHICO e OLIVIA...
+DEBUG: O CHICO tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem QUIRINO
+DEBUG: Pesquisando relacionamento entre QUIRINO e SAMUEL...
+DEBUG: O QUIRINO tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre AMADEU e ISABEL...
+DEBUG: O AMADEU tem os seguintes relacionamentos: {u'ISABEL': {u'n': 20}, u'CIRO': {u'n': 6}}
+DEBUG: Incrementando relacionamento entre AMADEU e ISABEL: de 20 para 26
+DEBUG: Pesquisando relacionamento entre CASSIANO e SAMUEL...
+DEBUG: O CASSIANO tem os seguintes relacionamentos: {u'ESTER': {u'n': 6}, u'DUQUE': {u'n': 59}, 'SAMUCA': {'n': 18}}
+DEBUG: Arvore nao contem MARIZE
+DEBUG: Pesquisando relacionamento entre MARIZE e MATEUS...
+DEBUG: O MARIZE tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre ISABEL e MANTOVANI...
+DEBUG: O ISABEL tem os seguintes relacionamentos: {u'RODRIGO': {u'n': 16}}
+DEBUG: Pesquisando relacionamento entre CASSIANO e ESTER...
+DEBUG: O CASSIANO tem os seguintes relacionamentos: {u'ESTER': {u'n': 6}, u'DUQUE': {u'n': 59}, 'SAMUCA': {'n': 18}, 'SAMUEL': {'n': 24}}
+DEBUG: Incrementando relacionamento entre CASSIANO e ESTER: de 6 para 62
+DEBUG: Arvore nao contem AMARALINA
+DEBUG: Pesquisando relacionamento entre AMARALINA e TAIS...
+DEBUG: O AMARALINA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre CASSIANO e OLIVIA...
+DEBUG: O CASSIANO tem os seguintes relacionamentos: {u'ESTER': {'n': 62}, u'DUQUE': {u'n': 59}, 'SAMUCA': {'n': 18}, 'SAMUEL': {'n': 24}}
+DEBUG: Pesquisando relacionamento entre CASSIANO e CHICO...
+DEBUG: O CASSIANO tem os seguintes relacionamentos: {u'ESTER': {'n': 62}, u'DUQUE': {u'n': 59}, 'SAMUCA': {'n': 18}, 'SAMUEL': {'n': 24}, 'OLIVIA': {'n': 6}}
+DEBUG: Pesquisando relacionamento entre ESTER e GUIOMAR...
+DEBUG: O ESTER tem os seguintes relacionamentos: {u'LINDAURA': {u'n': 14}, u'SAMUEL': {u'n': 10}}
+DEBUG: Pesquisando relacionamento entre AMARALINA e OLIVIA...
+DEBUG: O AMARALINA tem os seguintes relacionamentos: {'TAIS': {'n': 4}}
+DEBUG: Arvore nao contem MARINALVA
+DEBUG: Pesquisando relacionamento entre MARINALVA e PACOQUINHA...
+DEBUG: O MARINALVA tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem SAMUCA
+DEBUG: Pesquisando relacionamento entre SAMUCA e ZULEIKA...
+DEBUG: O SAMUCA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre ESTER e SAMUCA...
+DEBUG: O ESTER tem os seguintes relacionamentos: {'GUIOMAR': {'n': 6}, u'LINDAURA': {u'n': 14}, u'SAMUEL': {u'n': 10}}
+DEBUG: Pesquisando relacionamento entre CIRO e RODRIGO...
+DEBUG: O CIRO tem os seguintes relacionamentos: {u'ISABEL': {u'n': 8}, u'RODRIGO': {u'n': 4}, u'JUNTOS': {u'n': 6}}
+DEBUG: Incrementando relacionamento entre CIRO e RODRIGO: de 4 para 38
+DEBUG: Pesquisando relacionamento entre ESTER e SAMUEL...
+DEBUG: O ESTER tem os seguintes relacionamentos: {'SAMUCA': {'n': 40}, 'GUIOMAR': {'n': 6}, u'LINDAURA': {u'n': 14}, u'SAMUEL': {u'n': 10}}
+DEBUG: Incrementando relacionamento entre ESTER e SAMUEL: de 10 para 20
+DEBUG: Pesquisando relacionamento entre OLIVIA e SAMUEL...
+DEBUG: O OLIVIA tem os seguintes relacionamentos: {'TAIS': {'n': 32}}
+DEBUG: Pesquisando relacionamento entre LINDAURA e SAMUEL...
+DEBUG: O LINDAURA tem os seguintes relacionamentos: {u'SAMUEL': {u'n': 10}, 'ZULEIKA': {'n': 8}}
+DEBUG: Incrementando relacionamento entre LINDAURA e SAMUEL: de 10 para 18
+DEBUG: Pesquisando relacionamento entre CASSIANO e ZULEIKA...
+DEBUG: O CASSIANO tem os seguintes relacionamentos: {'SAMUCA': {'n': 18}, 'SAMUEL': {'n': 24}, u'DUQUE': {u'n': 59}, 'OLIVIA': {'n': 6}, u'ESTER': {'n': 62}, 'CHICO': {'n': 4}}
+DEBUG: Pesquisando relacionamento entre LIPE e MARIZE...
+DEBUG: O LIPE tem os seguintes relacionamentos: {'MATEUS': {'n': 22}}
+DEBUG: Clusterizacao:
+[['SAMUCA', 'QUIRINO', 'GUIOMAR', 'ZULEIKA', 'JULIANO', u'CASSIANO', u'SAMUEL', 'TAIS', u'DUQUE', 'AMARALINA', u'CASSIO', u'ESTER', 'OLIVIA', u'LINDAURA', 'CHICO'], [u'AMADEU', u'ISABEL', u'RODRIGO', u'JUNTOS', 'MANTOVANI', u'CIRO'], ['MARIZE', 'LIPE', 'MATEUS', 'BIBIANA'], ['HELIO', 'YVETE'], ['PACOQUINHA', 'MARINALVA'], ['TERESA'], ['PROFESSORA'], ['ALBERTO'], ['POQUINHA'], [u'EST'], ['MULHER'], ['LUCIA']]
+DEBUG: Node SAMUCA go to group #0
+DEBUG: Node HELIO go to group #3
+DEBUG: Node MATEUS go to group #2
+DEBUG: Node CASSIANO go to group #0
+DEBUG: Node SAMUEL go to group #0
+DEBUG: Node TERESA go to group #5
+DEBUG: Node PROFESSORA go to group #6
+DEBUG: Node DUQUE go to group #0
+DEBUG: Node OLIVIA go to group #0
+DEBUG: Node ALBERTO go to group #7
+DEBUG: Node ESTER go to group #0
+DEBUG: Node JUNTOS go to group #1
+DEBUG: Node GUIOMAR go to group #0
+DEBUG: Node YVETE go to group #3
+DEBUG: Node POQUINHA go to group #8
+DEBUG: Node RODRIGO go to group #1
+DEBUG: Node BIBIANA go to group #2
+DEBUG: Node QUIRINO go to group #0
+DEBUG: Node EST go to group #9
+DEBUG: Node LIPE go to group #2
+DEBUG: Node AMADEU go to group #1
+DEBUG: Node ISABEL go to group #1
+DEBUG: Node CHICO go to group #0
+DEBUG: Node MARIZE go to group #2
+DEBUG: Node ZULEIKA go to group #0
+DEBUG: Node JULIANO go to group #0
+DEBUG: Node MULHER go to group #10
+DEBUG: Node AMARALINA go to group #0
+DEBUG: Node TAIS go to group #0
+DEBUG: Node LUCIA go to group #11
+DEBUG: Node PACOQUINHA go to group #4
+DEBUG: Node MARINALVA go to group #4
+DEBUG: Node LINDAURA go to group #0
+DEBUG: Node CASSIO go to group #0
+DEBUG: Node MANTOVANI go to group #1
+DEBUG: Node CIRO go to group #1
+INFO: Relations:
+Counter({(u'CASSIANO', u'ESTER'): 56, (u'ESTER', u'SAMUCA'): 40, (u'ISABEL', u'MANTOVANI'): 36, (u'CIRO', u'RODRIGO'): 34, (u'OLIVIA', u'TAIS'): 32, (u'CASSIANO', u'SAMUEL'): 24, (u'LIPE', u'MATEUS'): 22, (u'MARINALVA', u'PACOQUINHA'): 22, (u'LIPE', u'MARIZE'): 22, (u'QUIRINO', u'SAMUEL'): 20, (u'CASSIANO', u'SAMUCA'): 18, (u'BIBIANA', u'MARIZE'): 16, (u'CASSIANO', u'ZULEIKA'): 16, (u'JULIANO', u'QUIRINO'): 15, (u'CHICO', u'OLIVIA'): 12, (u'ESTER', u'SAMUEL'): 10, (u'LINDAURA', u'ZULEIKA'): 8, (u'HELIO', u'YVETE'): 8, (u'AMARALINA', u'OLIVIA'): 8, (u'LINDAURA', u'SAMUEL'): 8, (u'AMADEU', u'ISABEL'): 6, (u'MARIZE', u'MATEUS'): 6, (u'CASSIANO', u'OLIVIA'): 6, (u'ESTER', u'GUIOMAR'): 6, (u'SAMUCA', u'ZULEIKA'): 6, (u'GUIOMAR', u'SAMUCA'): 4, (u'AMARALINA', u'TAIS'): 4, (u'CASSIANO', u'CHICO'): 4, (u'OLIVIA', u'SAMUEL'): 4, (u'LUCIA', u'TERESA'): 2, (u'CASSIANO', u'MARIZE'): 2, (u'TAIS', u'TAIS'): 2, (u'LINDAURA', u'MARIZE'): 2, (u'ISABEL', u'QUIRINO'): 2, (u'MATEUS', u'RODRIGO'): 2, (u'CIRO', u'TERESA'): 2, (u'BIBIANA', u'SAMUCA'): 2, (u'BIBIANA', u'ESTER'): 2, (u'CIRO', u'LUCIA'): 2, (u'OLIVIA', u'ZULEIKA'): 2, (u'SAMUEL', u'YVETE'): 2, (u'OLIVIA', u'PROFESSORA'): 2, (u'ESTER', u'ZULEIKA'): 2, (u'ALBERTO', u'ZULEIKA'): 2, (u'OLIVIA', u'PACOQUINHA'): 2, (u'ISABEL', u'OLIVIA'): 2, (u'MATEUS', u'PROFESSORA'): 2, (u'MATEUS', u'SAMUCA'): 2, (u'ESTER', u'RODRIGO'): 2, (u'ESTER', u'ESTER'): 2, (u'MARINALVA', u'POQUINHA'): 2, (u'ESTER', u'OLIVIA'): 2, (u'MATEUS', u'ZULEIKA'): 2, (u'POQUINHA', u'YVETE'): 2, (u'AMADEU', u'MULHER'): 2, (u'ALBERTO', u'LINDAURA'): 2, (u'MULHER', u'RODRIGO'): 2, (u'GUIOMAR', u'ZULEIKA'): 2, (u'CIRO', u'ISABEL'): 2})
+INFO: Arvore:
+{u'edges': {u'AMADEU': {u'CIRO': {u'n': 6},
+                        u'ISABEL': {'n': 26}},
+            'AMARALINA': {'OLIVIA': {'n': 8},
+                          'TAIS': {'n': 4}},
+            'BIBIANA': {'MARIZE': {'n': 16}},
+            u'CASSIANO': {'CHICO': {'n': 4},
+                          u'DUQUE': {u'n': 59},
+                          u'ESTER': {'n': 62},
+                          'OLIVIA': {'n': 6},
+                          'SAMUCA': {'n': 18},
+                          'SAMUEL': {'n': 24},
+                          'ZULEIKA': {'n': 16}},
+            u'CASSIO': {u'ESTER': {u'n': 4}},
+            'CHICO': {'OLIVIA': {'n': 12}},
+            u'CIRO': {u'ISABEL': {u'n': 8},
+                      u'JUNTOS': {u'n': 6},
+                      u'RODRIGO': {'n': 38}},
+            u'ESTER': {'GUIOMAR': {'n': 6},
+                       u'LINDAURA': {u'n': 14},
+                       'SAMUCA': {'n': 40},
+                       u'SAMUEL': {'n': 20}},
+            'GUIOMAR': {'SAMUCA': {'n': 4}},
+            'HELIO': {'YVETE': {'n': 8}},
+            u'ISABEL': {'MANTOVANI': {'n': 36},
+                        u'RODRIGO': {u'n': 16}},
+            'JULIANO': {'QUIRINO': {'n': 15}},
+            u'LINDAURA': {u'SAMUEL': {'n': 18},
+                          'ZULEIKA': {'n': 8}},
+            'LIPE': {'MARIZE': {'n': 22},
+                     'MATEUS': {'n': 22}},
+            'MARINALVA': {'PACOQUINHA': {'n': 22}},
+            'MARIZE': {'MATEUS': {'n': 6}},
+            'OLIVIA': {'SAMUEL': {'n': 4},
+                       'TAIS': {'n': 32}},
+            'QUIRINO': {'SAMUEL': {'n': 20}},
+            'SAMUCA': {'ZULEIKA': {'n': 6}}},
+ u'nodes': {'ALBERTO': {},
+            u'AMADEU': {},
+            'AMARALINA': {},
+            'BIBIANA': {},
+            u'CASSIANO': {},
+            u'CASSIO': {},
+            'CHICO': {},
+            u'CIRO': {},
+            u'DUQUE': {},
+            u'EST': {},
+            u'ESTER': {},
+            'GUIOMAR': {},
+            'HELIO': {},
+            u'ISABEL': {},
+            'JULIANO': {},
+            u'JUNTOS': {},
+            u'LINDAURA': {},
+            'LIPE': {},
+            'LUCIA': {},
+            'MANTOVANI': {},
+            'MARINALVA': {},
+            'MARIZE': {},
+            'MATEUS': {},
+            'MULHER': {},
+            'OLIVIA': {},
+            'PACOQUINHA': {},
+            'POQUINHA': {},
+            'PROFESSORA': {},
+            'QUIRINO': {},
+            u'RODRIGO': {},
+            'SAMUCA': {},
+            u'SAMUEL': {},
+            'TAIS': {},
+            'TERESA': {},
+            'YVETE': {},
+            'ZULEIKA': {}}}

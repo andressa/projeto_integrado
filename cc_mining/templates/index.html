@@ -8,7 +8,7 @@
         var MAP_WIDTH = 960;
         var MAP_HEIGHT = 600;
 
-        words = 'DE A O QUE E DO DA EM UM PARA COM NAO UMA OS NO SE NA POR MAIS AS DOS COMO MAS AO ELE DAS A SEU SUA OU QUANDO MUITO NOS JA EU TAMBEM SA PELO PELA ATA ISSO ELA ENTRE DEPOIS SEM MESMO AOS SEUS QUEM NAS ME ESSE ELES VOCES ESSA NUM NEM SUAS MEU A S MINHA NUMA PELOS ELAS QUAL NAS LHE DELES ESSAS ESSES PELAS ESTE DELE TU TE VOCAAS VOS LHES MEUS MINHAS TEU TUA TEUS TUAS NOSSO NOSSA NOSSOS NOSSAS DELA DELAS ESTA ESTES ESTAS AQUELE AQUELA AQUELES AQUELAS ISTO AQUILO ESTOU ESTA ESTAMOS ESTAO ESTIVE ESTEVE ESTIVEMOS ESTIVERAM ESTAVA ESTAVAMOS ESTAVAM ESTIVERA ESTIVARAMOS ESTEJA ESTEJAMOS ESTEJAM ESTIVESSE ESTIVASSEMOS ESTIVESSEM ESTIVER ESTIVERMOS ESTIVEREM HEI HA HAVEMOS HAO HOUVE HOUVEMOS HOUVERAM HOUVERA HOUVARAMOS HAJA HAJAMOS HAJAM HOUVESSE HOUVASSEMOS HOUVESSEM HOUVER HOUVERMOS HOUVEREM HOUVEREI HOUVERA HOUVEREMOS HOUVERAO HOUVERIA HOUVERAAMOS HOUVERIAM SOU SOMOS SAO ERA ARAMOS ERAM FUI FOI FOMOS FORAM FORA FA RAMOS SEJA SEJAMOS SEJAM FOSSE FA SSEMOS FOSSEM FOR FORMOS FOREM SEREI SERA SEREMOS SERAO SERIA SERAAMOS SERIAM TENHO TEM TEMOS TAM TINHA TANHAMOS TINHAM TIVE TEVE TIVEMOS TIVERAM TIVERA TIVARAMOS TENHA TENHAMOS TENHAM TIVESSE TIVASSEMOS TIVESSEM TIVER TIVERMOS TIVEREM TEREI TERA TEREMOS TERAO TERIA TERAAMOS TERIAM';
+        words = 'GENTE VAI FORAM DE A O QUE E DO DA EM UM PARA COM NAO UMA OS NO SE NA POR MAIS AS DOS COMO MAS AO ELE DAS A SEU SUA OU QUANDO MUITO NOS JA EU TAMBEM SA PELO PELA ATA ISSO ELA ENTRE DEPOIS SEM MESMO AOS SEUS QUEM NAS ME ESSE ELES VOCES ESSA NUM NEM SUAS MEU A S MINHA NUMA PELOS ELAS QUAL NAS LHE DELES ESSAS ESSES PELAS ESTE DELE TU TE VOCAAS VOS LHES MEUS MINHAS TEU TUA TEUS TUAS NOSSO NOSSA NOSSOS NOSSAS DELA DELAS ESTA ESTES ESTAS AQUELE AQUELA AQUELES AQUELAS ISTO AQUILO ESTOU ESTA ESTAMOS ESTAO ESTIVE ESTEVE ESTIVEMOS ESTIVERAM ESTAVA ESTAVAMOS ESTAVAM ESTIVERA ESTIVARAMOS ESTEJA ESTEJAMOS ESTEJAM ESTIVESSE ESTIVASSEMOS ESTIVESSEM ESTIVER ESTIVERMOS ESTIVEREM HEI HA HAVEMOS HAO HOUVE HOUVEMOS HOUVERAM HOUVERA HOUVARAMOS HAJA HAJAMOS HAJAM HOUVESSE HOUVASSEMOS HOUVESSEM HOUVER HOUVERMOS HOUVEREM HOUVEREI HOUVERA HOUVEREMOS HOUVERAO HOUVERIA HOUVERAAMOS HOUVERIAM SOU SOMOS SAO ERA ARAMOS ERAM FUI FOI FOMOS FORAM FORA FA RAMOS SEJA SEJAMOS SEJAM FOSSE FA SSEMOS FOSSEM FOR FORMOS FOREM SEREI SERA SEREMOS SERAO SERIA SERAAMOS SERIAM TENHO TEM TEMOS TAM TINHA TANHAMOS TINHAM TIVE TEVE TIVEMOS TIVERAM TIVERA TIVARAMOS TENHA TENHAMOS TENHAM TIVESSE TIVASSEMOS TIVESSEM TIVER TIVERMOS TIVEREM TEREI TERA TEREMOS TERAO TERIA TERAAMOS TERIAM';
 
         var defaultDiacriticsRemovalMap = [
             {'base':'A', 'letters':/[\u0041\u24B6\uFF21\u00C0\u00C1\u00C2\u1EA6\u1EA4\u1EAA\u1EA8\u00C3\u0100\u0102\u1EB0\u1EAE\u1EB4\u1EB2\u0226\u01E0\u00C4\u01DE\u1EA2\u00C5\u01FA\u01CD\u0200\u0202\u1EA0\u1EAC\u1EB6\u1E00\u0104\u023A\u2C6F]/g},
@@ -97,6 +97,14 @@
             {'base':'z','letters':/[\u007A\u24E9\uFF5A\u017A\u1E91\u017C\u017E\u1E93\u1E95\u01B6\u0225\u0240\u2C6C\uA763]/g}
         ];
         var changes;
+        function get_analysis(novela, ndate, atype) {
+            if (
+                novela == ""
+                || ndate == ""
+                || atype == ""
+            ) return;
+             window.open( "novelas/" + novela + "/" + ndate + "/" + atype + "/", "Analysis", "height=1500px,width=1500px,modal=yes");
+        }
 
         function parse_text(line) {
             var new_line = line.replace(/[^a-zA-Z ]/g, '').replace(/^\s+|\s+$/g, '');
@@ -288,6 +296,8 @@
             loadJornalismoTab();
 
             init_realtime(['']);
+
+            //init(['']);
             localStorage.setItem("last_minute", 0);
 
             var $cc_area = $('#cc_area');
@@ -314,6 +324,17 @@
             $("#jornalismo-data").change(function(){
                 loadJornalismoTab();
             });
+
+            // Novela
+            $('.novela_attr').change(function(){
+                get_analysis(
+                            $('#novela').val(),
+                            $('#datas').val(),
+                            $('#types').val()
+                            );
+            });
+
+            // ------
         });
         $(function() {
             $( "#tabs" ).tabs();
@@ -351,7 +372,6 @@
             <li><a href="#tab-realtime"> Tempo Real </a></li>
             <li><a href="#tab-jornalismo"> Jornalismo </a></li>
             <li><a href="#tab-novelas"> Novelas </a></li>
-            <li><a href="#tab-futebol"> Copa das Confederações </a></li>
         </ul>
         <div id="tab-realtime">
             <fieldset>
@@ -362,11 +382,6 @@
             <fieldset>
                 <legend> Nuvem de Palavras </legend>
                 <div id="realtime-wordcloud" class="wordcloud">
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend> Contador de Termos </legend>
-                <div id="realtime-wordcounter">
                 </div>
             </fieldset>
         </div>
@@ -386,6 +401,30 @@
             </fieldset>
         </div>
         <div id="tab-novelas">
+            <fieldset>
+                <legend> Novelas </legend>
+                <div id='novelasdiv'>
+                    <select id='novela' class='novela_attr'>
+                        <option value=''>----</option>
+                        {% for novela in novelas_list %}
+                            <option value='{{ novela.dir }}'>{{ novela.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div id='datasdiv'>
+                    <select id='datas' class='novela_attr'>
+                        {% for date in dates_list %}
+                            <option value='{{ date }}'>{{ date }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div id='typesdiv'>
+                    <select id='types' class='novela_attr'>
+                        <option value='tree'>Tree</option>
+                        <option value='matrix'>Matrix</option>
+                    </select>
+                </div>
+            </fieldset>
         </div>
         <div id="tab-futebol">
         </div>

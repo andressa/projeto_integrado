@@ -1,0 +1,183 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+'''
+
+BUGS
+o ccdb.py nao salva o range completo
+
+TODO
+Carregar ultima arvore
+Nos nodes, criar atributo group
+Translator
+
+'''
+
+import logging
+import pprint
+import json
+from collections import Counter
+
+
+class Tree:
+
+    def __init__(self, showid, analysis_id):
+        super(Tree, self).__init__()
+        self.tvshow, self.analysis_id = showid, analysis_id
+        self.json = {}
+        self.json['nodes'] = {}
+        self.json['edges'] = {}
+        self.nodes = self.json['nodes']
+        self.edges = self.json['edges']
+        self.load_last_tree()
+
+    def load_last_tree(self):
+        '''
+        self.open_conn()
+        query = "SELECT json FROM tree WHERE analysis_id = (SELECT a.id FROM analysis a WHERE tvshow = %d)" % (int(self.tvshow)-1)
+        logger.debug("Recuperando ultima arvore:\n%s" % query)
+        # Get the last tree based on tvshow id -1 (last tv show) - Highly explosive!
+        tree = self.cur.execute("SELECT json FROM tree WHERE analysis_id = (SELECT a.id FROM analysis a WHERE tvshow = ?)", (int(self.tvshow)-1,)).fetchone()
+        if tree is not None:
+            tree = json.loads(tree[0])
+        self.close_conn()
+        logger.debug("Ultima arvore recuperada:\n%s" % str(tree) )
+        self.json = tree
+        '''
+        return {}
+
+    def add_node(self, node):
+        self.nodes[node] = {'group':None}
+
+    def add_edge(self, first, second, n):
+        if not self.edges.has_key(first):
+            self.edges[first] = {}
+        old_value = 0
+        print self.json
+        print self.edges[first]
+        logger.debug("Pesquisando relacionamento entre %s e %s..." % (first, second))
+        if self.edges[first].has_key(second):
+            old_value = self.edges[first][second]['n']
+            logger.debug("Incrementando relacionamento entre %s e %s: de %d para %d" % (first, second, old_value, n+old_value))
+        self.edges[first][second] = {'n': n + old_value}
+
+    def get_group_index(self, m, groups):
+        print groups
+        for group, index in groups:
+            if m in group:
+                return index
+        return None
+
+    def get_group(self, section):
+        s = set([])
+        for e in section.keys():
+            s.add(e)
+            try: s.update(self.edges[e].keys())
+            except KeyError: pass
+        return s
+
+    def group(self):
+        # Initialize
+        index = 0
+        groups = []
+        groups_indexes = []
+        members_with_group = set([])
+        logger.debug("# Cluster #")
+        logger.debug("Loop nos edges")
+        # Iterate over edges
+        for k in self.edges.keys():
+            # If edge was already computed
+            if k in members_with_group: continue
+            # Get group and add it to the group with its index
+            new_group = self.get_group(self.edges[k])
+            groups.append( (new_group, index) )
+            logger.debug("Grupo #%d adicionado: %s" % (index, str(new_group)))
+            # Update control variables
+            index += 1
+            members_with_group.add(k)
+            groups_indexes.append(index)
+        # The last index should be removed from indexes
+        if groups_indexes: del groups_indexes[-1]
+        logger.debug("Grupos:")
+        logger.debug(str(groups))
+        # Finished the loop, update JSON
+        # Iterate over all characters
+        logger.debug("Loop nos nodes")
+        for k in self.nodes.keys():
+            # Get the group index
+            group_index = self.get_group_index(k, groups)
+            logger.debug("Membro %s no grupo %s" % (k, str(group_index)))
+            # If the member does not belong to a group
+            if group_index is None:
+                # Create a group for him
+                group_index = groups_indexes[-1]+1
+                groups_indexes.append(group_index)
+            self.nodes[k]['group'] = group_index
+            #self.nodes['%s %d' % (k, group_index)] = self.nodes.pop(k)
+            logger.debug("Indexes: %s" % str(groups_indexes))
+
+    def save(self):
+        self.group()
+        self.open_conn()
+        self.cur.execute("INSERT OR IGNORE INTO tree(analysis_id) VALUES (?)", (self.analysis_id,))
+        self.id = self.cur.execute("SELECT id FROM tree WHERE analysis_id = ?", (self.analysis_id,)).fetchone()[0]
+        self.cur.execute("UPDATE tree SET json = ? WHERE id = ?", (json.dumps(self.json), self.id))
+        self.close_conn()
+
+def debug(string):
+    print string
+
+def vai(key, edges):
+
+    g = set(edges[key])
+    for k in edges[key]:
+        try: g.update(edges[k])
+        except: pass
+    return g
+
+
+j = json.loads(open('amor-a-vida/AmorAVida-2013-06-22-tree.json').read())
+
+for e in j['edges']:
+    j['edges'][e] = j['edges'][e].keys()
+
+
+
+import sys; sys.exit(0)
+
+# Initialize
+index = 0
+groups = []
+groups_indexes = []
+members_with_group = set([])
+debug("Loop nos edges")
+# Iterate over edges
+for k in j.edges.keys():
+    # If edge was already computed
+    if k in members_with_group: continue
+    # Get group and add it to the group with its index
+    new_group = get_group(j.edges[k])
+    groups.append( (new_group, index) )
+    debug("Grupo #%d adicionado: %s" % (index, str(new_group)))
+    # Update control variables
+    index += 1
+    members_with_group.add(k)
+    groups_indexes.append(index)
+# The last index should be removed from indexes
+if groups_indexes: del groups_indexes[-1]
+debug("Grupos:")
+debug(str(groups))
+# Finished the loop, update JSON
+# Iterate over all characters
+debug("Loop nos nodes")
+for k in j.nodes.keys():
+    # Get the group index
+    group_index = get_group_index(k, groups)
+    debug("Membro %s no grupo %s" % (k, str(group_index)))
+    # If the member does not belong to a group
+    if group_index is None:
+        # Create a group for him
+        group_index = groups_indexes[-1]+1
+        groups_indexes.append(group_index)
+    j.nodes[k]['group'] = group_index
+    #j.nodes['%s %d' % (k, group_index)] = j.nodes.pop(k)
+    debug("Indexes: %s" % str(groups_indexes))
