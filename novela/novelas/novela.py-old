@@ -12,67 +12,13 @@ Translator
 
 '''
 
-import sys
-sys.path.insert(0, "/Users/lfrias/Dropbox/closed_captions")
-import settings
-import os.path
-import glob
 import logging
 import pprint
-import sqlite3
-from ClosedCaptionHandler import ClosedCaptionHandler
 import json
 from collections import Counter
 
-def camel_case(s):
-    return "".join(s.title().split())
 
-def get_novela_filename(novela_dir, novela_name, novela_date, extension, add=''):
-    if add: add = '-%s' % add
-    return '%s/%s-%s%s.%s' % ( novela_dir, camel_case(novela_name), novela_date.replace('/','.'), add, extension)
-
-class DBManager(object):
-
-    def open_conn(self):
-        self.conn = sqlite3.connect(settings.DB)
-        self.cur = self.conn.cursor()
-
-    def close_conn(self):
-        self.conn.commit()
-        self.conn.close()
-
-
-class Novela(DBManager):
-
-    def __init__(self, name, date, directory):
-        super(Novela, self).__init__()
-        self.name, self.date, self.dir = name, date, directory
-        self.open_conn()
-        self.ccs = []
-        self.id = self.get_id()
-        if self.id is not None:
-            self.ccs = self.get_cc()
-        self.close_conn()
-
-    def get_id(self):
-        nid = self.cur.execute("SELECT id FROM tvshow where name = ? and date = ?", (self.name, self.date) ).fetchone()
-        if nid:
-            return nid[0]
-        return None
-
-    def get_cc(self):
-        return [CC(c) for c, in self.cur.execute("SELECT text FROM cc WHERE show = ?", (self.id, ) ).fetchall()]
-
-class CC(object):
-
-    def __init__(self, cc):
-        c = ClosedCaptionHandler()
-        self.ccp = c.parse(cc)
-
-    def __getattr__(self, name):
-        return self.ccp[name]
-
-class Tree(DBManager):
+class Tree:
 
     def __init__(self, showid, analysis_id):
         super(Tree, self).__init__()
@@ -177,112 +123,61 @@ class Tree(DBManager):
         self.cur.execute("UPDATE tree SET json = ? WHERE id = ?", (json.dumps(self.json), self.id))
         self.close_conn()
 
-class Analysis(DBManager):
+def debug(string):
+    print string
 
-    def __init__(self, novela_obj):
-        super(Analysis, self).__init__()
-        self.novela = novela_obj
-        self.load_analysis()
-        self.speakers = []
-        self.load_speakers()
-        self.counter = Counter()
-        self.tree = Tree(self.novela.id, self.id)
-        self.load_tree()
+def vai(key, edges):
 
-    def load_analysis(self):
-        self.open_conn()
-        self.cur.execute("INSERT OR IGNORE INTO analysis(tvshow) VALUES (?)", (self.novela.id,))
-        self.id = self.cur.execute("SELECT id FROM analysis WHERE tvshow = ?", (self.novela.id,)).fetchone()[0]
-        self.close_conn()
+    g = set(edges[key])
+    for k in edges[key]:
+        try: g.update(edges[k])
+        except: pass
+    return g
 
-    def load_speakers(self):
-        # Iterate over CCs
-        for cc in self.novela.ccs:
-            # Save speaker
-            if cc.speaker:
-                self.speakers.append(cc.speaker)
-            # Log
-            if ( ('[' in cc.text or ']' in cc.text or ':' in cc.text) and (not cc.speaker and not cc.action) ):
-                logger.warning('''
-                CC: %s
-                Parsed: %s''' % (cc.text.encode('latin1'), str(cc.ccp)))
 
-    def load_tree(self):
-        # Iterate over speakers to count their relations
-        for begin in range(2):
-            speakers_list = self.speakers[begin:]
-            for i, s in enumerate(speakers_list):
-                if i == len(speakers_list) - 1: continue
-                self.counter[ tuple(sorted((speakers_list[i], speakers_list[i+1]))) ] += 1
-                # Update JSON
-                if begin == 0:
-                    self.tree.add_node(s.encode('latin1').upper())
-        for rel, n in self.counter.items():
-            per1, per2 = rel
-            per1, per2 = per1.encode('latin1').upper(), per2.encode('latin1').upper()
-            if n <= 2 or (per1 == per2): continue
-            self.tree.add_edge(per1, per2, n)
-        self.tree.save()
+j = json.loads(open('amor-a-vida/AmorAVida-2013-06-22-tree.json').read())
 
-    def save(self):
-        f = open(get_novela_filename(self.novela.dir, self.novela.name, self.novela.date, 'json', add='tree'), 'w')
-        f.write(json.dumps(self.tree.json))
-        f.close()
+for e in j['edges']:
+    j['edges'][e] = j['edges'][e].keys()
 
-def get_dates():
-    for f in glob.glob("%s/*-clean.txt" % settings.BASE_ADDRESS):
-        path, filename = os.path.split(f)
-        yield filename.split('-clean.txt')[0].replace('-', '/')
 
-def analysis_exists(novela_name, novela_date, novela_dir):
-    return os.path.isfile(get_novela_filename(novela_dir, novela_name, novela_date, 'log'))
 
-for novela_date in get_dates():
+import sys; sys.exit(0)
 
-    print
-    print 'Dia %s' % novela_date
-
-    for novela_name, novela_dir in settings.NOVELAS:
-
-        print 'Novela: %s' % novela_name
-
-        # Load novela
-        novela = Novela(novela_name, novela_date, novela_dir)
-
-        if analysis_exists(novela_name, novela_date, novela_dir):
-            print 'Ignorando: as analises ja foram feitas'
-            continue
-
-        if len(novela.ccs) == 0:
-            print 'Ignorando: nao existe Closed Caption para ser analisada'
-            continue
-
-        sys.stdout.write('Analisando...')
-
-        # Log
-
-        logger = logging.getLogger('MyLogger')
-        logger.setLevel(logging.DEBUG)
-        log_handler = None
-        formatter = logging.Formatter('%(levelname)s: %(message)s')
-
-        if log_handler is not None:
-            log_handler.close()
-            logger.removeHandler(log_handler)
-
-        filename=get_novela_filename(novela_dir, novela_name, novela_date, 'log')
-        log_handler=logging.FileHandler(filename,'w')
-        log_handler.setFormatter(formatter)
-        logger.addHandler(log_handler)
-
-        # Load Analysis object
-        a = Analysis(novela)
-        a.save()
-
-        # Log
-        logger.info('Quantidade de linhas de CC: %d' % len(novela.ccs))
-        logger.info('Speakers list:\n%s' % pprint.pformat(a.speakers))
-        logger.info('Relations:\n%s' % pprint.pformat(a.counter))
-        logger.info('Arvore:\n%s' % pprint.pformat(a.tree.json, width=10))
-
-        sys.stdout.write('Feito!\n')
+# Initialize
+index = 0
+groups = []
+groups_indexes = []
+members_with_group = set([])
+debug("Loop nos edges")
+# Iterate over edges
+for k in j.edges.keys():
+    # If edge was already computed
+    if k in members_with_group: continue
+    # Get group and add it to the group with its index
+    new_group = get_group(j.edges[k])
+    groups.append( (new_group, index) )
+    debug("Grupo #%d adicionado: %s" % (index, str(new_group)))
+    # Update control variables
+    index += 1
+    members_with_group.add(k)
+    groups_indexes.append(index)
+# The last index should be removed from indexes
+if groups_indexes: del groups_indexes[-1]
+debug("Grupos:")
+debug(str(groups))
+# Finished the loop, update JSON
+# Iterate over all characters
+debug("Loop nos nodes")
+for k in j.nodes.keys():
+    # Get the group index
+    group_index = get_group_index(k, groups)
+    debug("Membro %s no grupo %s" % (k, str(group_index)))
+    # If the member does not belong to a group
+    if group_index is None:
+        # Create a group for him
+        group_index = groups_indexes[-1]+1
+        groups_indexes.append(group_index)
+    j.nodes[k]['group'] = group_index
+    #j.nodes['%s %d' % (k, group_index)] = j.nodes.pop(k)
+    debug("Indexes: %s" % str(groups_indexes))

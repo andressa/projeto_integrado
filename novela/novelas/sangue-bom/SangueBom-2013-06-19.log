@@ -135,6 +135,82 @@ DEBUG: Pesquisando relacionamento entre CHARLENE e LILI...
 DEBUG: O CHARLENE tem os seguintes relacionamentos: {'VERONICA': {'n': 8}, 'WILSON': {'n': 30}, u'LUCINDO': {u'n': 14}, 'RENATA': {'n': 4}, u'FILINHO': {u'n': 4}, u'DAMARIS': {u'n': 6}, u'FILIPINHO': {u'n': 6}}
 DEBUG: Pesquisando relacionamento entre GIANE e SOCORRO...
 DEBUG: O GIANE tem os seguintes relacionamentos: {'MALU': {'n': 4}, u'SILVERIO': {u'n': 6}}
+DEBUG: Clusterizacao:
+[[u'VERONICA', u'BEN', u'LUCINDO', u'LUZ', u'DOUGLAS', 'RENATA', u'FILINHO', u'BRUNO', u'JUNTOS', 'FABIN', u'BARBARA', u'CHARLENE', 'INACIA', 'WILSON', 'CELINHA', u'FABINHO', u'NATAN', 'TITO', 'MALU', 'LILI', u'AMORA', 'SANTA', 'BENTO', 'DOROTHY', 'NESTOR', 'BETA', u'SHEILA', u'ERICO', u'MAURICIO', 'CRIANCAS', 'TINA', 'SUELI', 'NTOR', u'ODILA', u'VITINHO', u'KARMITA', u'GIANE', u'VINNY', u'DAMARIS', u'SILVERIO', 'GERTRUDES', u'BARRABAS', u'SALMA', u'MEL', 'MADA', 'TABATA', 'PLINIO', 'XANDE', u'LARA', u'CARLITO', u'SOCORRO', 'EMILIA', u'FILIPINHO', u'KEVIN', 'NICE'], ['WESLEY', 'RAPAZ'], [u'RONALDO', u'CAMILINHA'], [u'PERACIO'], [u'PEIXINHO'], ['MULHER'], [u'ROSEME'], ['BRENDA'], ['VERNICA'], ['LI'], ['ZITO'], [u'FILIPHO'], ['ZICA'], [u'ELISEU'], [u'CRLENE'], ['BRBARA'], [u'JONAS'], [u'GLORIA']]
+DEBUG: Node VERONICA go to group #0
+DEBUG: Node CRLENE go to group #14
+DEBUG: Node BEN go to group #0
+DEBUG: Node RAPAZ go to group #1
+DEBUG: Node PERACIO go to group #3
+DEBUG: Node BARRABAS go to group #0
+DEBUG: Node KARMITA go to group #0
+DEBUG: Node BENTO go to group #0
+DEBUG: Node LUZ go to group #0
+DEBUG: Node PEIXINHO go to group #4
+DEBUG: Node DOUGLAS go to group #0
+DEBUG: Node RENATA go to group #0
+DEBUG: Node MULHER go to group #5
+DEBUG: Node FILINHO go to group #0
+DEBUG: Node BRUNO go to group #0
+DEBUG: Node JUNTOS go to group #0
+DEBUG: Node CELINHA go to group #0
+DEBUG: Node BARBARA go to group #0
+DEBUG: Node ROSEME go to group #6
+DEBUG: Node CHARLENE go to group #0
+DEBUG: Node INACIA go to group #0
+DEBUG: Node WILSON go to group #0
+DEBUG: Node BRENDA go to group #7
+DEBUG: Node FABINHO go to group #0
+DEBUG: Node VERNICA go to group #8
+DEBUG: Node TITO go to group #0
+DEBUG: Node MALU go to group #0
+DEBUG: Node LILI go to group #0
+DEBUG: Node LI go to group #9
+DEBUG: Node CARLITO go to group #0
+DEBUG: Node TINA go to group #0
+DEBUG: Node LUCINDO go to group #0
+DEBUG: Node DOROTHY go to group #0
+DEBUG: Node NESTOR go to group #0
+DEBUG: Node FILIPHO go to group #11
+DEBUG: Node SHEILA go to group #0
+DEBUG: Node ERICO go to group #0
+DEBUG: Node MAURICIO go to group #0
+DEBUG: Node CRIANCAS go to group #0
+DEBUG: Node SANTA go to group #0
+DEBUG: Node SUELI go to group #0
+DEBUG: Node ZITO go to group #10
+DEBUG: Node NTOR go to group #0
+DEBUG: Node RONALDO go to group #2
+DEBUG: Node VITINHO go to group #0
+DEBUG: Node WESLEY go to group #1
+DEBUG: Node BETA go to group #0
+DEBUG: Node GIANE go to group #0
+DEBUG: Node VINNY go to group #0
+DEBUG: Node DAMARIS go to group #0
+DEBUG: Node SILVERIO go to group #0
+DEBUG: Node ZICA go to group #12
+DEBUG: Node CAMILINHA go to group #2
+DEBUG: Node ODILA go to group #0
+DEBUG: Node GERTRUDES go to group #0
+DEBUG: Node FABIN go to group #0
+DEBUG: Node SALMA go to group #0
+DEBUG: Node MEL go to group #0
+DEBUG: Node ELISEU go to group #13
+DEBUG: Node TABATA go to group #0
+DEBUG: Node BRBARA go to group #15
+DEBUG: Node PLINIO go to group #0
+DEBUG: Node XANDE go to group #0
+DEBUG: Node LARA go to group #0
+DEBUG: Node AMORA go to group #0
+DEBUG: Node JONAS go to group #16
+DEBUG: Node GLORIA go to group #17
+DEBUG: Node SOCORRO go to group #0
+DEBUG: Node EMILIA go to group #0
+DEBUG: Node NICE go to group #0
+DEBUG: Node MADA go to group #0
+DEBUG: Node FILIPINHO go to group #0
+DEBUG: Node KEVIN go to group #0
+DEBUG: Node NATAN go to group #0
 INFO: Relations:
 Counter({(u'BARBARA', u'TINA'): 48, (u'AMORA', u'BENTO'): 41, (u'AMORA', u'BARBARA'): 34, (u'BARRABAS', u'VITINHO'): 32, (u'CHARLENE', u'WILSON'): 30, (u'BETA', u'LARA'): 24, (u'LARA', u'TITO'): 24, (u'BENTO', u'GIANE'): 22, (u'DOUGLAS', u'GIANE'): 18, (u'TABATA', u'XANDE'): 18, (u'RENATA', u'TITO'): 18, (u'BENTO', u'MADA'): 16, (u'DAMARIS', u'NICE'): 16, (u'RENATA', u'VERONICA'): 14, (u'SHEILA', u'TITO'): 14, (u'GERTRUDES', u'NESTOR'): 14, (u'LILI', u'RENATA'): 12, (u'LARA', u'SUELI'): 12, (u'LILI', u'TITO'): 12, (u'RAPAZ', u'WESLEY'): 12, (u'CHARLENE', u'LILI'): 12, (u'BENTO', u'EMILIA'): 10, (u'LILI', u'NESTOR'): 10, (u'CELINHA', u'PLINIO'): 10, (u'DAMARIS', u'LUCINDO'): 10, (u'AMORA', u'MADA'): 10, (u'MALU', u'PLINIO'): 8, (u'CHARLENE', u'VERONICA'): 8, (u'LARA', u'RENATA'): 8, (u'FABINHO', u'MEL'): 8, (u'MAURICIO', u'SANTA'): 8, (u'GIANE', u'SOCORRO'): 8, (u'VERONICA', u'VERONICA'): 6, (u'BARBARA', u'BENTO'): 6, (u'BARBARA', u'NATAN'): 6, (u'ERICO', u'SALMA'): 6, (u'NESTOR', u'ODILA'): 6, (u'INACIA', u'LARA'): 6, (u'LARA', u'SHEILA'): 6, (u'FILIPINHO', u'TABATA'): 6, (u'MADA', u'MALU'): 6, (u'FABINHO', u'NATAN'): 4, (u'GERTRUDES', u'NTOR'): 4, (u'EMILIA', u'MADA'): 4, (u'FABIN', u'NATAN'): 4, (u'GIANE', u'MALU'): 4, (u'LILI', u'VERONICA'): 4, (u'DOROTHY', u'MADA'): 4, (u'BENTO', u'MALU'): 4, (u'BENTO', u'CRIANCAS'): 4, (u'CHARLENE', u'RENATA'): 4, (u'LUZ', u'MALU'): 4, (u'LARA', u'ZICA'): 2, (u'CHARLENE', u'ODILA'): 2, (u'DAMARIS', u'LILI'): 2, (u'AMORA', u'ZITO'): 2, (u'TABATA', u'WESLEY'): 2, (u'MEL', u'NATAN'): 2, (u'BETA', u'SUELI'): 2, (u'BARBARA', u'DOROTHY'): 2, (u'LUZ', u'MADA'): 2, (u'LILI', u'VERNICA'): 2, (u'CHARLENE', u'MADA'): 2, (u'GIANE', u'LI'): 2, (u'SUELI', u'TITO'): 2, (u'FILIPINHO', u'XANDE'): 2, (u'DAMARIS', u'LARA'): 2, (u'BENTO', u'MAURICIO'): 2, (u'NICE', u'SUELI'): 2, (u'BETA', u'TINA'): 2, (u'TITO', u'VERNICA'): 2, (u'AMORA', u'BRBARA'): 2, (u'KEVIN', u'LUZ'): 2, (u'LUCINDO', u'NICE'): 2, (u'BRENDA', u'XANDE'): 2, (u'BENTO', u'DOUGLAS'): 2, (u'MALU', u'NATAN'): 2, (u'LI', u'RENATA'): 2, (u'MALU', u'TABATA'): 2, (u'ERICO', u'LILI'): 2, (u'BENTO', u'SALMA'): 2, (u'BARBARA', u'LARA'): 2, (u'RENATA', u'TABATA'): 2, (u'MAURICIO', u'VERONICA'): 2, (u'GIANE', u'PLINIO'): 2, (u'TABATA', u'ZITO'): 2, (u'LARA', u'VITINHO'): 2, (u'FILIPINHO', u'MULHER'): 2, (u'DAMARIS', u'SUELI'): 2, (u'LILI', u'TINA'): 2, (u'CELINHA', u'MEL'): 2, (u'CHARLENE', u'NESTOR'): 2, (u'LILI', u'LILI'): 2, (u'AMORA', u'DOROTHY'): 2, (u'GERTRUDES', u'LILI'): 2, (u'BENTO', u'SOCORRO'): 2, (u'MULHER', u'XANDE'): 2, (u'LILI', u'WILSON'): 2, (u'BRENDA', u'FILIPINHO'): 2, (u'AMORA', u'NATAN'): 2, (u'INACIA', u'ZICA'): 2, (u'BARBARA', u'VITINHO'): 2, (u'BRBARA', u'MALU'): 2, (u'EMILIA', u'KEVIN'): 2, (u'SOCORRO', u'WESLEY'): 2})
 INFO: Arvore:

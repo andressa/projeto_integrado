@@ -140,6 +140,52 @@ DEBUG: Pesquisando relacionamento entre MARCIA e VALDIRENE...
 DEBUG: O MARCIA tem os seguintes relacionamentos: {}
 DEBUG: Pesquisando relacionamento entre LEILA e PILAR...
 DEBUG: O LEILA tem os seguintes relacionamentos: {'NEIDE': {'n': 20}, 'THALES': {'n': 50}, 'PIL': {'n': 4}}
+DEBUG: Clusterizacao:
+[['GINA', 'FELIX', 'JOANA', 'PAULINHA', 'LUTERO', 'SIMONE', 'PAULA', 'BRUNO', 'PALOMA', 'ORDALIA', 'AMARILYS', 'NINHO', 'FEX', 'JACQUES'], ['ANE', 'PILAR', 'PIL', 'ALINE', 'THALES', 'BERNARDA', 'WAGNER', 'VINICIUS', 'LEILA', 'CER', 'SIRLANGE', 'NEIDE', 'CESAR', 'NICOLE'], ['MARCIA', 'RINALDO', 'VALDIRENE', 'CARLITO', 'DENIZARD', 'ATILIO', 'HOMEM'], ['MICHEL', 'PATRICIA', 'PORTEIRO', 'ENTREGADOR'], ['LUTO'], ['LDA'], ['ROGERIO'], ['LEI'], ['BRU']]
+DEBUG: Node FEX go to group #0
+DEBUG: Node PILAR go to group #1
+DEBUG: Node WAGNER go to group #1
+DEBUG: Node HOMEM go to group #2
+DEBUG: Node ENTREGADOR go to group #3
+DEBUG: Node RINALDO go to group #2
+DEBUG: Node SIMONE go to group #0
+DEBUG: Node LEILA go to group #1
+DEBUG: Node BRUNO go to group #0
+DEBUG: Node NEIDE go to group #1
+DEBUG: Node LUTO go to group #4
+DEBUG: Node LDA go to group #5
+DEBUG: Node PIL go to group #1
+DEBUG: Node ROGERIO go to group #6
+DEBUG: Node MARCIA go to group #2
+DEBUG: Node THALES go to group #1
+DEBUG: Node FELIX go to group #0
+DEBUG: Node PATRICIA go to group #3
+DEBUG: Node VINICIUS go to group #1
+DEBUG: Node NICOLE go to group #1
+DEBUG: Node PALOMA go to group #0
+DEBUG: Node DENIZARD go to group #2
+DEBUG: Node CESAR go to group #1
+DEBUG: Node NINHO go to group #0
+DEBUG: Node CER go to group #1
+DEBUG: Node GINA go to group #0
+DEBUG: Node BERNARDA go to group #1
+DEBUG: Node JOANA go to group #0
+DEBUG: Node PAULINHA go to group #0
+DEBUG: Node ATILIO go to group #2
+DEBUG: Node ORDALIA go to group #0
+DEBUG: Node PAULA go to group #0
+DEBUG: Node JACQUES go to group #0
+DEBUG: Node ANE go to group #1
+DEBUG: Node ALINE go to group #1
+DEBUG: Node LEI go to group #7
+DEBUG: Node BRU go to group #8
+DEBUG: Node SIRLANGE go to group #1
+DEBUG: Node LUTERO go to group #0
+DEBUG: Node VALDIRENE go to group #2
+DEBUG: Node CARLITO go to group #2
+DEBUG: Node PORTEIRO go to group #3
+DEBUG: Node AMARILYS go to group #0
+DEBUG: Node MICHEL go to group #3
 INFO: Relations:
 Counter({(u'AMARILYS', u'PALOMA'): 85, (u'MARCIA', u'VALDIRENE'): 60, (u'LEILA', u'THALES'): 50, (u'BRUNO', u'PALOMA'): 42, (u'AMARILYS', u'FELIX'): 36, (u'FELIX', u'JACQUES'): 36, (u'HOMEM', u'MARCIA'): 34, (u'NINHO', u'PALOMA'): 34, (u'LEILA', u'PILAR'): 34, (u'ALINE', u'CESAR'): 28, (u'LUTERO', u'PALOMA'): 26, (u'CARLITO', u'VALDIRENE'): 24, (u'LEILA', u'NEIDE'): 20, (u'ATILIO', u'MARCIA'): 18, (u'PALOMA', u'PAULA'): 18, (u'ORDALIA', u'PALOMA'): 16, (u'AMARILYS', u'BRUNO'): 16, (u'BERNARDA', u'PILAR'): 14, (u'DENIZARD', u'RINALDO'): 14, (u'NICOLE', u'VINICIUS'): 12, (u'PILAR', u'SIRLANGE'): 12, (u'PATRICIA', u'PORTEIRO'): 10, (u'JACQUES', u'LUTERO'): 10, (u'AMARILYS', u'ORDALIA'): 10, (u'MICHEL', u'PATRICIA'): 10, (u'NICOLE', u'PILAR'): 10, (u'GINA', u'ORDALIA'): 8, (u'PILAR', u'VINICIUS'): 8, (u'BRUNO', u'PAULINHA'): 8, (u'BERNARDA', u'LEILA'): 8, (u'CESAR', u'PILAR'): 8, (u'FELIX', u'SIMONE'): 8, (u'ENTREGADOR', u'PATRICIA'): 8, (u'BRUNO', u'GINA'): 6, (u'RINALDO', u'VALDIRENE'): 6, (u'FELIX', u'FELIX'): 6, (u'BRUNO', u'PAULA'): 6, (u'NICOLE', u'THALES'): 4, (u'ATILIO', u'VALDIRENE'): 4, (u'BERNARDA', u'WAGNER'): 4, (u'LUTERO', u'ORDALIA'): 4, (u'AMARILYS', u'LUTERO'): 4, (u'AMARILYS', u'FEX'): 4, (u'CER', u'PILAR'): 4, (u'JOANA', u'LUTERO'): 4, (u'LEILA', u'PIL'): 4, (u'ORDALIA', u'PAULINHA'): 4, (u'PILAR', u'WAGNER'): 4, (u'BRUNO', u'ORDALIA'): 4, (u'ANE', u'CESAR'): 4, (u'LUTERO', u'LUTERO'): 4, (u'BERNARDA', u'NICOLE'): 2, (u'LEI', u'NEIDE'): 2, (u'DENIZARD', u'MARCIA'): 2, (u'AMARILYS', u'LUTO'): 2, (u'LDA', u'LEI'): 2, (u'LDA', u'LEILA'): 2, (u'FELIX', u'LUTERO'): 2, (u'BRU', u'NINHO'): 2, (u'MARCIA', u'MARCIA'): 2, (u'LEILA', u'PALOMA'): 2, (u'GINA', u'PALOMA'): 2, (u'ROGERIO', u'THALES'): 2, (u'PILAR', u'THALES'): 2, (u'FELIX', u'PORTEIRO'): 2, (u'CESAR', u'MICHEL'): 2, (u'JACQUES', u'JACQUES'): 2, (u'AMARILYS', u'SIRLANGE'): 2, (u'BERNARDA', u'THALES'): 2, (u'NICOLE', u'NINHO'): 2, (u'HOMEM', u'VALDIRENE'): 2, (u'BRUNO', u'PILAR'): 2, (u'PALOMA', u'PALOMA'): 2, (u'LUTO', u'PALOMA'): 2, (u'BRUNO', u'JACQUES'): 2, (u'LEILA', u'LEILA'): 2, (u'BRUNO', u'NEIDE'): 2, (u'AMARILYS', u'GINA'): 2, (u'CESAR', u'LUTERO'): 2, (u'LUTERO', u'PILAR'): 2, (u'GINA', u'LUTERO'): 2, (u'MARCIA', u'PALOMA'): 2, (u'AMARILYS', u'ATILIO'): 2, (u'NICOLE', u'ROGERIO'): 2, (u'BRU', u'ORDALIA'): 2, (u'BERNARDA', u'SIRLANGE'): 2})
 INFO: Arvore:

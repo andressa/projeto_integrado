@@ -21,6 +21,10 @@ def get_novela_dir(novela):
         if novela_dir.endswith( novela ): return novela_dir
 
 def analysis(request, novela, date, atype):
+    templates = {
+            'tree': 'analysis.html',
+            'matrix': 'matrix.html'
+            }
     novela_dir = get_novela_dir(novela)
     analysis_name = '%s/%s-%s-%s.json' % (novela_dir, camel_case(novela).replace("-", ""), date, atype)
     if not os.path.isfile(analysis_name):
@@ -29,7 +33,8 @@ def analysis(request, novela, date, atype):
                             context_instance=RequestContext(request)
                             )
 
-    return render_to_response('analysis.html',
+    return render_to_response(templates[atype],
                         {'json': json.dumps(open(analysis_name).read())},
                         context_instance=RequestContext(request)
                         )
+

@@ -40,6 +40,20 @@ DEBUG: Pesquisando relacionamento entre CIRO e ISABEL...
 DEBUG: O CIRO tem os seguintes relacionamentos: {'RODRIGO': {'n': 4}, 'JUNTOS': {'n': 6}}
 DEBUG: Pesquisando relacionamento entre CASSIANO e DUQUE...
 DEBUG: O CASSIANO tem os seguintes relacionamentos: {'ESTER': {'n': 6}}
+DEBUG: Clusterizacao:
+[['CASSIANO', 'SAMUEL', 'DUQUE', 'CASSIO', 'ESTER', 'LINDAURA'], ['ISABEL', 'JUNTOS', 'RODRIGO', 'AMADEU', 'CIRO'], ['EST']]
+DEBUG: Node EST go to group #2
+DEBUG: Node CASSIANO go to group #0
+DEBUG: Node SAMUEL go to group #0
+DEBUG: Node AMADEU go to group #1
+DEBUG: Node ISABEL go to group #1
+DEBUG: Node DUQUE go to group #0
+DEBUG: Node CASSIO go to group #0
+DEBUG: Node RODRIGO go to group #1
+DEBUG: Node ESTER go to group #0
+DEBUG: Node JUNTOS go to group #1
+DEBUG: Node LINDAURA go to group #0
+DEBUG: Node CIRO go to group #1
 INFO: Relations:
 Counter({(u'CASSIANO', u'DUQUE'): 59, (u'AMADEU', u'ISABEL'): 20, (u'ISABEL', u'RODRIGO'): 16, (u'ESTER', u'LINDAURA'): 14, (u'LINDAURA', u'SAMUEL'): 10, (u'ESTER', u'SAMUEL'): 10, (u'CIRO', u'ISABEL'): 8, (u'AMADEU', u'CIRO'): 6, (u'CIRO', u'JUNTOS'): 6, (u'CASSIANO', u'ESTER'): 6, (u'CASSIO', u'ESTER'): 4, (u'CIRO', u'RODRIGO'): 4, (u'ALBERTO', u'EST'): 2, (u'CASSIANO', u'EST'): 2, (u'AMADEU', u'JUNTOS'): 2, (u'ESTER', u'ISABEL'): 2, (u'DUQUE', u'ISABEL'): 2})
 INFO: Arvore:

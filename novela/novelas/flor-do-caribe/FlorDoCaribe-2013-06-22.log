@@ -116,6 +116,63 @@ DEBUG: O DADA tem os seguintes relacionamentos: {}
 DEBUG: Pesquisando relacionamento entre AMADEU e CIRO...
 DEBUG: O AMADEU tem os seguintes relacionamentos: {u'ISABEL': {u'n': 26}, u'CIRO': {u'n': 6}}
 DEBUG: Incrementando relacionamento entre AMADEU e CIRO: de 6 para 10
+DEBUG: Clusterizacao:
+[[u'SAMUCA', 'NATALIA', u'CASSIANO', u'SAMUEL', u'DUQUE', u'OLIVIA', 'CAROL', u'ESTER', u'JUNTOS', u'GUIOMAR', u'CHICO', 'RODRIGO', u'QUIRINO', u'AMADEU', u'ISABEL', 'MILA', u'LINDAURA', u'ZULEIKA', u'JULIANO', 'DORALICE', u'AMARALINA', 'TAIS', 'WILLIAM', 'PACOQUINHA', u'MARINALVA', u'CASSIO', 'MANTOVANI', 'CIRO'], ['LO', 'DADA', 'CANNHO', 'LINO', 'CANDINHO', 'VERIDIANA'], [u'MARIZE', u'LIPE', u'MATEUS', u'BIBIANA'], ['DNISIO', 'DIONISIO', u'ALBERTO'], [u'HELIO', u'YVETE'], ['CRISTAL', 'AMPARO'], ['LFINO'], [u'TERESA'], ['MTOVANI'], ['QUIRIN'], [u'POQUINHA'], [u'PROFESSORA'], [u'EST'], ['CSIANO'], [u'LUCIA'], [u'MULHER']]
+DEBUG: Node SAMUCA go to group #0
+DEBUG: Node HELIO go to group #4
+DEBUG: Node LFINO go to group #6
+DEBUG: Node MATEUS go to group #2
+DEBUG: Node NATALIA go to group #0
+DEBUG: Node CASSIANO go to group #0
+DEBUG: Node SAMUEL go to group #0
+DEBUG: Node TERESA go to group #7
+DEBUG: Node PROFESSORA go to group #11
+DEBUG: Node LINO go to group #1
+DEBUG: Node DUQUE go to group #0
+DEBUG: Node OLIVIA go to group #0
+DEBUG: Node CAROL go to group #0
+DEBUG: Node ALBERTO go to group #3
+DEBUG: Node ESTER go to group #0
+DEBUG: Node JUNTOS go to group #0
+DEBUG: Node CRISTAL go to group #5
+DEBUG: Node GUIOMAR go to group #0
+DEBUG: Node MTOVANI go to group #8
+DEBUG: Node YVETE go to group #4
+DEBUG: Node QUIRIN go to group #9
+DEBUG: Node LO go to group #1
+DEBUG: Node POQUINHA go to group #10
+DEBUG: Node RODRIGO go to group #0
+DEBUG: Node BIBIANA go to group #2
+DEBUG: Node QUIRINO go to group #0
+DEBUG: Node EST go to group #12
+DEBUG: Node LIPE go to group #2
+DEBUG: Node AMADEU go to group #0
+DEBUG: Node CANNHO go to group #1
+DEBUG: Node ISABEL go to group #0
+DEBUG: Node MILA go to group #0
+DEBUG: Node VERIDIANA go to group #1
+DEBUG: Node CHICO go to group #0
+DEBUG: Node CSIANO go to group #13
+DEBUG: Node MARIZE go to group #2
+DEBUG: Node DNISIO go to group #3
+DEBUG: Node ZULEIKA go to group #0
+DEBUG: Node JULIANO go to group #0
+DEBUG: Node DORALICE go to group #0
+DEBUG: Node AMARALINA go to group #0
+DEBUG: Node DADA go to group #1
+DEBUG: Node TAIS go to group #0
+DEBUG: Node AMPARO go to group #5
+DEBUG: Node LUCIA go to group #14
+DEBUG: Node WILLIAM go to group #0
+DEBUG: Node DIONISIO go to group #3
+DEBUG: Node PACOQUINHA go to group #0
+DEBUG: Node MARINALVA go to group #0
+DEBUG: Node LINDAURA go to group #0
+DEBUG: Node CANDINHO go to group #1
+DEBUG: Node CASSIO go to group #0
+DEBUG: Node MANTOVANI go to group #0
+DEBUG: Node CIRO go to group #0
+DEBUG: Node MULHER go to group #15
 INFO: Relations:
 Counter({(u'JULIANO', u'NATALIA'): 62, (u'ISABEL', u'TAIS'): 62, (u'CANDINHO', u'DADA'): 46, (u'DORALICE', u'QUIRINO'): 42, (u'JULIANO', u'QUIRINO'): 40, (u'MANTOVANI', u'TAIS'): 34, (u'DORALICE', u'NATALIA'): 32, (u'CASSIANO', u'DUQUE'): 22, (u'DADA', u'LINO'): 22, (u'AMPARO', u'CRISTAL'): 20, (u'ALBERTO', u'DIONISIO'): 20, (u'CAROL', u'NATALIA'): 18, (u'CAROL', u'MILA'): 16, (u'CANDINHO', u'VERIDIANA'): 16, (u'ESTER', u'ZULEIKA'): 14, (u'DORALICE', u'JULIANO'): 14, (u'CAROL', u'DORALICE'): 12, (u'CASSIANO', u'OLIVIA'): 12, (u'OLIVIA', u'TAIS'): 10, (u'LINDAURA', u'PACOQUINHA'): 10, (u'DUQUE', u'OLIVIA'): 8, (u'NATALIA', u'QUIRINO'): 8, (u'MILA', u'NATALIA'): 6, (u'ESTER', u'SAMUCA'): 6, (u'CAROL', u'JULIANO'): 6, (u'CASSIANO', u'TAIS'): 6, (u'LINO', u'VERIDIANA'): 6, (u'DORALICE', u'WILLIAM'): 6, (u'CASSIANO', u'CIRO'): 6, (u'CANNHO', u'DADA'): 4, (u'TAIS', u'TAIS'): 4, (u'ALBERTO', u'DNISIO'): 4, (u'JULIANO', u'WILLIAM'): 4, (u'CANDINHO', u'LO'): 4, (u'CASSIANO', u'ESTER'): 4, (u'CAROL', u'QUIRINO'): 4, (u'CIRO', u'RODRIGO'): 4, (u'CASSIANO', u'RODRIGO'): 4, (u'DUQUE', u'DUQUE'): 4, (u'AMADEU', u'CIRO'): 4, (u'LINO', u'LINO'): 2, (u'AMADEU', u'RODRIGO'): 2, (u'CANDINHO', u'JULIANO'): 2, (u'CIRO', u'CSIANO'): 2, (u'ISABEL', u'QUIRINO'): 2, (u'CANDINHO', u'LINO'): 2, (u'MANTOVANI', u'NATALIA'): 2, (u'CASSIANO', u'ISABEL'): 2, (u'CAROL', u'DADA'): 2, (u'CASSIANO', u'DIONISIO'): 2, (u'CAROL', u'WILLIAM'): 2, (u'DORALICE', u'MANTOVANI'): 2, (u'LINDAURA', u'TAIS'): 2, (u'JULIANO', u'QUIRIN'): 2, (u'HELIO', u'MILA'): 2, (u'CASSIANO', u'CRISTAL'): 2, (u'CSIANO', u'ISABEL'): 2, (u'CAROL', u'MANTOVANI'): 2, (u'CANNHO', u'LINO'): 2, (u'CRISTAL', u'JULIANO'): 2, (u'DUQUE', u'ESTER'): 2, (u'ISABEL', u'LINDAURA'): 2, (u'JULIANO', u'MILA'): 2, (u'SAMUCA', u'SAMUCA'): 2, (u'MANTOVANI', u'VERIDIANA'): 2, (u'ESTER', u'JULIANO'): 2, (u'MTOVANI', u'TAIS'): 2, (u'AMADEU', u'DORALICE'): 2, (u'CANDINHO', u'LFINO'): 2, (u'JULIANO', u'JULIANO'): 2, (u'MARINALVA', u'PACOQUINHA'): 2, (u'SAMUCA', u'ZULEIKA'): 2, (u'ISABEL', u'RODRIGO'): 2, (u'DADA', u'LFINO'): 2, (u'ESTER', u'OLIVIA'): 2, (u'DORALICE', u'QUIRIN'): 2, (u'CANDINHO', u'CANDINHO'): 2, (u'LINDAURA', u'MARINALVA'): 2, (u'CANNHO', u'DORALICE'): 2, (u'CANDINHO', u'DORALICE'): 2, (u'CAROL', u'HELIO'): 2, (u'MANTOVANI', u'MTOVANI'): 2, (u'CANDINHO', u'MILA'): 2, (u'ESTER', u'ESTER'): 1})
 INFO: Arvore:

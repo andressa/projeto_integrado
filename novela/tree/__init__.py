@@ -20,6 +20,7 @@ import pprint
 import sqlite3
 import json
 import re
+import networkx as nx
 from collections import Counter
 from cc_mining.models import TVShow, CC, Programa, Tree as TreeModel, Analysis
 
@@ -159,6 +160,59 @@ class Tree(object):
         t.json = self.json
         t.save()
 
+class Matrix(object):
+
+    def __init__(self, treeobj, speakers, logger):
+        self.logger = logger
+        self.treeobj, self.speakers = treeobj, speakers
+        self.create()
+
+    def create(self):
+        # Graph creation
+        G = nx.Graph()
+        # Nodes
+        for n in self.treeobj.nodes: G.add_node(n)
+        # Edges
+        for e in self.treeobj.edges:
+            for i in self.treeobj.edges[e].keys():
+                G.add_edge(e, i, weight=self.treeobj.edges[e][i]['n'])
+        self.graph = G
+        self.save()
+        # Clustering
+        relations = nx.connected_components(G)
+        self.logger.debug("Clusterizacao:\n%s" % str(relations))
+        # Update JSON with clustering info
+        for n in self.json['nodes']:
+            for i, a in enumerate(relations):
+                if n in a:
+                    self.logger.debug("Node %s go to group #%d" % (n, i))
+                    self.json['nodes'][n]['group'] = i
+        self.process()
+
+    def save(self):
+        # Saida do grafo para formato JSON
+        novela = {}
+        novela['nodes'] = {}
+        nodes = self.graph.nodes()
+        for node in nodes:
+            novela['nodes'][node] = {}
+        novela['links'] = []
+        for p_1, p_2, data in self.graph.edges_iter(data=True):
+            if data['weight'] == 1:
+                continue
+            i_1 = nodes.index(p_1)
+            i_2 = nodes.index(p_2)
+            novela['links'].append({'source': i_1, 'target': i_2, 'value': data['weight']})
+        self.json = novela
+
+    def process(self):
+        novela = {}
+        novela['nodes'] = []
+        for n in self.json['nodes']:
+            novela['nodes'].append({'name': n, 'group': self.json['nodes'][n]['group']})
+        novela['links'] = self.json['links']
+        self.json = novela
+
 class NovelaAnalysis(object):
 
     def __init__(self, novela_obj, logger):
@@ -170,6 +224,7 @@ class NovelaAnalysis(object):
         self.counter = Counter()
         self.tree = Tree(self.novela.id, self.id, self.logger)
         self.load_tree()
+        self.matrix = Matrix(self.tree, self.speakers, self.logger)
 
     def load_analysis(self):
         t = TVShow.objects.get(id=self.novela.id)
@@ -208,6 +263,9 @@ class NovelaAnalysis(object):
     def save(self):
         f = open(get_novela_filename(self.novela.dir, self.novela.name, self.novela.date, 'json', add='tree'), 'w')
         f.write(json.dumps(self.tree.json))
+        f.close()
+        f = open(get_novela_filename(self.novela.dir, self.novela.name, self.novela.date, 'json', add='matrix'), 'w')
+        f.write(json.dumps(self.matrix.json, separators=(',', ':')))
         f.close()
 
 def get_dates():
