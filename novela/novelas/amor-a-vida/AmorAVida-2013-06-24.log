@@ -1,0 +1,604 @@
+DEBUG: Recuperando ultima arvore
+DEBUG: SELECT "cc_mining_analysis"."id", "cc_mining_analysis"."tvshow_id" FROM "cc_mining_analysis" INNER JOIN "cc_mining_tvshow" ON ("cc_mining_analysis"."tvshow_id" = "cc_mining_tvshow"."id") WHERE ("cc_mining_tvshow"."pid_id" = 6  AND "cc_mining_analysis"."id" < 12 )
+DEBUG: JSON inicial:
+{u'nodes': {u'THAS': {}, u'PAR': {}, u'RAPAZ': {}, u'VIVIAN': {}, u'PRIA': {}, u'EDITH': {}, u'LIN': {}, u'PILAR': {}, u'WAGNER': {}, u'MHEL': {}, u'MICL': {}, u'CARTO': {}, u'LUCIANO': {}, u'VDINE': {}, u'PIL': {}, u'FLIX': {}, u'PRICIA': {}, u'JOA': {}, u'DANIEL': {}, u'PAULA': {}, u'PALOMA': {}, u'DENIZARD': {}, u'CARLI': {}, u'VDIRENE': {}, u'ROGERIO': {}, u'BERNARDA': {}, u'JOANA': {}, u'AMADEU': {}, u'PAULINHA': {}, u'LINDA': {}, u'NIN': {}, u'MARC': {}, u'KEILA': {}, u'LUTERO': {}, u'MRCIA': {}, u'VALDIRE': {}, u'PSEFONE': {}, u'ERON': {}, u'RENAN': {}, u'ADONIRAM': {}, u'NIVALDO': {}, u'RINALDO': {}, u'SIMONE': {}, u'NEIDE': {}, u'JUNTOS': {}, u'TAMARA': {}, u'LUTO': {}, u'LDA': {}, u'PATCIA': {}, u'THALES': {}, u'VALRENE': {}, u'PATRICIA': {}, u'DELEGADO': {}, u'VINICIUS': {}, u'CER': {}, u'SIRLANGE': {}, u'LLA': {}, u'C': {}, u'PRISCILA': {}, u'LERO': {}, u'ATILIO': {}, u'HOMEM': {}, u'ANE': {}, u'ALINE': {}, u'CARLITO': {}, u'MICHEL': {}, u'PERNE': {}, u'AMARILYS': {}, u'RITA': {}, u'NEI': {}, u'CICA': {}, u'LEILA': {}, u'BERNAA': {}, u'REN': {}, u'CTO': {}, u'VALDINE': {}, u'NO': {}, u'VALENTIN': {}, u'FELIX': {}, u'GARCOM': {}, u'NINHO': {}, u'CR': {}, u'PERFONE': {}, u'FEX': {}, u'POLICIAL': {}, u'ALI': {}, u'PATRIA': {}, u'LEI': {}, u'BRU': {}, u'TAMA': {}, u'ENTREGADOR': {}, u'VALDIRENE': {}, u'DANL': {}, u'PORTEIRO': {}, u'ORDAA': {}, u'SE': {}, u'GENTIL': {}, u'PERSENE': {}, u'PATA': {}, u'PILGA': {}, u'BRUNO': {}, u'MARCIA': {}, u'MULHER': {}, u'DENIZD': {}, u'ELENICE': {}, u'NICOLE': {}, u'CESAR': {}, u'DIZD': {}, u'LIDIA': {}, u'GINA': {}, u'JQUES': {}, u'SIME': {}, u'ORDALIA': {}, u'JACQUES': {}, u'GLAUCE': {}, u'MACIEL': {}, u'NIKO': {}, u'PERSEFONE': {}, u'AMALYS': {}, u'ORDLIA': {}, u'GIGI': {}, u'PCIA': {}}, u'edges': {u'ERON': {u'HOMEM': {u'n': 8}, u'PATRICIA': {u'n': 24}, u'NIKO': {u'n': 6}}, u'GENTIL': {u'VALDIRENE': {u'n': 6}, u'MARCIA': {u'n': 6}}, u'JACQUES': {u'JQUES': {u'n': 4}, u'PILAR': {u'n': 4}, u'LUTERO': {u'n': 16}}, u'NEI': {u'NEIDE': {u'n': 4}}, u'EDITH': {u'TAMARA': {u'n': 6}, u'FELIX': {u'n': 38}}, u'PILAR': {u'VINICIUS': {u'n': 8}, u'WAGNER': {u'n': 4}, u'SIRLANGE': {u'n': 12}}, u'CICA': {u'FELIX': {u'n': 6}, u'LUTERO': {u'n': 4}}, u'PERSENE': {u'RENAN': {u'n': 10}}, u'NIKO': {u'PATRICIA': {u'n': 30}, u'PRICIA': {u'n': 6}}, u'MHEL': {u'PATRICIA': {u'n': 4}}, u'LEILA': {u'THAS': {u'n': 8}, u'PIL': {u'n': 4}, u'THALES': {u'n': 106}, u'PILAR': {u'n': 34}, u'NEIDE': {u'n': 24}, u'NICOLE': {u'n': 4}}, u'MRCIA': {u'RITA': {u'n': 4}}, u'BRUNO': {u'GINA': {u'n': 6}, u'GLAUCE': {u'n': 4}, u'PILAR': {u'n': 10}, u'JOANA': {u'n': 4}, u'CESAR': {u'n': 6}, u'PAULINHA': {u'n': 8}, u'LUTERO': {u'n': 6}, u'PAULA': {u'n': 6}, u'PALOMA': {u'n': 42}, u'DENIZARD': {u'n': 8}, u'ORDALIA': {u'n': 14}, u'NINHO': {u'n': 30}, u'LUTO': {u'n': 4}}, u'NICOLE': {u'VINICIUS': {u'n': 12}, u'THALES': {u'n': 24}, u'PILAR': {u'n': 10}, u'ROGERIO': {u'n': 58}, u'THAS': {u'n': 8}}, u'FLIX': {u'TAMARA': {u'n': 4}}, u'MARCIA': {u'VALDIRENE': {u'n': 124}, u'VDIRENE': {u'n': 4}, u'RITA': {u'n': 44}}, u'FELIX': {u'PILAR': {u'n': 64}, u'SIMONE': {u'n': 12}, u'SIME': {u'n': 6}, u'TAMARA': {u'n': 16}, u'NINHO': {u'n': 24}, u'JACQUES': {u'n': 56}}, u'PATRICIA': {u'PORTEIRO': {u'n': 10}}, u'DELEGADO': {u'VALDIRENE': {u'n': 6}, u'MARCIA': {u'n': 24}}, u'ELENICE': {u'MICHEL': {u'n': 12}}, u'DANIEL': {u'ELENICE': {u'n': 4}, u'MICL': {u'n': 4}, u'MICHEL': {u'n': 14}}, u'CER': {u'PILAR': {u'n': 4}}, u'PALOMA': {u'PAULA': {u'n': 18}}, u'DENIZARD': {u'PILAR': {u'n': 14}, u'FELIX': {u'n': 4}, u'LUTERO': {u'n': 4}, u'RINALDO': {u'n': 22}, u'VALDIRENE': {u'n': 4}, u'ORDAA': {u'n': 4}, u'ORDALIA': {u'n': 16}}, u'CESAR': {u'PILAR': {u'n': 32}, u'FELIX': {u'n': 4}, u'PRISCILA': {u'n': 6}, u'LUCIANO': {u'n': 4}, u'TAMARA': {u'n': 3}, u'ORDALIA': {u'n': 4}}, u'NINHO': {u'VALENTIN': {u'n': 20}, u'TAMARA': {u'n': 4}, u'PILAR': {u'n': 32}, u'PALOMA': {u'n': 34}, u'ORDALIA': {u'n': 3}}, u'DIZD': {u'ORDALIA': {u'n': 4}}, u'GINA': {u'ORDALIA': {u'n': 8}}, u'LIDIA': {u'THALES': {u'n': 4}, u'NICOLE': {u'n': 20}}, u'ANE': {u'CESAR': {u'n': 8}}, u'BERNARDA': {u'FELIX': {u'n': 16}, u'EDITH': {u'n': 4}, u'PILAR': {u'n': 40}, u'WAGNER': {u'n': 4}, u'LEILA': {u'n': 8}, u'DENIZARD': {u'n': 4}, u'CESAR': {u'n': 8}}, u'JOANA': {u'LUTERO': {u'n': 14}}, u'AMADEU': {u'NEIDE': {u'n': 4}, u'FELIX': {u'n': 6}, u'LEILA': {u'n': 4}, u'PILAR': {u'n': 4}}, u'ADONIRAM': {u'NIKO': {u'n': 4}}, u'ATILIO': {u'VALDIRENE': {u'n': 4}, u'RITA': {u'n': 4}, u'MARCIA': {u'n': 52}}, u'ORDALIA': {u'PILAR': {u'n': 10}, u'PAULINHA': {u'n': 4}, u'PALOMA': {u'n': 16}}, u'FEX': {u'SIMONE': {u'n': 6}}, u'HOMEM': {u'NIKO': {u'n': 12}, u'MARCIA': {u'n': 34}}, u'RINALDO': {u'VALDIRENE': {u'n': 10}}, u'POLICIAL': {u'VALDIRENE': {u'n': 8}}, u'ALINE': {u'PILAR': {u'n': 18}, u'CESAR': {u'n': 84}}, u'MARC': {u'RITA': {u'n': 8}}, u'LEI': {u'NEIDE': {u'n': 4}}, u'ENTREGADOR': {u'PATRICIA': {u'n': 8}}, u'PERSEFONE': {u'VIVIAN': {u'n': 6}, u'RENAN': {u'n': 18}}, u'LUTERO': {u'ORDALIA': {u'n': 8}, u'PATRICIA': {u'n': 4}, u'PALOMA': {u'n': 26}}, u'CARLITO': {u'GENTIL': {u'n': 8}, u'MARCIA': {u'n': 6}, u'VALRENE': {u'n': 4}, u'RINALDO': {u'n': 8}, u'VALDIRENE': {u'n': 32}, u'DENIZARD': {u'n': 14}, u'VDIRENE': {u'n': 4}}, u'AMARILYS': {u'FELIX': {u'n': 36}, u'CICA': {u'n': 4}, u'PATRICIA': {u'n': 4}, u'LUTERO': {u'n': 4}, u'BRUNO': {u'n': 16}, u'PALOMA': {u'n': 85}, u'ORDALIA': {u'n': 10}, u'NIKO': {u'n': 8}, u'NINHO': {u'n': 50}, u'FEX': {u'n': 4}}, u'MICHEL': {u'PRIA': {u'n': 4}, u'PATRICIA': {u'n': 46}, u'PORTEIRO': {u'n': 6}, u'PATCIA': {u'n': 4}}, u'KEILA': {u'VALDIRENE': {u'n': 36}}}}
+DEBUG: Pesquisando relacionamento entre HOMEM e MARCIA...
+DEBUG: O HOMEM tem os seguintes relacionamentos: {u'NIKO': {u'n': 12}, u'MARCIA': {u'n': 34}}
+DEBUG: Incrementando relacionamento entre HOMEM e MARCIA: de 34 para 62
+DEBUG: Pesquisando relacionamento entre BRUNO e PALOMA...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {u'GINA': {u'n': 6}, u'GLAUCE': {u'n': 4}, u'PILAR': {u'n': 10}, u'JOANA': {u'n': 4}, u'CESAR': {u'n': 6}, u'PAULINHA': {u'n': 8}, u'LUTERO': {u'n': 6}, u'PAULA': {u'n': 6}, u'PALOMA': {u'n': 42}, u'DENIZARD': {u'n': 8}, u'ORDALIA': {u'n': 14}, u'NINHO': {u'n': 30}, u'LUTO': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre BRUNO e PALOMA: de 42 para 48
+DEBUG: Pesquisando relacionamento entre NICOLE e THALES...
+DEBUG: O NICOLE tem os seguintes relacionamentos: {u'VINICIUS': {u'n': 12}, u'THALES': {u'n': 24}, u'PILAR': {u'n': 10}, u'ROGERIO': {u'n': 58}, u'THAS': {u'n': 8}}
+DEBUG: Incrementando relacionamento entre NICOLE e THALES: de 24 para 62
+DEBUG: Arvore nao contem PATO
+DEBUG: Pesquisando relacionamento entre PATO e VALDIRENE...
+DEBUG: O PATO tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre ATILIO e VALDIRENE...
+DEBUG: O ATILIO tem os seguintes relacionamentos: {u'VALDIRENE': {u'n': 4}, u'RITA': {u'n': 4}, u'MARCIA': {u'n': 52}}
+DEBUG: Incrementando relacionamento entre ATILIO e VALDIRENE: de 4 para 8
+DEBUG: Pesquisando relacionamento entre LUTERO e ORDALIA...
+DEBUG: O LUTERO tem os seguintes relacionamentos: {u'ORDALIA': {u'n': 8}, u'PATRICIA': {u'n': 4}, u'PALOMA': {u'n': 26}}
+DEBUG: Incrementando relacionamento entre LUTERO e ORDALIA: de 8 para 18
+DEBUG: Pesquisando relacionamento entre PATRICIA e SIMONE...
+DEBUG: O PATRICIA tem os seguintes relacionamentos: {u'PORTEIRO': {u'n': 10}}
+DEBUG: Pesquisando relacionamento entre CESAR e PILAR...
+DEBUG: O CESAR tem os seguintes relacionamentos: {u'PILAR': {u'n': 32}, u'FELIX': {u'n': 4}, u'PRISCILA': {u'n': 6}, u'LUCIANO': {u'n': 4}, u'TAMARA': {u'n': 3}, u'ORDALIA': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre CESAR e PILAR: de 32 para 52
+DEBUG: Pesquisando relacionamento entre FELIX e LUTERO...
+DEBUG: O FELIX tem os seguintes relacionamentos: {u'PILAR': {u'n': 64}, u'SIMONE': {u'n': 12}, u'SIME': {u'n': 6}, u'TAMARA': {u'n': 16}, u'NINHO': {u'n': 24}, u'JACQUES': {u'n': 56}}
+DEBUG: Pesquisando relacionamento entre DENIZARD e FILOSOFO...
+DEBUG: O DENIZARD tem os seguintes relacionamentos: {u'PILAR': {u'n': 14}, u'FELIX': {u'n': 4}, u'LUTERO': {u'n': 4}, u'RINALDO': {u'n': 22}, u'VALDIRENE': {u'n': 4}, u'ORDAA': {u'n': 4}, u'ORDALIA': {u'n': 16}}
+DEBUG: Pesquisando relacionamento entre LUTERO e PALOMA...
+DEBUG: O LUTERO tem os seguintes relacionamentos: {u'ORDALIA': {'n': 18}, u'PATRICIA': {u'n': 4}, u'PALOMA': {u'n': 26}}
+DEBUG: Incrementando relacionamento entre LUTERO e PALOMA: de 26 para 36
+DEBUG: Pesquisando relacionamento entre BERNARDA e PILAR...
+DEBUG: O BERNARDA tem os seguintes relacionamentos: {u'FELIX': {u'n': 16}, u'EDITH': {u'n': 4}, u'PILAR': {u'n': 40}, u'WAGNER': {u'n': 4}, u'LEILA': {u'n': 8}, u'DENIZARD': {u'n': 4}, u'CESAR': {u'n': 8}}
+DEBUG: Incrementando relacionamento entre BERNARDA e PILAR: de 40 para 48
+DEBUG: Pesquisando relacionamento entre ALINE e FELIX...
+DEBUG: O ALINE tem os seguintes relacionamentos: {u'PILAR': {u'n': 18}, u'CESAR': {u'n': 84}}
+DEBUG: Pesquisando relacionamento entre LEILA e NEIDE...
+DEBUG: O LEILA tem os seguintes relacionamentos: {u'THAS': {u'n': 8}, u'PIL': {u'n': 4}, u'THALES': {u'n': 106}, u'PILAR': {u'n': 34}, u'NEIDE': {u'n': 24}, u'NICOLE': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre LEILA e NEIDE: de 24 para 46
+DEBUG: Pesquisando relacionamento entre ATILIO e MARCIA...
+DEBUG: O ATILIO tem os seguintes relacionamentos: {u'VALDIRENE': {'n': 8}, u'RITA': {u'n': 4}, u'MARCIA': {u'n': 52}}
+DEBUG: Incrementando relacionamento entre ATILIO e MARCIA: de 52 para 70
+DEBUG: Pesquisando relacionamento entre DENIZARD e ORDALIA...
+DEBUG: O DENIZARD tem os seguintes relacionamentos: {u'PILAR': {u'n': 14}, u'FELIX': {u'n': 4}, u'LUTERO': {u'n': 4}, u'RINALDO': {u'n': 22}, u'VALDIRENE': {u'n': 4}, 'FILOSOFO': {'n': 8}, u'ORDAA': {u'n': 4}, u'ORDALIA': {u'n': 16}}
+DEBUG: Incrementando relacionamento entre DENIZARD e ORDALIA: de 16 para 22
+DEBUG: Pesquisando relacionamento entre DENIZARD e RINALDO...
+DEBUG: O DENIZARD tem os seguintes relacionamentos: {u'PILAR': {u'n': 14}, u'FELIX': {u'n': 4}, u'LUTERO': {u'n': 4}, u'RINALDO': {u'n': 22}, u'VALDIRENE': {u'n': 4}, 'FILOSOFO': {'n': 8}, u'ORDAA': {u'n': 4}, u'ORDALIA': {'n': 22}}
+DEBUG: Incrementando relacionamento entre DENIZARD e RINALDO: de 22 para 30
+DEBUG: Pesquisando relacionamento entre ATILIO e MULHER...
+DEBUG: O ATILIO tem os seguintes relacionamentos: {u'VALDIRENE': {'n': 8}, u'RITA': {u'n': 4}, u'MARCIA': {'n': 70}}
+DEBUG: Arvore nao contem MARISTELA
+DEBUG: Pesquisando relacionamento entre MARISTELA e VERONICA...
+DEBUG: O MARISTELA tem os seguintes relacionamentos: {}
+DEBUG: Arvore nao contem ALEJANDRA
+DEBUG: Pesquisando relacionamento entre ALEJANDRA e NINHO...
+DEBUG: O ALEJANDRA tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre AMARILYS e NINHO...
+DEBUG: O AMARILYS tem os seguintes relacionamentos: {u'FELIX': {u'n': 36}, u'CICA': {u'n': 4}, u'PATRICIA': {u'n': 4}, u'LUTERO': {u'n': 4}, u'BRUNO': {u'n': 16}, u'PALOMA': {u'n': 85}, u'ORDALIA': {u'n': 10}, u'NIKO': {u'n': 8}, u'NINHO': {u'n': 50}, u'FEX': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre AMARILYS e NINHO: de 50 para 72
+DEBUG: Pesquisando relacionamento entre DENIZARD e GINA...
+DEBUG: O DENIZARD tem os seguintes relacionamentos: {u'PILAR': {u'n': 14}, u'FELIX': {u'n': 4}, u'LUTERO': {u'n': 4}, u'RINALDO': {'n': 30}, u'VALDIRENE': {u'n': 4}, 'FILOSOFO': {'n': 8}, u'ORDAA': {u'n': 4}, u'ORDALIA': {'n': 22}}
+DEBUG: Pesquisando relacionamento entre BRUNO e NINHO...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {u'GINA': {u'n': 6}, u'GLAUCE': {u'n': 4}, u'PILAR': {u'n': 10}, u'JOANA': {u'n': 4}, u'CESAR': {u'n': 6}, u'PAULINHA': {u'n': 8}, u'LUTERO': {u'n': 6}, u'PAULA': {u'n': 6}, u'PALOMA': {'n': 48}, u'DENIZARD': {u'n': 8}, u'ORDALIA': {u'n': 14}, u'NINHO': {u'n': 30}, u'LUTO': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre BRUNO e NINHO: de 30 para 41
+DEBUG: Pesquisando relacionamento entre ERON e LUTERO...
+DEBUG: O ERON tem os seguintes relacionamentos: {u'HOMEM': {u'n': 8}, u'PATRICIA': {u'n': 24}, u'NIKO': {u'n': 6}}
+DEBUG: Arvore nao contem MULHER
+DEBUG: Pesquisando relacionamento entre MULHER e VALDIRENE...
+DEBUG: O MULHER tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre PATRICIA e PERSEFONE...
+DEBUG: O PATRICIA tem os seguintes relacionamentos: {'SIMONE': {'n': 6}, u'PORTEIRO': {u'n': 10}}
+DEBUG: Pesquisando relacionamento entre FELIX e PALOMA...
+DEBUG: O FELIX tem os seguintes relacionamentos: {u'PILAR': {u'n': 64}, 'LUTERO': {'n': 8}, u'SIMONE': {u'n': 12}, u'SIME': {u'n': 6}, u'TAMARA': {u'n': 16}, u'NINHO': {u'n': 24}, u'JACQUES': {u'n': 56}}
+DEBUG: Pesquisando relacionamento entre AMADEU e LEILA...
+DEBUG: O AMADEU tem os seguintes relacionamentos: {u'NEIDE': {u'n': 4}, u'FELIX': {u'n': 6}, u'LEILA': {u'n': 4}, u'PILAR': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre AMADEU e LEILA: de 4 para 8
+DEBUG: Pesquisando relacionamento entre ALEJANDRA e VALENTIN...
+DEBUG: O ALEJANDRA tem os seguintes relacionamentos: {'NINHO': {'n': 32}}
+DEBUG: Pesquisando relacionamento entre CESAR e FELIX...
+DEBUG: O CESAR tem os seguintes relacionamentos: {u'PILAR': {'n': 52}, u'FELIX': {u'n': 4}, u'PRISCILA': {u'n': 6}, u'LUCIANO': {u'n': 4}, u'TAMARA': {u'n': 3}, u'ORDALIA': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre CESAR e FELIX: de 4 para 46
+DEBUG: Pesquisando relacionamento entre AMARILYS e CESAR...
+DEBUG: O AMARILYS tem os seguintes relacionamentos: {u'FELIX': {u'n': 36}, u'CICA': {u'n': 4}, u'PATRICIA': {u'n': 4}, u'LUTERO': {u'n': 4}, u'BRUNO': {u'n': 16}, u'PALOMA': {u'n': 85}, u'ORDALIA': {u'n': 10}, u'NIKO': {u'n': 8}, u'NINHO': {'n': 72}, u'FEX': {u'n': 4}}
+DEBUG: Arvore nao contem NEIDE
+DEBUG: Pesquisando relacionamento entre NEIDE e RENAN...
+DEBUG: O NEIDE tem os seguintes relacionamentos: {}
+DEBUG: Pesquisando relacionamento entre DENIZARD e VALDIRENE...
+DEBUG: O DENIZARD tem os seguintes relacionamentos: {u'PILAR': {u'n': 14}, u'FELIX': {u'n': 4}, 'GINA': {'n': 12}, u'LUTERO': {u'n': 4}, u'RINALDO': {'n': 30}, u'VALDIRENE': {u'n': 4}, 'FILOSOFO': {'n': 8}, u'ORDAA': {u'n': 4}, u'ORDALIA': {'n': 22}}
+DEBUG: Incrementando relacionamento entre DENIZARD e VALDIRENE: de 4 para 12
+DEBUG: Pesquisando relacionamento entre NINHO e PALOMA...
+DEBUG: O NINHO tem os seguintes relacionamentos: {u'VALENTIN': {u'n': 20}, u'TAMARA': {u'n': 4}, u'PILAR': {u'n': 32}, u'PALOMA': {u'n': 34}, u'ORDALIA': {u'n': 3}}
+DEBUG: Incrementando relacionamento entre NINHO e PALOMA: de 34 para 76
+DEBUG: Pesquisando relacionamento entre ALINE e CESAR...
+DEBUG: O ALINE tem os seguintes relacionamentos: {'FELIX': {'n': 12}, u'PILAR': {u'n': 18}, u'CESAR': {u'n': 84}}
+DEBUG: Incrementando relacionamento entre ALINE e CESAR: de 84 para 96
+DEBUG: Pesquisando relacionamento entre AMARILYS e PALOMA...
+DEBUG: O AMARILYS tem os seguintes relacionamentos: {'CESAR': {'n': 10}, u'FELIX': {u'n': 36}, u'CICA': {u'n': 4}, u'PATRICIA': {u'n': 4}, u'LUTERO': {u'n': 4}, u'BRUNO': {u'n': 16}, u'PALOMA': {u'n': 85}, u'ORDALIA': {u'n': 10}, u'NIKO': {u'n': 8}, u'NINHO': {'n': 72}, u'FEX': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre AMARILYS e PALOMA: de 85 para 97
+DEBUG: Pesquisando relacionamento entre MARCIA e MULHER...
+DEBUG: O MARCIA tem os seguintes relacionamentos: {u'VALDIRENE': {u'n': 124}, u'VDIRENE': {u'n': 4}, u'RITA': {u'n': 44}}
+DEBUG: Pesquisando relacionamento entre BRUNO e MARCIA...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {u'GINA': {u'n': 6}, u'GLAUCE': {u'n': 4}, u'PILAR': {u'n': 10}, u'JOANA': {u'n': 4}, u'CESAR': {u'n': 6}, u'PAULINHA': {u'n': 8}, u'LUTERO': {u'n': 6}, u'PAULA': {u'n': 6}, u'PALOMA': {'n': 48}, u'DENIZARD': {u'n': 8}, u'ORDALIA': {u'n': 14}, u'NINHO': {'n': 41}, u'LUTO': {u'n': 4}}
+DEBUG: Pesquisando relacionamento entre AMARILYS e VALENTIN...
+DEBUG: O AMARILYS tem os seguintes relacionamentos: {'CESAR': {'n': 10}, u'FELIX': {u'n': 36}, u'CICA': {u'n': 4}, u'PATRICIA': {u'n': 4}, u'LUTERO': {u'n': 4}, u'BRUNO': {u'n': 16}, u'PALOMA': {'n': 97}, u'ORDALIA': {u'n': 10}, u'NIKO': {u'n': 8}, u'NINHO': {'n': 72}, u'FEX': {u'n': 4}}
+DEBUG: Pesquisando relacionamento entre FELIX e PATRICIA...
+DEBUG: O FELIX tem os seguintes relacionamentos: {'PALOMA': {'n': 8}, u'PILAR': {u'n': 64}, 'LUTERO': {'n': 8}, u'SIMONE': {u'n': 12}, u'SIME': {u'n': 6}, u'TAMARA': {u'n': 16}, u'NINHO': {u'n': 24}, u'JACQUES': {u'n': 56}}
+DEBUG: Pesquisando relacionamento entre AMARILYS e BRUNO...
+DEBUG: O AMARILYS tem os seguintes relacionamentos: {'CESAR': {'n': 10}, 'VALENTIN': {'n': 10}, u'FELIX': {u'n': 36}, u'CICA': {u'n': 4}, u'PATRICIA': {u'n': 4}, u'LUTERO': {u'n': 4}, u'BRUNO': {u'n': 16}, u'PALOMA': {'n': 97}, u'ORDALIA': {u'n': 10}, u'NIKO': {u'n': 8}, u'NINHO': {'n': 72}, u'FEX': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre AMARILYS e BRUNO: de 16 para 30
+DEBUG: Pesquisando relacionamento entre PILAR e PRISCILA...
+DEBUG: O PILAR tem os seguintes relacionamentos: {u'VINICIUS': {u'n': 8}, u'WAGNER': {u'n': 4}, u'SIRLANGE': {u'n': 12}}
+DEBUG: Pesquisando relacionamento entre FELIX e PERSEFONE...
+DEBUG: O FELIX tem os seguintes relacionamentos: {'PALOMA': {'n': 8}, u'PILAR': {u'n': 64}, 'PATRICIA': {'n': 4}, 'LUTERO': {'n': 8}, u'SIMONE': {u'n': 12}, u'SIME': {u'n': 6}, u'TAMARA': {u'n': 16}, u'NINHO': {u'n': 24}, u'JACQUES': {u'n': 56}}
+DEBUG: Pesquisando relacionamento entre BRUNO e VALDIRENE...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {u'GINA': {u'n': 6}, u'GLAUCE': {u'n': 4}, 'MARCIA': {'n': 4}, u'PILAR': {u'n': 10}, u'JOANA': {u'n': 4}, u'CESAR': {u'n': 6}, u'PAULINHA': {u'n': 8}, u'LUTERO': {u'n': 6}, u'PAULA': {u'n': 6}, u'PALOMA': {'n': 48}, u'DENIZARD': {u'n': 8}, u'ORDALIA': {u'n': 14}, u'NINHO': {'n': 41}, u'LUTO': {u'n': 4}}
+DEBUG: Pesquisando relacionamento entre CARLITO e MARCIA...
+DEBUG: O CARLITO tem os seguintes relacionamentos: {u'GENTIL': {u'n': 8}, u'MARCIA': {u'n': 6}, u'VALRENE': {u'n': 4}, u'RINALDO': {u'n': 8}, u'VALDIRENE': {u'n': 32}, u'DENIZARD': {u'n': 14}, u'VDIRENE': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre CARLITO e MARCIA: de 6 para 12
+DEBUG: Pesquisando relacionamento entre BRUNO e DENIZARD...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {u'GINA': {u'n': 6}, u'GLAUCE': {u'n': 4}, 'MARCIA': {'n': 4}, u'PILAR': {u'n': 10}, u'JOANA': {u'n': 4}, u'CESAR': {u'n': 6}, u'PAULINHA': {u'n': 8}, u'LUTERO': {u'n': 6}, 'VALDIRENE': {'n': 4}, u'PAULA': {u'n': 6}, u'PALOMA': {'n': 48}, u'DENIZARD': {u'n': 8}, u'ORDALIA': {u'n': 14}, u'NINHO': {'n': 41}, u'LUTO': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre BRUNO e DENIZARD: de 8 para 14
+DEBUG: Pesquisando relacionamento entre FELIX e SIMONE...
+DEBUG: O FELIX tem os seguintes relacionamentos: {'PALOMA': {'n': 8}, u'PILAR': {u'n': 64}, 'PATRICIA': {'n': 4}, 'PERSEFONE': {'n': 6}, 'LUTERO': {'n': 8}, u'SIMONE': {u'n': 12}, u'SIME': {u'n': 6}, u'TAMARA': {u'n': 16}, u'NINHO': {u'n': 24}, u'JACQUES': {u'n': 56}}
+DEBUG: Incrementando relacionamento entre FELIX e SIMONE: de 12 para 16
+DEBUG: Pesquisando relacionamento entre AMADEU e NEIDE...
+DEBUG: O AMADEU tem os seguintes relacionamentos: {u'NEIDE': {u'n': 4}, u'FELIX': {u'n': 6}, u'LEILA': {'n': 8}, u'PILAR': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre AMADEU e NEIDE: de 4 para 10
+DEBUG: Pesquisando relacionamento entre CESAR e LUTERO...
+DEBUG: O CESAR tem os seguintes relacionamentos: {u'PILAR': {'n': 52}, u'FELIX': {'n': 46}, u'PRISCILA': {u'n': 6}, u'LUCIANO': {u'n': 4}, u'TAMARA': {u'n': 3}, u'ORDALIA': {u'n': 4}}
+DEBUG: Pesquisando relacionamento entre BERNARDA e CESAR...
+DEBUG: O BERNARDA tem os seguintes relacionamentos: {u'FELIX': {u'n': 16}, u'EDITH': {u'n': 4}, u'PILAR': {'n': 48}, u'WAGNER': {u'n': 4}, u'LEILA': {u'n': 8}, u'DENIZARD': {u'n': 4}, u'CESAR': {u'n': 8}}
+DEBUG: Incrementando relacionamento entre BERNARDA e CESAR: de 8 para 24
+DEBUG: Pesquisando relacionamento entre CESAR e PALOMA...
+DEBUG: O CESAR tem os seguintes relacionamentos: {u'PILAR': {'n': 52}, u'FELIX': {'n': 46}, 'LUTERO': {'n': 8}, u'PRISCILA': {u'n': 6}, u'LUCIANO': {u'n': 4}, u'TAMARA': {u'n': 3}, u'ORDALIA': {u'n': 4}}
+DEBUG: Pesquisando relacionamento entre BRUNO e FELIX...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {u'GINA': {u'n': 6}, u'GLAUCE': {u'n': 4}, 'MARCIA': {'n': 4}, u'PILAR': {u'n': 10}, u'JOANA': {u'n': 4}, u'CESAR': {u'n': 6}, u'PAULINHA': {u'n': 8}, u'LUTERO': {u'n': 6}, 'VALDIRENE': {'n': 4}, u'PAULA': {u'n': 6}, u'PALOMA': {'n': 48}, u'DENIZARD': {'n': 14}, u'ORDALIA': {u'n': 14}, u'NINHO': {'n': 41}, u'LUTO': {u'n': 4}}
+DEBUG: Pesquisando relacionamento entre MICHEL e PATRICIA...
+DEBUG: O MICHEL tem os seguintes relacionamentos: {u'PRIA': {u'n': 4}, u'PATRICIA': {u'n': 46}, u'PORTEIRO': {u'n': 6}, u'PATCIA': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre MICHEL e PATRICIA: de 46 para 62
+DEBUG: Pesquisando relacionamento entre NINHO e VALENTIN...
+DEBUG: O NINHO tem os seguintes relacionamentos: {u'VALENTIN': {u'n': 20}, u'TAMARA': {u'n': 4}, u'PILAR': {u'n': 32}, u'PALOMA': {'n': 76}, u'ORDALIA': {u'n': 3}}
+DEBUG: Incrementando relacionamento entre NINHO e VALENTIN: de 20 para 30
+DEBUG: Pesquisando relacionamento entre CARLITO e DENIZARD...
+DEBUG: O CARLITO tem os seguintes relacionamentos: {u'GENTIL': {u'n': 8}, u'MARCIA': {'n': 12}, u'VALRENE': {u'n': 4}, u'RINALDO': {u'n': 8}, u'VALDIRENE': {u'n': 32}, u'DENIZARD': {u'n': 14}, u'VDIRENE': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre CARLITO e DENIZARD: de 14 para 28
+DEBUG: Pesquisando relacionamento entre BRUNO e LUTERO...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {u'GINA': {u'n': 6}, u'GLAUCE': {u'n': 4}, 'MARCIA': {'n': 4}, 'FELIX': {'n': 4}, u'PILAR': {u'n': 10}, u'JOANA': {u'n': 4}, u'CESAR': {u'n': 6}, u'PAULINHA': {u'n': 8}, u'LUTERO': {u'n': 6}, 'VALDIRENE': {'n': 4}, u'PAULA': {u'n': 6}, u'PALOMA': {'n': 48}, u'DENIZARD': {'n': 14}, u'ORDALIA': {u'n': 14}, u'NINHO': {'n': 41}, u'LUTO': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre BRUNO e LUTERO: de 6 para 10
+DEBUG: Pesquisando relacionamento entre CARLITO e VALDIRENE...
+DEBUG: O CARLITO tem os seguintes relacionamentos: {u'GENTIL': {u'n': 8}, u'MARCIA': {'n': 12}, u'VALRENE': {u'n': 4}, u'RINALDO': {u'n': 8}, u'VALDIRENE': {u'n': 32}, u'DENIZARD': {'n': 28}, u'VDIRENE': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre CARLITO e VALDIRENE: de 32 para 54
+DEBUG: Pesquisando relacionamento entre EDITH e FELIX...
+DEBUG: O EDITH tem os seguintes relacionamentos: {u'TAMARA': {u'n': 6}, u'FELIX': {u'n': 38}}
+DEBUG: Incrementando relacionamento entre EDITH e FELIX: de 38 para 52
+DEBUG: Pesquisando relacionamento entre CESAR e NINHO...
+DEBUG: O CESAR tem os seguintes relacionamentos: {u'PILAR': {'n': 52}, u'FELIX': {'n': 46}, 'LUTERO': {'n': 8}, 'PALOMA': {'n': 24}, u'PRISCILA': {u'n': 6}, u'LUCIANO': {u'n': 4}, u'TAMARA': {u'n': 3}, u'ORDALIA': {u'n': 4}}
+DEBUG: Pesquisando relacionamento entre BRUNO e ORDALIA...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {u'GINA': {u'n': 6}, u'GLAUCE': {u'n': 4}, 'MARCIA': {'n': 4}, 'FELIX': {'n': 4}, u'PILAR': {u'n': 10}, u'JOANA': {u'n': 4}, u'CESAR': {u'n': 6}, u'PAULINHA': {u'n': 8}, u'LUTERO': {'n': 10}, 'VALDIRENE': {'n': 4}, u'PAULA': {u'n': 6}, u'PALOMA': {'n': 48}, u'DENIZARD': {'n': 14}, u'ORDALIA': {u'n': 14}, u'NINHO': {'n': 41}, u'LUTO': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre BRUNO e ORDALIA: de 14 para 22
+DEBUG: Pesquisando relacionamento entre MULHER e PATO...
+DEBUG: O MULHER tem os seguintes relacionamentos: {'VALDIRENE': {'n': 58}}
+DEBUG: Pesquisando relacionamento entre MARCIA e VALDIRENE...
+DEBUG: O MARCIA tem os seguintes relacionamentos: {u'VALDIRENE': {u'n': 124}, u'VDIRENE': {u'n': 4}, u'RITA': {u'n': 44}, 'MULHER': {'n': 12}}
+DEBUG: Incrementando relacionamento entre MARCIA e VALDIRENE: de 124 para 164
+DEBUG: Pesquisando relacionamento entre BRUNO e JOANA...
+DEBUG: O BRUNO tem os seguintes relacionamentos: {u'GINA': {u'n': 6}, u'GLAUCE': {u'n': 4}, 'MARCIA': {'n': 4}, 'FELIX': {'n': 4}, u'PILAR': {u'n': 10}, u'JOANA': {u'n': 4}, u'CESAR': {u'n': 6}, u'PAULINHA': {u'n': 8}, u'LUTERO': {'n': 10}, 'VALDIRENE': {'n': 4}, u'PAULA': {u'n': 6}, u'PALOMA': {'n': 48}, u'DENIZARD': {'n': 14}, u'ORDALIA': {'n': 22}, u'NINHO': {'n': 41}, u'LUTO': {u'n': 4}}
+DEBUG: Incrementando relacionamento entre BRUNO e JOANA: de 4 para 14
+DEBUG: Clusterizacao:
+[[u'THAS', u'ERON', u'FELIX', u'FEX', u'MICL', u'POLICIAL', 'RENAN', u'PRIA', u'EDITH', u'PILAR', u'WAGNER', u'PERSENE', u'HOMEM', u'ENTREGADOR', u'RINALDO', u'SIMONE', u'LEILA', u'GENTIL', u'BRUNO', u'LUCIANO', u'NEIDE', u'TAMARA', u'DELEGADO', u'NICOLE', u'PATCIA', u'ELENICE', u'PIL', u'FLIX', u'ROGERIO', 'MARCIA', 'MULHER', u'THALES', u'VALRENE', u'NEI', 'PATRICIA', u'PRICIA', u'VIVIAN', u'VINICIUS', u'DANIEL', u'CER', u'DENIZARD', u'SIRLANGE', u'CESAR', u'VDIRENE', u'NINHO', u'DIZD', u'GINA', u'LIDIA', u'PALOMA', u'CICA', u'BERNARDA', u'JOANA', u'AMADEU', u'LUTO', u'JQUES', 'FILOSOFO', u'ADONIRAM', u'PAULINHA', u'SIME', 'PRISCILA', 'PATO', u'ATILIO', u'ORDALIA', u'PAULA', u'JACQUES', u'MRCIA', u'ANE', u'GLAUCE', u'ALINE', u'MHEL', u'LEI', u'MARC', u'NIKO', u'PERSEFONE', u'LUTERO', 'VALDIRENE', u'CARLITO', u'MICHEL', u'PORTEIRO', u'VALENTIN', u'ORDAA', 'ALEJANDRA', u'AMARILYS', u'RITA', u'KEILA'], ['VERONICA', 'MARISTELA'], [u'PAR'], [u'RAPAZ'], [u'LIN'], [u'CARTO'], [u'VDINE'], [u'JOA'], [u'CARLI'], [u'LINDA'], [u'NIN'], ['VELENTIN'], [u'ALI'], ['JEFFERSON'], [u'VALDIRE'], [u'PSEFONE'], [u'NIVALDO'], [u'JUNTOS'], [u'LDA'], [u'LLA'], [u'C'], [u'LERO'], [u'SE'], [u'PERNE'], [u'BERNAA'], [u'REN'], [u'CTO'], [u'VALDINE'], [u'NO'], [u'GARCOM'], [u'CR'], [u'PERFONE'], [u'PATRIA'], [u'BRU'], [u'TAMA'], [u'DANL'], [u'PATA'], [u'PILGA'], [u'DENIZD'], [u'MACIEL'], [u'AMALYS'], [u'ORDLIA'], [u'GIGI'], [u'PCIA']]
+DEBUG: Node THAS go to group #0
+DEBUG: Node PAR go to group #2
+DEBUG: Node RAPAZ go to group #3
+DEBUG: Node VIVIAN go to group #0
+DEBUG: Node PRIA go to group #0
+DEBUG: Node EDITH go to group #0
+DEBUG: Node LIN go to group #4
+DEBUG: Node PILAR go to group #0
+DEBUG: Node WAGNER go to group #0
+DEBUG: Node MHEL go to group #0
+DEBUG: Node MICL go to group #0
+DEBUG: Node CARTO go to group #5
+DEBUG: Node LUCIANO go to group #0
+DEBUG: Node VDINE go to group #6
+DEBUG: Node PIL go to group #0
+DEBUG: Node FLIX go to group #0
+DEBUG: Node PRICIA go to group #0
+DEBUG: Node JOA go to group #7
+DEBUG: Node DANIEL go to group #0
+DEBUG: Node PAULA go to group #0
+DEBUG: Node PALOMA go to group #0
+DEBUG: Node DENIZARD go to group #0
+DEBUG: Node CARLI go to group #8
+DEBUG: Node VDIRENE go to group #0
+DEBUG: Node ROGERIO go to group #0
+DEBUG: Node BERNARDA go to group #0
+DEBUG: Node JOANA go to group #0
+DEBUG: Node AMADEU go to group #0
+DEBUG: Node PAULINHA go to group #0
+DEBUG: Node LINDA go to group #9
+DEBUG: Node MARISTELA go to group #1
+DEBUG: Node NIN go to group #10
+DEBUG: Node VELENTIN go to group #11
+DEBUG: Node MARC go to group #0
+DEBUG: Node KEILA go to group #0
+DEBUG: Node LUTERO go to group #0
+DEBUG: Node MRCIA go to group #0
+DEBUG: Node JEFFERSON go to group #13
+DEBUG: Node VALDIRE go to group #14
+DEBUG: Node PSEFONE go to group #15
+DEBUG: Node VERONICA go to group #1
+DEBUG: Node ERON go to group #0
+DEBUG: Node RENAN go to group #0
+DEBUG: Node ADONIRAM go to group #0
+DEBUG: Node NIVALDO go to group #16
+DEBUG: Node RINALDO go to group #0
+DEBUG: Node SIMONE go to group #0
+DEBUG: Node NEIDE go to group #0
+DEBUG: Node JUNTOS go to group #17
+DEBUG: Node TAMARA go to group #0
+DEBUG: Node LUTO go to group #0
+DEBUG: Node LDA go to group #18
+DEBUG: Node PATCIA go to group #0
+DEBUG: Node THALES go to group #0
+DEBUG: Node VALRENE go to group #0
+DEBUG: Node PATRICIA go to group #0
+DEBUG: Node DELEGADO go to group #0
+DEBUG: Node VINICIUS go to group #0
+DEBUG: Node CER go to group #0
+DEBUG: Node SIRLANGE go to group #0
+DEBUG: Node LLA go to group #19
+DEBUG: Node ALEJANDRA go to group #0
+DEBUG: Node C go to group #20
+DEBUG: Node FILOSOFO go to group #0
+DEBUG: Node PRISCILA go to group #0
+DEBUG: Node LERO go to group #21
+DEBUG: Node ATILIO go to group #0
+DEBUG: Node HOMEM go to group #0
+DEBUG: Node ANE go to group #0
+DEBUG: Node ALINE go to group #0
+DEBUG: Node CARLITO go to group #0
+DEBUG: Node MICHEL go to group #0
+DEBUG: Node PERNE go to group #23
+DEBUG: Node AMARILYS go to group #0
+DEBUG: Node RITA go to group #0
+DEBUG: Node NEI go to group #0
+DEBUG: Node CICA go to group #0
+DEBUG: Node LEILA go to group #0
+DEBUG: Node BERNAA go to group #24
+DEBUG: Node REN go to group #25
+DEBUG: Node CTO go to group #26
+DEBUG: Node VALDINE go to group #27
+DEBUG: Node NO go to group #28
+DEBUG: Node VALENTIN go to group #0
+DEBUG: Node FELIX go to group #0
+DEBUG: Node GARCOM go to group #29
+DEBUG: Node NINHO go to group #0
+DEBUG: Node CR go to group #30
+DEBUG: Node PERFONE go to group #31
+DEBUG: Node FEX go to group #0
+DEBUG: Node POLICIAL go to group #0
+DEBUG: Node ALI go to group #12
+DEBUG: Node PATRIA go to group #32
+DEBUG: Node LEI go to group #0
+DEBUG: Node BRU go to group #33
+DEBUG: Node TAMA go to group #34
+DEBUG: Node ENTREGADOR go to group #0
+DEBUG: Node VALDIRENE go to group #0
+DEBUG: Node DANL go to group #35
+DEBUG: Node PORTEIRO go to group #0
+DEBUG: Node ORDAA go to group #0
+DEBUG: Node SE go to group #22
+DEBUG: Node GENTIL go to group #0
+DEBUG: Node PERSENE go to group #0
+DEBUG: Node PATA go to group #36
+DEBUG: Node PILGA go to group #37
+DEBUG: Node BRUNO go to group #0
+DEBUG: Node PATO go to group #0
+DEBUG: Node MARCIA go to group #0
+DEBUG: Node MULHER go to group #0
+DEBUG: Node DENIZD go to group #38
+DEBUG: Node ELENICE go to group #0
+DEBUG: Node NICOLE go to group #0
+DEBUG: Node CESAR go to group #0
+DEBUG: Node DIZD go to group #0
+DEBUG: Node LIDIA go to group #0
+DEBUG: Node GINA go to group #0
+DEBUG: Node JQUES go to group #0
+DEBUG: Node SIME go to group #0
+DEBUG: Node ORDALIA go to group #0
+DEBUG: Node JACQUES go to group #0
+DEBUG: Node GLAUCE go to group #0
+DEBUG: Node MACIEL go to group #39
+DEBUG: Node NIKO go to group #0
+DEBUG: Node PERSEFONE go to group #0
+DEBUG: Node AMALYS go to group #40
+DEBUG: Node ORDLIA go to group #41
+DEBUG: Node GIGI go to group #42
+DEBUG: Node PCIA go to group #43
+INFO: Relations:
+Counter({(u'MULHER', u'VALDIRENE'): 58, (u'CESAR', u'FELIX'): 42, (u'NINHO', u'PALOMA'): 42, (u'MARCIA', u'VALDIRENE'): 40, (u'NICOLE', u'THALES'): 38, (u'ALEJANDRA', u'NINHO'): 32, (u'HOMEM', u'MARCIA'): 28, (u'CESAR', u'PALOMA'): 24, (u'LEILA', u'NEIDE'): 22, (u'AMARILYS', u'NINHO'): 22, (u'CARLITO', u'VALDIRENE'): 22, (u'CESAR', u'PILAR'): 20, (u'ATILIO', u'MARCIA'): 18, (u'PILAR', u'PRISCILA'): 18, (u'PATO', u'VALDIRENE'): 16, (u'BERNARDA', u'CESAR'): 16, (u'MICHEL', u'PATRICIA'): 16, (u'CESAR', u'NINHO'): 16, (u'AMARILYS', u'BRUNO'): 14, (u'CARLITO', u'DENIZARD'): 14, (u'EDITH', u'FELIX'): 14, (u'ALINE', u'FELIX'): 12, (u'DENIZARD', u'GINA'): 12, (u'ALINE', u'CESAR'): 12, (u'AMARILYS', u'PALOMA'): 12, (u'MARCIA', u'MULHER'): 12, (u'BRUNO', u'NINHO'): 11, (u'LUTERO', u'ORDALIA'): 10, (u'LUTERO', u'PALOMA'): 10, (u'ERON', u'LUTERO'): 10, (u'PATRICIA', u'PERSEFONE'): 10, (u'AMARILYS', u'CESAR'): 10, (u'AMARILYS', u'VALENTIN'): 10, (u'NINHO', u'VALENTIN'): 10, (u'BRUNO', u'JOANA'): 10, (u'FELIX', u'LUTERO'): 8, (u'DENIZARD', u'FILOSOFO'): 8, (u'BERNARDA', u'PILAR'): 8, (u'DENIZARD', u'RINALDO'): 8, (u'FELIX', u'PALOMA'): 8, (u'DENIZARD', u'VALDIRENE'): 8, (u'CESAR', u'LUTERO'): 8, (u'BRUNO', u'ORDALIA'): 8, (u'BRUNO', u'PALOMA'): 6, (u'PATRICIA', u'SIMONE'): 6, (u'DENIZARD', u'ORDALIA'): 6, (u'FELIX', u'PERSEFONE'): 6, (u'CARLITO', u'MARCIA'): 6, (u'BRUNO', u'DENIZARD'): 6, (u'AMADEU', u'NEIDE'): 6, (u'ATILIO', u'VALDIRENE'): 4, (u'ATILIO', u'MULHER'): 4, (u'MARISTELA', u'VERONICA'): 4, (u'AMADEU', u'LEILA'): 4, (u'ALEJANDRA', u'VALENTIN'): 4, (u'NEIDE', u'RENAN'): 4, (u'BRUNO', u'MARCIA'): 4, (u'FELIX', u'PATRICIA'): 4, (u'BRUNO', u'VALDIRENE'): 4, (u'FELIX', u'SIMONE'): 4, (u'FELIX', u'FELIX'): 4, (u'BRUNO', u'FELIX'): 4, (u'BRUNO', u'LUTERO'): 4, (u'MULHER', u'PATO'): 4, (u'MICHEL', u'PERSEFONE'): 2, (u'BRUNO', u'GINA'): 2, (u'CARLITO', u'MULHER'): 2, (u'PALOMA', u'VELENTIN'): 2, (u'AMARILYS', u'LUTERO'): 2, (u'CARLITO', u'GINA'): 2, (u'ALEJANDRA', u'LEILA'): 2, (u'BRUNO', u'CESAR'): 2, (u'ALINE', u'VERONICA'): 2, (u'AMADEU', u'MARISTELA'): 2, (u'LUTERO', u'NINHO'): 2, (u'PERSEFONE', u'SIMONE'): 2, (u'NINHO', u'PILAR'): 2, (u'AMARILYS', u'CICA'): 2, (u'BRUNO', u'BRUNO'): 2, (u'VALDIRENE', u'VALDIRENE'): 2, (u'ERON', u'RENAN'): 2, (u'CESAR', u'EDITH'): 2, (u'NEIDE', u'NICOLE'): 2, (u'CARLITO', u'JUNTOS'): 2, (u'MARISTELA', u'NEIDE'): 2, (u'FELIX', u'JOANA'): 2, (u'ALINE', u'ALINE'): 2, (u'PRISCILA', u'THALES'): 2, (u'ATILIO', u'JUNTOS'): 2, (u'GIBAO', u'LUTERO'): 2, (u'PALOMA', u'PALOMA'): 2, (u'DENIZARD', u'DENIZARD'): 2, (u'MICHEL', u'PALOMA'): 2, (u'AMADEU', u'VERONICA'): 2, (u'NINHO', u'NINHO'): 2, (u'ALINE', u'PILAR'): 2, (u'JEFFERSON', u'PALOMA'): 2, (u'BRUNO', u'CICA'): 2, (u'AMARILYS', u'PILAR'): 2, (u'JEFFERSON', u'NINHO'): 2, (u'ALEJANDRA', u'LUTERO'): 2, (u'AMARILYS', u'VELENTIN'): 2, (u'AMADEU', u'RENAN'): 2, (u'DENIZARD', u'LUTERO'): 2})
+INFO: Arvore:
+{u'edges': {u'ADONIRAM': {u'NIKO': {u'n': 4}},
+            'ALEJANDRA': {'NINHO': {'n': 32},
+                          'VALENTIN': {'n': 4}},
+            u'ALINE': {u'CESAR': {'n': 96},
+                       'FELIX': {'n': 12},
+                       u'PILAR': {u'n': 18}},
+            u'AMADEU': {u'FELIX': {u'n': 6},
+                        u'LEILA': {'n': 8},
+                        u'NEIDE': {'n': 10},
+                        u'PILAR': {u'n': 4}},
+            u'AMARILYS': {u'BRUNO': {'n': 30},
+                          'CESAR': {'n': 10},
+                          u'CICA': {u'n': 4},
+                          u'FELIX': {u'n': 36},
+                          u'FEX': {u'n': 4},
+                          u'LUTERO': {u'n': 4},
+                          u'NIKO': {u'n': 8},
+                          u'NINHO': {'n': 72},
+                          u'ORDALIA': {u'n': 10},
+                          u'PALOMA': {'n': 97},
+                          u'PATRICIA': {u'n': 4},
+                          'VALENTIN': {'n': 10}},
+            u'ANE': {u'CESAR': {u'n': 8}},
+            u'ATILIO': {u'MARCIA': {'n': 70},
+                        'MULHER': {'n': 4},
+                        u'RITA': {u'n': 4},
+                        u'VALDIRENE': {'n': 8}},
+            u'BERNARDA': {u'CESAR': {'n': 24},
+                          u'DENIZARD': {u'n': 4},
+                          u'EDITH': {u'n': 4},
+                          u'FELIX': {u'n': 16},
+                          u'LEILA': {u'n': 8},
+                          u'PILAR': {'n': 48},
+                          u'WAGNER': {u'n': 4}},
+            u'BRUNO': {u'CESAR': {u'n': 6},
+                       u'DENIZARD': {'n': 14},
+                       'FELIX': {'n': 4},
+                       u'GINA': {u'n': 6},
+                       u'GLAUCE': {u'n': 4},
+                       u'JOANA': {'n': 14},
+                       u'LUTERO': {'n': 10},
+                       u'LUTO': {u'n': 4},
+                       'MARCIA': {'n': 4},
+                       u'NINHO': {'n': 41},
+                       u'ORDALIA': {'n': 22},
+                       u'PALOMA': {'n': 48},
+                       u'PAULA': {u'n': 6},
+                       u'PAULINHA': {u'n': 8},
+                       u'PILAR': {u'n': 10},
+                       'VALDIRENE': {'n': 4}},
+            u'CARLITO': {u'DENIZARD': {'n': 28},
+                         u'GENTIL': {u'n': 8},
+                         u'MARCIA': {'n': 12},
+                         u'RINALDO': {u'n': 8},
+                         u'VALDIRENE': {'n': 54},
+                         u'VALRENE': {u'n': 4},
+                         u'VDIRENE': {u'n': 4}},
+            u'CER': {u'PILAR': {u'n': 4}},
+            u'CESAR': {u'FELIX': {'n': 46},
+                       u'LUCIANO': {u'n': 4},
+                       'LUTERO': {'n': 8},
+                       'NINHO': {'n': 16},
+                       u'ORDALIA': {u'n': 4},
+                       'PALOMA': {'n': 24},
+                       u'PILAR': {'n': 52},
+                       u'PRISCILA': {u'n': 6},
+                       u'TAMARA': {u'n': 3}},
+            u'CICA': {u'FELIX': {u'n': 6},
+                      u'LUTERO': {u'n': 4}},
+            u'DANIEL': {u'ELENICE': {u'n': 4},
+                        u'MICHEL': {u'n': 14},
+                        u'MICL': {u'n': 4}},
+            u'DELEGADO': {u'MARCIA': {u'n': 24},
+                          u'VALDIRENE': {u'n': 6}},
+            u'DENIZARD': {u'FELIX': {u'n': 4},
+                          'FILOSOFO': {'n': 8},
+                          'GINA': {'n': 12},
+                          u'LUTERO': {u'n': 4},
+                          u'ORDAA': {u'n': 4},
+                          u'ORDALIA': {'n': 22},
+                          u'PILAR': {u'n': 14},
+                          u'RINALDO': {'n': 30},
+                          u'VALDIRENE': {'n': 12}},
+            u'DIZD': {u'ORDALIA': {u'n': 4}},
+            u'EDITH': {u'FELIX': {'n': 52},
+                       u'TAMARA': {u'n': 6}},
+            u'ELENICE': {u'MICHEL': {u'n': 12}},
+            u'ENTREGADOR': {u'PATRICIA': {u'n': 8}},
+            u'ERON': {u'HOMEM': {u'n': 8},
+                      'LUTERO': {'n': 10},
+                      u'NIKO': {u'n': 6},
+                      u'PATRICIA': {u'n': 24}},
+            u'FELIX': {u'JACQUES': {u'n': 56},
+                       'LUTERO': {'n': 8},
+                       u'NINHO': {u'n': 24},
+                       'PALOMA': {'n': 8},
+                       'PATRICIA': {'n': 4},
+                       'PERSEFONE': {'n': 6},
+                       u'PILAR': {u'n': 64},
+                       u'SIME': {u'n': 6},
+                       u'SIMONE': {'n': 16},
+                       u'TAMARA': {u'n': 16}},
+            u'FEX': {u'SIMONE': {u'n': 6}},
+            u'FLIX': {u'TAMARA': {u'n': 4}},
+            u'GENTIL': {u'MARCIA': {u'n': 6},
+                        u'VALDIRENE': {u'n': 6}},
+            u'GINA': {u'ORDALIA': {u'n': 8}},
+            u'HOMEM': {u'MARCIA': {'n': 62},
+                       u'NIKO': {u'n': 12}},
+            u'JACQUES': {u'JQUES': {u'n': 4},
+                         u'LUTERO': {u'n': 16},
+                         u'PILAR': {u'n': 4}},
+            u'JOANA': {u'LUTERO': {u'n': 14}},
+            u'KEILA': {u'VALDIRENE': {u'n': 36}},
+            u'LEI': {u'NEIDE': {u'n': 4}},
+            u'LEILA': {u'NEIDE': {'n': 46},
+                       u'NICOLE': {u'n': 4},
+                       u'PIL': {u'n': 4},
+                       u'PILAR': {u'n': 34},
+                       u'THALES': {u'n': 106},
+                       u'THAS': {u'n': 8}},
+            u'LIDIA': {u'NICOLE': {u'n': 20},
+                       u'THALES': {u'n': 4}},
+            u'LUTERO': {u'ORDALIA': {'n': 18},
+                        u'PALOMA': {'n': 36},
+                        u'PATRICIA': {u'n': 4}},
+            u'MARC': {u'RITA': {u'n': 8}},
+            u'MARCIA': {'MULHER': {'n': 12},
+                        u'RITA': {u'n': 44},
+                        u'VALDIRENE': {'n': 164},
+                        u'VDIRENE': {u'n': 4}},
+            'MARISTELA': {'VERONICA': {'n': 4}},
+            u'MHEL': {u'PATRICIA': {u'n': 4}},
+            u'MICHEL': {u'PATCIA': {u'n': 4},
+                        u'PATRICIA': {'n': 62},
+                        u'PORTEIRO': {u'n': 6},
+                        u'PRIA': {u'n': 4}},
+            u'MRCIA': {u'RITA': {u'n': 4}},
+            'MULHER': {'PATO': {'n': 4},
+                       'VALDIRENE': {'n': 58}},
+            u'NEI': {u'NEIDE': {u'n': 4}},
+            'NEIDE': {'RENAN': {'n': 4}},
+            u'NICOLE': {u'PILAR': {u'n': 10},
+                        u'ROGERIO': {u'n': 58},
+                        u'THALES': {'n': 62},
+                        u'THAS': {u'n': 8},
+                        u'VINICIUS': {u'n': 12}},
+            u'NIKO': {u'PATRICIA': {u'n': 30},
+                      u'PRICIA': {u'n': 6}},
+            u'NINHO': {u'ORDALIA': {u'n': 3},
+                       u'PALOMA': {'n': 76},
+                       u'PILAR': {u'n': 32},
+                       u'TAMARA': {u'n': 4},
+                       u'VALENTIN': {'n': 30}},
+            u'ORDALIA': {u'PALOMA': {u'n': 16},
+                         u'PAULINHA': {u'n': 4},
+                         u'PILAR': {u'n': 10}},
+            u'PALOMA': {u'PAULA': {u'n': 18}},
+            'PATO': {'VALDIRENE': {'n': 16}},
+            u'PATRICIA': {'PERSEFONE': {'n': 10},
+                          u'PORTEIRO': {u'n': 10},
+                          'SIMONE': {'n': 6}},
+            u'PERSEFONE': {u'RENAN': {u'n': 18},
+                           u'VIVIAN': {u'n': 6}},
+            u'PERSENE': {u'RENAN': {u'n': 10}},
+            u'PILAR': {'PRISCILA': {'n': 18},
+                       u'SIRLANGE': {u'n': 12},
+                       u'VINICIUS': {u'n': 8},
+                       u'WAGNER': {u'n': 4}},
+            u'POLICIAL': {u'VALDIRENE': {u'n': 8}},
+            u'RINALDO': {u'VALDIRENE': {u'n': 10}}},
+ u'nodes': {u'ADONIRAM': {},
+            'ALEJANDRA': {},
+            u'ALI': {},
+            u'ALINE': {},
+            u'AMADEU': {},
+            u'AMALYS': {},
+            u'AMARILYS': {},
+            u'ANE': {},
+            u'ATILIO': {},
+            u'BERNAA': {},
+            u'BERNARDA': {},
+            u'BRU': {},
+            u'BRUNO': {},
+            u'C': {},
+            u'CARLI': {},
+            u'CARLITO': {},
+            u'CARTO': {},
+            u'CER': {},
+            u'CESAR': {},
+            u'CICA': {},
+            u'CR': {},
+            u'CTO': {},
+            u'DANIEL': {},
+            u'DANL': {},
+            u'DELEGADO': {},
+            u'DENIZARD': {},
+            u'DENIZD': {},
+            u'DIZD': {},
+            u'EDITH': {},
+            u'ELENICE': {},
+            u'ENTREGADOR': {},
+            u'ERON': {},
+            u'FELIX': {},
+            u'FEX': {},
+            'FILOSOFO': {},
+            u'FLIX': {},
+            u'GARCOM': {},
+            u'GENTIL': {},
+            u'GIGI': {},
+            u'GINA': {},
+            u'GLAUCE': {},
+            u'HOMEM': {},
+            u'JACQUES': {},
+            'JEFFERSON': {},
+            u'JOA': {},
+            u'JOANA': {},
+            u'JQUES': {},
+            u'JUNTOS': {},
+            u'KEILA': {},
+            u'LDA': {},
+            u'LEI': {},
+            u'LEILA': {},
+            u'LERO': {},
+            u'LIDIA': {},
+            u'LIN': {},
+            u'LINDA': {},
+            u'LLA': {},
+            u'LUCIANO': {},
+            u'LUTERO': {},
+            u'LUTO': {},
+            u'MACIEL': {},
+            u'MARC': {},
+            u'MARCIA': {},
+            'MARISTELA': {},
+            u'MHEL': {},
+            u'MICHEL': {},
+            u'MICL': {},
+            u'MRCIA': {},
+            u'MULHER': {},
+            u'NEI': {},
+            u'NEIDE': {},
+            u'NICOLE': {},
+            u'NIKO': {},
+            u'NIN': {},
+            u'NINHO': {},
+            u'NIVALDO': {},
+            u'NO': {},
+            u'ORDAA': {},
+            u'ORDALIA': {},
+            u'ORDLIA': {},
+            u'PALOMA': {},
+            u'PAR': {},
+            u'PATA': {},
+            u'PATCIA': {},
+            'PATO': {},
+            u'PATRIA': {},
+            u'PATRICIA': {},
+            u'PAULA': {},
+            u'PAULINHA': {},
+            u'PCIA': {},
+            u'PERFONE': {},
+            u'PERNE': {},
+            u'PERSEFONE': {},
+            u'PERSENE': {},
+            u'PIL': {},
+            u'PILAR': {},
+            u'PILGA': {},
+            u'POLICIAL': {},
+            u'PORTEIRO': {},
+            u'PRIA': {},
+            u'PRICIA': {},
+            u'PRISCILA': {},
+            u'PSEFONE': {},
+            u'RAPAZ': {},
+            u'REN': {},
+            u'RENAN': {},
+            u'RINALDO': {},
+            u'RITA': {},
+            u'ROGERIO': {},
+            u'SE': {},
+            u'SIME': {},
+            u'SIMONE': {},
+            u'SIRLANGE': {},
+            u'TAMA': {},
+            u'TAMARA': {},
+            u'THALES': {},
+            u'THAS': {},
+            u'VALDINE': {},
+            u'VALDIRE': {},
+            u'VALDIRENE': {},
+            u'VALENTIN': {},
+            u'VALRENE': {},
+            u'VDINE': {},
+            u'VDIRENE': {},
+            'VELENTIN': {},
+            'VERONICA': {},
+            u'VINICIUS': {},
+            u'VIVIAN': {},
+            u'WAGNER': {}}}

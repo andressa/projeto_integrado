@@ -109,9 +109,11 @@ class Tree(object):
         self.amodel = Analysis.objects.get(id=self.analysis_id)
         self.groups = [0]
         self.json = {}
-        self.json['nodes'] = {}
-        self.json['edges'] = {}
         self.load_last_tree()
+        if not self.json.has_key('nodes'):
+            self.json['nodes'] = {}
+        if not self.json.has_key('edges'):
+            self.json['edges'] = {}
         self.nodes = self.json['nodes']
         self.edges = self.json['edges']
         self.logger.debug("JSON inicial:\n%s" % str(self.json) )
@@ -156,7 +158,8 @@ class Tree(object):
         #self.nodes[second]['group'] = self.nodes[first]['group']
 
     def save(self):
-        t, created = TreeModel.objects.get_or_create(aid__tvshow=self.tvshow)
+        a, acreated = Analysis.objects.get_or_create(tvshow=self.tvshow)
+        t, created = TreeModel.objects.get_or_create(aid=a)
         t.json = self.json
         t.save()
 
