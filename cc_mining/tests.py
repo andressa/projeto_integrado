@@ -6,11 +6,8 @@ Replace this with more appropriate tests for your application.
 """
 
 from django.test import TestCase
+from cc_mining.views import *
 
-
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.assertEqual(1 + 1, 2)
+class TestCopa(TestCase):
+    def test_json(self):
+        test_copa()

@@ -284,6 +284,21 @@
             var y = date.getFullYear();
             return '' + (d <= 9 ? '0' + d : d) + '/' + (m<=9 ? '0' + m : m) + '/' + y;
         }
+        function load_match(match){
+            var data;
+            $.ajax({
+                type: "POST",
+                data: {"match": match, csrfmiddlewaretoken: "{{ csrf_token }}"},
+                dataType: "json",
+                url: {% url copa %},
+                cache: false,
+                async: false,
+                success: function(cc){
+                    data = cc;
+                }
+            });
+            return data;
+        }
         $(document).ready(function(){
             $( ".datepicker" ).datepicker({
               showOn: "button",
@@ -335,6 +350,15 @@
             });
 
             // ------
+
+            // Copa
+            $('#jogos').change(function() {
+                var match = $(this).val();
+                if (!match) return;
+                console.log('Jogo: ' + match);
+                var results = load_match(match);
+                console.log(results);
+            });
         });
         $(function() {
             $( "#tabs" ).tabs();
@@ -372,6 +396,7 @@
             <li><a href="#tab-realtime"> Tempo Real </a></li>
             <li><a href="#tab-jornalismo"> Jornalismo </a></li>
             <li><a href="#tab-novelas"> Novelas </a></li>
+            <li><a href="#tab-copa"> Copa das Confederações </a></li>
         </ul>
         <div id="tab-realtime">
             <fieldset>
@@ -426,7 +451,16 @@
                 </div>
             </fieldset>
         </div>
-        <div id="tab-futebol">
+        <div id="tab-copa">
+            <fieldset>
+                <legend> Jogos disponíveis </legend>
+                <div id='jogosdiv'>
+                    <select id='jogos'>
+                        <option value=''>----</option>
+                        <option value='Brasil x Italia'>Brasil X Itália</option>
+                    </select>
+                </div>
+            </fieldset>
         </div>
     </div>
 {% endblock "content" %}
