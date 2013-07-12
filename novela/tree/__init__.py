@@ -264,10 +264,11 @@ class NovelaAnalysis(object):
         self.tree.save()
 
     def save(self):
-        f = open(get_novela_filename(self.novela.dir, self.novela.name, self.novela.date, 'json', add='tree'), 'w')
+        import novela; pth = os.path.abspath(novela.__path__[0])
+        f = open(get_novela_filename('%s/static' % pth, self.novela.name, self.novela.date, 'json', add='tree'), 'w')
         f.write(json.dumps(self.tree.json))
         f.close()
-        f = open(get_novela_filename(self.novela.dir, self.novela.name, self.novela.date, 'json', add='matrix'), 'w')
+        f = open(get_novela_filename('%s/static' % pth, self.novela.name, self.novela.date, 'json', add='matrix'), 'w')
         f.write(json.dumps(self.matrix.json, separators=(',', ':')))
         f.close()
 

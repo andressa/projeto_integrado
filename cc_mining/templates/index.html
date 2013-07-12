@@ -341,7 +341,7 @@
             });
 
             // Novela
-            $('.novela_attr').change(function(){
+            $('#get-analysis').click(function(){
                 get_analysis(
                             $('#novela').val(),
                             $('#datas').val(),
@@ -435,6 +435,7 @@
                             <option value='{{ novela.dir }}'>{{ novela.name }}</option>
                         {% endfor %}
                     </select>
+                    <button type="button" id='get-analysis'>Go!</button>
                 </div>
                 <div id='datasdiv'>
                     <select id='datas' class='novela_attr'>
