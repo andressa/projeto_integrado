@@ -7,12 +7,11 @@
             }
 
             $(document).ready(function(){
-                $('#novelasdiv').change(function(){
-                    $('#datasdiv').show();
-                });
-
-                $('#datasdiv').change(function(){
-                    location.href = buildURL();
+                $('body').bind('keypress', function(e) {
+                    var code = e.keyCode || e.which; 
+                    if (code == 100) {
+                        $('p.secondary').show();
+                    }
                 });
             });
         </script>
@@ -28,12 +27,13 @@
                 border-style: solid none none none;
                 border-color: #1E254A;
             }
-            div.secondary {
-                display: none
+            .secondary {
+                display: none;
             }
         </style>
     </head>
     <body>
-        <h3>Nao existe essa analise =/</h3>
+        <h3>Nao existe essa análise =/</h3>
+        <p class='secondary'>{{ name }}</p>
     </body>
 </html>
